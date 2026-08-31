@@ -46,6 +46,28 @@ asks what the true rate plausibly is *given the sample size*:
 Providers with no reviews sort **last** under `rating` and are labelled
 `unrated` rather than scored zero. No reviews is not a bad review.
 
+## How the upstream API behaves
+
+Oscar Health's provider search is undocumented, and it **fails quietly** — an
+unrecognised parameter is ignored rather than rejected, and a wrong field name
+yields `undefined` rather than an error. Both produce plausible-looking output.
+
+[`docs/upstream-api.md`](docs/upstream-api.md) records the contract as observed,
+with the result counts behind each claim. The traps worth knowing before you
+touch this code:
+
+- **`gender` is accepted and silently ignored** — every value returns the same
+  unfiltered count.
+- **NPI and `provider_id` are not searchable** — only `name_query`, and only on
+  a name.
+- **Facet keys differ from their labels** — `language_code=ES` matches 2449 of
+  4772; `language_code=Spanish` matches **0**.
+- **Some facet keys carry meaningful leading spaces**, and both variants exist
+  as distinct facets.
+- **`years_experience: 0` means "not recorded"**, not zero years.
+- **`sort` outside `0｜1｜2` returns HTTP 400**, with the reason nested in an
+  object rather than a string.
+
 ## Design notes
 
 **Responses are shaped down hard.** One upstream page of 30 providers is ~225 KB
