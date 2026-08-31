@@ -101,7 +101,13 @@ function main(): void {
   // a misconfiguration error on every hit.
   app.set('trust proxy', 'loopback');
   app.disable('x-powered-by');
-  app.use(express.json({ limit: '2mb' }));
+  // NOT mounted globally. A root-level parser reads and JSON.parses the body of
+  // every request — including unauthenticated ones on paths that have no rate
+  // limiter — before host validation, throttling or auth ever run, so the most
+  // expensive part of handling a request that will be rejected has already
+  // happened. It is mounted on /mcp below, after those gates. /login brings its
+  // own urlencoded parser, and the SDK's /authorize, /token and /register each
+  // mount their own.
 
   const allowedHosts = [issuerUrl.host, `127.0.0.1:${config.port}`, `localhost:${config.port}`];
   const hostValidation = createHostValidationMiddleware(allowedHosts);
@@ -157,7 +163,7 @@ function main(): void {
   // fully attacker-chosen. rateLimit()'s default keyFn does this (see
   // audit.ts); a second, post-auth limiter keyed on the verified token would be
   // needed for genuine per-caller fairness, and is not implemented here.
-  app.all('/mcp', hostValidation, rateLimit(), auth, async (req, res) => {
+  app.all('/mcp', hostValidation, rateLimit(), auth, express.json({ limit: '1mb' }), async (req, res) => {
     const transport = new StreamableHTTPServerTransport({ sessionIdGenerator: undefined });
     res.on('close', () => void transport.close());
     await buildMcpServer(toolContext).connect(transport);

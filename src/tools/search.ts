@@ -163,16 +163,16 @@ export function registerSearchTools(server: McpServer, ctx: ToolContext): void {
         'they operate on a sample, not the whole directory. Narrow with distanceMiles for better coverage. ' +
         'Providers with no gender on file are returned separately in unknownGender rather than dropped.',
       inputSchema: {
-        specialty: z.string().optional().describe('Specialty ID from find_specialty, e.g. "CLINPCPMAN" or "207RC0000Y".'),
-        nameQuery: z.string().optional().describe('Search by provider name instead of specialty.'),
-        zipCode: z.string().optional().describe('Override the plan default ZIP (33101).'),
+        specialty: z.string().max(120).optional().describe('Specialty ID from find_specialty, e.g. "CLINPCPMAN" or "207RC0000Y".'),
+        nameQuery: z.string().max(120).optional().describe('Search by provider name instead of specialty.'),
+        zipCode: z.string().max(120).optional().describe('Override the plan default ZIP (33101).'),
         distanceMiles: z.union([z.literal(1), z.literal(5), z.literal(10), z.literal(20), z.literal(50)])
           .optional().describe('Radius. Only 1, 5, 10, 20 and 50 are accepted upstream. Default 50.'),
-        languageCode: z.string().optional()
+        languageCode: z.string().max(120).optional()
           .describe('ISO language code, e.g. "ES" for Spanish. Pass the "code" field from describe_plan\'s language facets, not the readable label — "Spanish" matches nothing.'),
-        medicalGroup: z.string().optional()
+        medicalGroup: z.string().max(120).optional()
           .describe('Medical group. Pass the "code" field from describe_plan\'s medicalGroups facets verbatim, not the readable label.'),
-        hospitalAffiliation: z.string().optional()
+        hospitalAffiliation: z.string().max(120).optional()
           .describe('Hospital. Pass the "code" field from describe_plan\'s hospitalAffiliations facets verbatim, not the readable label; some codes carry meaningful leading spaces.'),
         includeNoNewPatients: z.boolean().optional().describe('Include doctors not accepting new patients. Default true.'),
         gender: z.enum(['M', 'F']).optional().describe('LOCAL filter — Oscar ignores this server-side.'),
@@ -267,9 +267,9 @@ export function registerFacilityTools(server: McpServer, ctx: ToolContext): void
         'kind="facility" first to get a specialty ID (e.g. 282N00000X = General Hospital, ' +
         '3336C0003X = Pharmacy). Facilities carry no gender or review data, so those filters do not apply.',
       inputSchema: {
-        specialtyId: z.string().optional().describe('Facility specialty ID from find_specialty.'),
-        nameQuery: z.string().optional().describe('Search by facility name.'),
-        zipCode: z.string().optional(),
+        specialtyId: z.string().max(120).optional().describe('Facility specialty ID from find_specialty.'),
+        nameQuery: z.string().max(120).optional().describe('Search by facility name.'),
+        zipCode: z.string().max(120).optional(),
         distanceMiles: z.union([z.literal(1), z.literal(5), z.literal(10), z.literal(20), z.literal(50)]).optional(),
         sort: z.enum(['smart', 'distance']).optional(),
         limit: z.number().int().min(1).max(50).optional(),

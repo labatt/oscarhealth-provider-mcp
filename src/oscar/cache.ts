@@ -2,6 +2,13 @@ import Database from 'better-sqlite3';
 import { mkdirSync } from 'node:fs';
 import { dirname } from 'node:path';
 
+/**
+ * Upper bound on cached responses. At roughly 80 KB per stored search page this
+ * is a few hundred MB — generous for real use, and finite under an adversarial
+ * one.
+ */
+const MAX_ROWS = 5000;
+
 export interface CacheHit {
   body: unknown;
   cachedAt: number;
@@ -16,8 +23,11 @@ export interface CacheHit {
  */
 export class ResponseCache {
   private readonly db: Database.Database;
+  private readonly maxRows: number;
 
-  constructor(dbPath: string) {
+  /** `maxRows` is injectable so the eviction bound can be tested cheaply. */
+  constructor(dbPath: string, opts: { maxRows?: number } = {}) {
+    this.maxRows = opts.maxRows ?? MAX_ROWS;
     mkdirSync(dirname(dbPath), { recursive: true });
     this.db = new Database(dbPath);
     this.db.pragma('journal_mode = WAL');
@@ -43,6 +53,30 @@ export class ResponseCache {
     this.db
       .prepare('INSERT OR REPLACE INTO responses (key, body, cached_at) VALUES (?, ?, ?)')
       .run(key, JSON.stringify(body), Date.now());
+    this.evictBeyond(this.maxRows);
+  }
+
+  /**
+   * Age-based expiry alone does not bound this table. The cache key embeds
+   * caller-chosen arguments (a name query, a ZIP, a group name), so a client can
+   * mint unlimited distinct keys, each storing a full upstream response for the
+   * full TTL. `data/` also holds the OAuth database, so filling the disk would
+   * take the auth store down with it. Evicting all but the most recently cached
+   * rows makes growth bounded regardless of key cardinality.
+   */
+  private evictBeyond(maxRows: number): void {
+    this.db
+      .prepare(
+        // rowid breaks ties on cached_at. Millisecond timestamps collide freely
+        // — a single search fetches several pages in a burst — and with a tie
+        // SQLite's row order is arbitrary, so eviction could drop the newest
+        // entries instead of the oldest. INSERT OR REPLACE assigns a fresh
+        // rowid, so it tracks write recency exactly.
+        `DELETE FROM responses WHERE key NOT IN (
+           SELECT key FROM responses ORDER BY cached_at DESC, rowid DESC LIMIT ?
+         )`
+      )
+      .run(maxRows);
   }
 
   purgeExpired(maxAgeMs: number): void {

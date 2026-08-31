@@ -35,7 +35,7 @@ export function registerLookupTools(server: McpServer, ctx: ToolContext): void {
         '(207RC0000Y) and cannot be guessed. Returns doctor specialties and facility specialties; ' +
         'use kind to narrow.',
       inputSchema: {
-        query: z.string().min(2).describe('Free-text specialty or facility type, e.g. "cardiologist".'),
+        query: z.string().min(2).max(120).describe('Free-text specialty or facility type, e.g. "cardiologist".'),
         kind: z.enum(['doctor', 'facility']).optional()
           .describe('Restrict to doctor specialties or facility types.'),
         plan: z.string().optional().describe('Plan id from config/plans.json. Defaults to the configured plan.')
@@ -125,10 +125,10 @@ export function registerDetailTools(server: McpServer, ctx: ToolContext): void {
         'Pass BOTH name and npi (or providerId) from the search result: Oscar can only search by name, ' +
         'so the name finds the candidates and the identifier picks the exact one.',
       inputSchema: {
-        name: z.string().optional()
+        name: z.string().max(120).optional()
           .describe('The provider\'s name exactly as returned by search. Required in practice — Oscar cannot search by NPI or provider_id.'),
-        npi: z.string().optional().describe('10-digit NPI from a search result, used to pick the exact match.'),
-        providerId: z.string().optional().describe('Oscar provider_id from a search result, used to pick the exact match.'),
+        npi: z.string().max(120).optional().describe('10-digit NPI from a search result, used to pick the exact match.'),
+        providerId: z.string().max(120).optional().describe('Oscar provider_id from a search result, used to pick the exact match.'),
         plan: z.string().optional()
       }
     },
