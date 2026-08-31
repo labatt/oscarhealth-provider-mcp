@@ -52,9 +52,9 @@ describe('getProviderDetails', () => {
 describe('getProviderDetails identifier lookup', () => {
   it('queries upstream by name when one is given, not by the NPI', async () => {
     const c = ctx(fixture);
-    await getProviderDetails(c, { npi: target.npi, name: 'Yanelys Quevedo' });
+    await getProviderDetails(c, { npi: target.npi, name: 'Alex Alvarez' });
     const params = c.client.get.mock.calls[0][1];
-    expect(params.name_query).toBe('Yanelys Quevedo');
+    expect(params.name_query).toBe('Alex Alvarez');
   });
 
   it('explains that an identifier alone is not searchable, rather than blaming the network', async () => {
@@ -65,7 +65,7 @@ describe('getProviderDetails identifier lookup', () => {
 
   it('still matches on provider_id when that is the identifier given', async () => {
     const out = await getProviderDetails(ctx(fixture), {
-      providerId: target.provider_id, name: 'Yanelys Quevedo'
+      providerId: target.provider_id, name: 'Alex Alvarez'
     });
     expect(out.npi).toBe(target.npi);
   });
