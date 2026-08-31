@@ -1,0 +1,164 @@
+{
+ "results": [
+  {
+   "entity_id": "207RC0000Y",
+   "group_type": 4,
+   "response_fields": {
+    "doctor_specialty_fields": {
+     "doctor_specialty_name": "Cardiologist",
+     "equivalent_specialty_name": "",
+     "equivalent_specialty_id": ""
+    }
+   },
+   "score": 3.0416672,
+   "display_name": "Example Medical Center 36"
+  },
+  {
+   "entity_id": "207RC0002Y",
+   "group_type": 4,
+   "response_fields": {
+    "doctor_specialty_fields": {
+     "doctor_specialty_name": "Interventional Cardiologist",
+     "equivalent_specialty_name": "",
+     "equivalent_specialty_id": ""
+    }
+   },
+   "score": 3.0333338,
+   "display_name": "Example Medical Center 37"
+  },
+  {
+   "entity_id": "2080P0202X",
+   "group_type": 4,
+   "response_fields": {
+    "doctor_specialty_fields": {
+     "doctor_specialty_name": "Pediatric Cardiologist",
+     "equivalent_specialty_name": "",
+     "equivalent_specialty_id": ""
+    }
+   },
+   "score": 3.0333338,
+   "display_name": "Example Medical Center 38"
+  },
+  {
+   "entity_id": "CARDIOPA00",
+   "group_type": 4,
+   "response_fields": {
+    "doctor_specialty_fields": {
+     "doctor_specialty_name": "Cardiology Physician Assistant",
+     "equivalent_specialty_name": "",
+     "equivalent_specialty_id": ""
+    }
+   },
+   "score": 3.0250003,
+   "display_name": "Example Medical Center 39"
+  },
+  {
+   "entity_id": "CARDIONP00",
+   "group_type": 4,
+   "response_fields": {
+    "doctor_specialty_fields": {
+     "doctor_specialty_name": "Cardiology Nurse Practitioner",
+     "equivalent_specialty_name": "",
+     "equivalent_specialty_id": ""
+    }
+   },
+   "score": 3.0250003,
+   "display_name": "Example Medical Center 40"
+  },
+  {
+   "entity_id": "NCARDIOCLN",
+   "group_type": 8,
+   "response_fields": {
+    "facility_specialty_fields": {
+     "facility_specialty_name": "Nuclear Cardiology Center"
+    }
+   },
+   "score": 3.0250003,
+   "display_name": "Example Medical Center 41"
+  },
+  {
+   "entity_id": "INTCARDNP0",
+   "group_type": 4,
+   "response_fields": {
+    "doctor_specialty_fields": {
+     "doctor_specialty_name": "Interventional Cardiology Nurse Practitioner",
+     "equivalent_specialty_name": "",
+     "equivalent_specialty_id": ""
+    }
+   },
+   "score": 3.016667,
+   "display_name": "Example Medical Center 42"
+  },
+  {
+   "entity_id": "exampleFacility000",
+   "group_type": 6,
+   "response_fields": {
+    "facility_name_fields": {
+     "facility_name": "Example Medical Center 43",
+     "address": {
+      "address_line_1": "250 Sample Blvd",
+      "city": "Example City",
+      "state": "FL",
+      "zipcode": "33101",
+      "address_line_2": ""
+     },
+     "npi": "1000000010",
+     "tenant_id": "oscar",
+     "npi2s": [
+      "1000000011"
+     ]
+    }
+   },
+   "score": 3.0001,
+   "display_name": "Example Medical Center 44"
+  },
+  {
+   "entity_id": "exampleFacility000",
+   "group_type": 6,
+   "response_fields": {
+    "facility_name_fields": {
+     "facility_name": "Example Medical Center 45",
+     "address": {
+      "address_line_1": "375 Placeholder Way",
+      "city": "Example City",
+      "state": "FL",
+      "zipcode": "33101",
+      "address_line_2": ""
+     },
+     "npi": "1000000012",
+     "tenant_id": "oscar",
+     "npi2s": [
+      "1000000013"
+     ]
+    }
+   },
+   "score": 3.0001,
+   "display_name": "Example Medical Center 46"
+  },
+  {
+   "entity_id": "exampleFacility000",
+   "group_type": 6,
+   "response_fields": {
+    "facility_name_fields": {
+     "facility_name": "Example Medical Center 47",
+     "address": {
+      "address_line_1": "410 Fictional Dr",
+      "city": "Example City",
+      "state": "FL",
+      "zipcode": "33101",
+      "address_line_2": ""
+     },
+     "npi": "1000000014",
+     "tenant_id": "oscar",
+     "npi2s": [
+      "1000000015"
+     ]
+    }
+   },
+   "score": 3.0001,
+   "display_name": "Example Medical Center 48"
+  }
+ ],
+ "experiment_group": null,
+ "request_id": "example-request-id"
+}

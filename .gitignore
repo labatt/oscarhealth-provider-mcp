@@ -1,0 +1,17 @@
+node_modules/
+dist/
+.env
+
+# Runtime state and secrets: OAuth tokens/clients, the response cache, and the
+# generated operator password. Never commit anything in here.
+data/
+
+logs/
+
+# Your own plan details. Copy config/plans.example.json to config/plans.json.
+config/plans.json
+
+# Build-status roadmap, if you keep one. It is a log of your own work and
+# tends to accumulate deployment specifics — keep it out of a public repo.
+config/roadmap.json
+public/roadmap.html

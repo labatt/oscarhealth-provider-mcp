@@ -1,0 +1,419 @@
+{
+  "addressFromZip": "Example City, FL 33101, USA",
+  "aggregations": [],
+  "boundingBox": null,
+  "memberInfo": {},
+  "results": [
+    {
+      "facility_id": "exampleFacility000",
+      "name": "Example General Hospital",
+      "specialties": [
+        {
+          "internal_specialty_code": "282N00000X",
+          "internal_specialty_description": "General Acute Hospital",
+          "internal_specialty_display": "Hospital",
+          "specialty_group": "",
+          "specialty_id": "282N00000X",
+          "specialty_name": "Hospital"
+        }
+      ],
+      "phone": "5550100000",
+      "fax": "5550100000",
+      "accepting_new_patients": true,
+      "licenses": [],
+      "wheelchair_accessible": false,
+      "ecp_indicator": false,
+      "cost_to_member_bucket": 0,
+      "tenant_id": "oscar",
+      "tier_infos": [],
+      "npi2s": [
+        "1000000002"
+      ],
+      "show_disclaimer": false,
+      "badges": {
+        "pediatric_only": false,
+        "mental_health_only": false,
+        "quaternary_care_only": false,
+        "offers_mental_health": false,
+        "preferred_partner": false,
+        "routine_services_only": false,
+        "cigna_lp_and_oap": false,
+        "cigna_lp_xor_oap": false,
+        "in_network": true,
+        "going_oon_soon": false,
+        "last_inn_date": null
+      },
+      "location": {
+        "address": {
+          "address_line_1": "250 Sample Blvd",
+          "city": "Example City",
+          "state": "FL",
+          "zipcode": "33101",
+          "address_line_2": ""
+        },
+        "coordinates": {
+          "lat": 25.9302269,
+          "lng": -80.2030508,
+          "latitude": null,
+          "longitude": null
+        },
+        "distance_miles": 1.5113400597064328,
+        "county": "Miami-Dade"
+      },
+      "tier_label": null,
+      "last_edit_time": null,
+      "pharmacy_structured_attributes": null,
+      "tin_infos": [
+        {
+          "tin": "000000000"
+        }
+      ],
+      "has_public_profile": true,
+      "website": "",
+      "should_show_optum_redirect": false,
+      "all_specialties_ny_bh_optum": false,
+      "is_contracted_specialty_pharmacy": false,
+      "accreditation_info": {
+        "accreditation_by_text": "The Joint Commission",
+        "accreditation_by_link": "https://www.jointcommission.org/en/about-us/recognizing-excellence/find-accredited-organizations/621906",
+        "hqds_source_text": "",
+        "hqds_source_link": ""
+      },
+      "has_accreditation": true,
+      "dme_vendor_name": "",
+      "office_hours": {
+        "mon": {
+          "status": 0,
+          "time_range": null
+        },
+        "tue": {
+          "status": 0,
+          "time_range": null
+        },
+        "wed": {
+          "status": 0,
+          "time_range": null
+        },
+        "thu": {
+          "status": 0,
+          "time_range": null
+        },
+        "fri": {
+          "status": 0,
+          "time_range": null
+        },
+        "sat": {
+          "status": 0,
+          "time_range": null
+        },
+        "sun": {
+          "status": 0,
+          "time_range": null
+        }
+      }
+    },
+    {
+      "facility_id": "exampleFacility001",
+      "name": "Example Regional Medical Center",
+      "specialties": [
+        {
+          "internal_specialty_code": "282N00000X",
+          "internal_specialty_description": "General Acute Hospital",
+          "internal_specialty_display": "Hospital",
+          "specialty_group": "",
+          "specialty_id": "282N00000X",
+          "specialty_name": "Hospital"
+        }
+      ],
+      "phone": "5550100000",
+      "fax": "",
+      "accepting_new_patients": true,
+      "licenses": [
+        {
+          "license_number": "EX100000",
+          "license_state": "FL",
+          "expiration_date": null
+        }
+      ],
+      "wheelchair_accessible": false,
+      "ecp_indicator": false,
+      "cost_to_member_bucket": 0,
+      "tenant_id": "oscar",
+      "tier_infos": [],
+      "npi2s": [
+        "1000000003"
+      ],
+      "show_disclaimer": false,
+      "badges": {
+        "pediatric_only": false,
+        "mental_health_only": false,
+        "quaternary_care_only": false,
+        "offers_mental_health": false,
+        "preferred_partner": false,
+        "routine_services_only": false,
+        "cigna_lp_and_oap": false,
+        "cigna_lp_xor_oap": false,
+        "in_network": true,
+        "going_oon_soon": false,
+        "last_inn_date": null
+      },
+      "location": {
+        "address": {
+          "address_line_1": "375 Placeholder Way",
+          "city": "Example City",
+          "state": "FL",
+          "zipcode": "33101",
+          "address_line_2": ""
+        },
+        "coordinates": {
+          "lat": 25.970327,
+          "lng": -80.14556,
+          "latitude": null,
+          "longitude": null
+        },
+        "distance_miles": 3.2646673800330612,
+        "county": "Miami-Dade"
+      },
+      "tier_label": null,
+      "last_edit_time": null,
+      "pharmacy_structured_attributes": null,
+      "tin_infos": [
+        {
+          "tin": "000000000"
+        }
+      ],
+      "has_public_profile": true,
+      "website": "",
+      "should_show_optum_redirect": false,
+      "all_specialties_ny_bh_optum": false,
+      "is_contracted_specialty_pharmacy": false,
+      "accreditation_info": {
+        "accreditation_by_text": "",
+        "accreditation_by_link": "",
+        "hqds_source_text": "",
+        "hqds_source_link": ""
+      },
+      "has_accreditation": false,
+      "dme_vendor_name": "",
+      "office_hours": {
+        "mon": {
+          "status": 0,
+          "time_range": null
+        },
+        "tue": {
+          "status": 0,
+          "time_range": null
+        },
+        "wed": {
+          "status": 0,
+          "time_range": null
+        },
+        "thu": {
+          "status": 0,
+          "time_range": null
+        },
+        "fri": {
+          "status": 0,
+          "time_range": null
+        },
+        "sat": {
+          "status": 0,
+          "time_range": null
+        },
+        "sun": {
+          "status": 0,
+          "time_range": null
+        }
+      }
+    },
+    {
+      "facility_id": "exampleFacility002",
+      "name": "Example Community Hospital",
+      "specialties": [
+        {
+          "internal_specialty_code": "282N00000X",
+          "internal_specialty_description": "General Acute Hospital",
+          "internal_specialty_display": "Hospital",
+          "specialty_group": "",
+          "specialty_id": "282N00000X",
+          "specialty_name": "Hospital"
+        }
+      ],
+      "phone": "5550100000",
+      "fax": "5550100000",
+      "accepting_new_patients": true,
+      "licenses": [],
+      "wheelchair_accessible": false,
+      "ecp_indicator": false,
+      "cost_to_member_bucket": 0,
+      "tenant_id": "oscar",
+      "tier_infos": [],
+      "npi2s": [
+        "1000000004"
+      ],
+      "show_disclaimer": false,
+      "badges": {
+        "pediatric_only": false,
+        "mental_health_only": false,
+        "quaternary_care_only": false,
+        "offers_mental_health": false,
+        "preferred_partner": false,
+        "routine_services_only": false,
+        "cigna_lp_and_oap": false,
+        "cigna_lp_xor_oap": false,
+        "in_network": true,
+        "going_oon_soon": false,
+        "last_inn_date": null
+      },
+      "location": {
+        "address": {
+          "address_line_1": "410 Fictional Dr",
+          "city": "Example City",
+          "state": "FL",
+          "zipcode": "33101",
+          "address_line_2": ""
+        },
+        "coordinates": {
+          "lat": 25.9730403,
+          "lng": -80.1458439,
+          "latitude": null,
+          "longitude": null
+        },
+        "distance_miles": 3.332405381138543,
+        "county": "Miami-Dade"
+      },
+      "tier_label": null,
+      "last_edit_time": null,
+      "pharmacy_structured_attributes": null,
+      "tin_infos": [
+        {
+          "tin": "000000000"
+        }
+      ],
+      "has_public_profile": true,
+      "website": "",
+      "should_show_optum_redirect": false,
+      "all_specialties_ny_bh_optum": false,
+      "is_contracted_specialty_pharmacy": false,
+      "accreditation_info": {
+        "accreditation_by_text": "",
+        "accreditation_by_link": "",
+        "hqds_source_text": "",
+        "hqds_source_link": ""
+      },
+      "has_accreditation": false,
+      "dme_vendor_name": "",
+      "office_hours": {
+        "mon": {
+          "status": 0,
+          "time_range": null
+        },
+        "tue": {
+          "status": 0,
+          "time_range": null
+        },
+        "wed": {
+          "status": 0,
+          "time_range": null
+        },
+        "thu": {
+          "status": 0,
+          "time_range": null
+        },
+        "fri": {
+          "status": 0,
+          "time_range": null
+        },
+        "sat": {
+          "status": 0,
+          "time_range": null
+        },
+        "sun": {
+          "status": 0,
+          "time_range": null
+        }
+      }
+    }
+  ],
+  "totalResultCount": 76,
+  "requestInfo": {
+    "pageStart": 0,
+    "pageSize": 30,
+    "parentSpecialty": null,
+    "nameQuery": null,
+    "specialty": {
+      "specialty_id": "282N00000X",
+      "name": "Example Medical Center 4",
+      "specialty_type": 4,
+      "autocomplete_searchable": true,
+      "expand_to_ids": [
+        "282N00000X",
+        "261QC0050Y"
+      ],
+      "children_ids": [
+        "282N00001Y",
+        "282N00002Y",
+        "282N00004Y",
+        "HOSPICU000",
+        "282N00017Y",
+        "282N00021Y",
+        "HOSPERINAT"
+      ],
+      "name_spanish": "Hospital",
+      "children_oscar_hierarchy_ids": [
+        "282N00010Y",
+        "282N00009Y",
+        "282N00008Y",
+        "282N00007Y",
+        "HOSPICU000",
+        "282N00006Y",
+        "282N00005Y",
+        "282N00004Y",
+        "282N00003Y",
+        "282N00002Y",
+        "282N00001Y",
+        "HOSPERINAT",
+        "HOSPCICU00",
+        "HOSPBURN00",
+        "HOSPARTIAL",
+        "JHOSIMAGE0",
+        "HOSCARSURG",
+        "282N00016Y",
+        "261QC0050Y",
+        "JHOSTRAUMA",
+        "282N00021Y",
+        "282N00020Y",
+        "282N00019Y",
+        "282N00011Y",
+        "282N00018Y",
+        "282N00017Y",
+        "282N00015Y",
+        "282N00014Y",
+        "HOSREHAB00",
+        "282N00013Y",
+        "HOSPSICU00",
+        "HOSPNRICU0",
+        "282N00012Y",
+        "JHOSNICU00",
+        "HOSPMICU00"
+      ],
+      "name_highlights": [],
+      "parent_ids": [],
+      "equivalent_name": "",
+      "equivalent_id": "",
+      "parent_oscar_hierarchy_id": ""
+    }
+  },
+  "responseContext": {
+    "request_id": "example-request-id"
+  },
+  "tierLabel": null,
+  "parentResultCount": 0,
+  "providerNetworkId": "066",
+  "ooaLinks": null,
+  "anchorLocation": {
+    "lat": 25.9502474,
+    "lng": -80.1930859
+  },
+  "zipCode": "33101"
+}

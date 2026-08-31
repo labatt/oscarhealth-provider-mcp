@@ -1,0 +1,14 @@
+{
+  "defaultPlan": "my-plan",
+  "plans": {
+    "my-plan": {
+      "label": "2026 Example State HMO — describe your plan here",
+      "year": 2026,
+      "state": "FL",
+      "networkId": "000",
+      "policyId": "00000000-0000-0000-0000-000000000000",
+      "zipCode": "33101",
+      "formularyPlanType": "INDIVIDUAL_4_TIER"
+    }
+  }
+}

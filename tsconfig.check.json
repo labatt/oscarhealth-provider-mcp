@@ -1,0 +1,15 @@
+{
+  // Type-checks src/ AND test/, which the build config deliberately cannot.
+  //
+  // tsconfig.json's `include` is ["src/**/*"] with `rootDir: "src"`, because it
+  // drives `npm run build` and everything it sees is emitted to dist/. Widening
+  // its `include` to cover test/** would put compiled tests in the build output
+  // and break rootDir. So checking is a separate concern with a separate config:
+  // same compiler options, wider file set, emits nothing.
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "rootDir": "."
+  },
+  "include": ["src/**/*", "test/**/*"]
+}

@@ -1,0 +1,4070 @@
+{
+  "addressFromZip": "Example City, FL 33101, USA",
+  "aggregations": {
+    "1": [
+      {
+        "key": "AF",
+        "display_str": "Afrikaans",
+        "count": 2
+      },
+      {
+        "key": "SQ",
+        "display_str": "Albanian",
+        "count": 2
+      },
+      {
+        "key": "AR",
+        "display_str": "Arabic",
+        "count": 31
+      },
+      {
+        "key": "BN",
+        "display_str": "Bengali",
+        "count": 4
+      },
+      {
+        "key": "BG",
+        "display_str": "Bulgarian",
+        "count": 2
+      },
+      {
+        "key": "ZH",
+        "display_str": "Chinese",
+        "count": 6
+      },
+      {
+        "key": "CT",
+        "display_str": "Chinese-Cantonese",
+        "count": 3
+      },
+      {
+        "key": "MD",
+        "display_str": "Chinese-Mandarin",
+        "count": 6
+      },
+      {
+        "key": "HR",
+        "display_str": "Croatian",
+        "count": 4
+      },
+      {
+        "key": "CS",
+        "display_str": "Czech",
+        "count": 1
+      },
+      {
+        "key": "DA",
+        "display_str": "Danish",
+        "count": 1
+      },
+      {
+        "key": "NL",
+        "display_str": "Dutch",
+        "count": 1
+      },
+      {
+        "key": "EN",
+        "display_str": "English",
+        "count": 4769
+      },
+      {
+        "key": "FR",
+        "display_str": "French",
+        "count": 172
+      },
+      {
+        "key": "DE",
+        "display_str": "German",
+        "count": 11
+      },
+      {
+        "key": "EL",
+        "display_str": "Greek",
+        "count": 7
+      },
+      {
+        "key": "GU",
+        "display_str": "Gujarati",
+        "count": 9
+      },
+      {
+        "key": "HT",
+        "display_str": "Haitian",
+        "count": 5
+      },
+      {
+        "key": "HC",
+        "display_str": "Haitian-Creole",
+        "count": 145
+      },
+      {
+        "key": "IW",
+        "display_str": "Hebrew",
+        "count": 15
+      },
+      {
+        "key": "HI",
+        "display_str": "Hindi",
+        "count": 55
+      },
+      {
+        "key": "IT",
+        "display_str": "Italian",
+        "count": 21
+      },
+      {
+        "key": "KN",
+        "display_str": "Kannada",
+        "count": 4
+      },
+      {
+        "key": "KS",
+        "display_str": "Kashmiri",
+        "count": 1
+      },
+      {
+        "key": "KO",
+        "display_str": "Korean",
+        "count": 5
+      },
+      {
+        "key": "LOU",
+        "display_str": "Louisiana Creole French",
+        "count": 2
+      },
+      {
+        "key": "ML",
+        "display_str": "Malayalam",
+        "count": 3
+      },
+      {
+        "key": "MR",
+        "display_str": "Marathia",
+        "count": 1
+      },
+      {
+        "key": "FA",
+        "display_str": "Persian",
+        "count": 6
+      },
+      {
+        "key": "PL",
+        "display_str": "Polish",
+        "count": 1
+      },
+      {
+        "key": "PT",
+        "display_str": "Portuguese",
+        "count": 80
+      },
+      {
+        "key": "PA",
+        "display_str": "Punjabi",
+        "count": 12
+      },
+      {
+        "key": "RO",
+        "display_str": "Romanian",
+        "count": 4
+      },
+      {
+        "key": "RU",
+        "display_str": "Russian",
+        "count": 37
+      },
+      {
+        "key": "SR",
+        "display_str": "Serbian",
+        "count": 1
+      },
+      {
+        "key": "ES",
+        "display_str": "Spanish",
+        "count": 2449
+      },
+      {
+        "key": "SW",
+        "display_str": "Swahili",
+        "count": 1
+      },
+      {
+        "key": "TL",
+        "display_str": "Tagalog/Filipino",
+        "count": 10
+      },
+      {
+        "key": "TA",
+        "display_str": "Tamil",
+        "count": 2
+      },
+      {
+        "key": "TE",
+        "display_str": "Telugu",
+        "count": 9
+      },
+      {
+        "key": "TH",
+        "display_str": "Thai",
+        "count": 1
+      },
+      {
+        "key": "TW",
+        "display_str": "Twi",
+        "count": 1
+      },
+      {
+        "key": "UK",
+        "display_str": "Ukrainian",
+        "count": 7
+      },
+      {
+        "key": "UR",
+        "display_str": "Urdu",
+        "count": 24
+      },
+      {
+        "key": "VI",
+        "display_str": "Vietnamese",
+        "count": 7
+      },
+      {
+        "key": "YO",
+        "display_str": "Yoruba",
+        "count": 2
+      }
+    ],
+    "14": [
+      {
+        "key": "EXAMPLE PRIMARY CARE GROUP INC",
+        "display_str": "EXAMPLE PRIMARY CARE GROUP INC",
+        "count": 14
+      },
+      {
+        "key": "SAMPLE MEDICAL ASSOCIATES LLC",
+        "display_str": "SAMPLE MEDICAL ASSOCIATES LLC",
+        "count": 5
+      },
+      {
+        "key": "PLACEHOLDER HEALTH PARTNERS PA",
+        "display_str": "PLACEHOLDER HEALTH PARTNERS PA",
+        "count": 3
+      },
+      {
+        "key": "EXAMPLE PRIMARY CARE GROUP INC 3",
+        "display_str": "EXAMPLE PRIMARY CARE GROUP INC 3",
+        "count": 40
+      },
+      {
+        "key": "SAMPLE MEDICAL ASSOCIATES LLC 4",
+        "display_str": "SAMPLE MEDICAL ASSOCIATES LLC 4",
+        "count": 8
+      },
+      {
+        "key": "PLACEHOLDER HEALTH PARTNERS PA 5",
+        "display_str": "PLACEHOLDER HEALTH PARTNERS PA 5",
+        "count": 4
+      },
+      {
+        "key": "EXAMPLE PRIMARY CARE GROUP INC 6",
+        "display_str": "EXAMPLE PRIMARY CARE GROUP INC 6",
+        "count": 5
+      },
+      {
+        "key": "SAMPLE MEDICAL ASSOCIATES LLC 7",
+        "display_str": "SAMPLE MEDICAL ASSOCIATES LLC 7",
+        "count": 4
+      },
+      {
+        "key": "PLACEHOLDER HEALTH PARTNERS PA 8",
+        "display_str": "PLACEHOLDER HEALTH PARTNERS PA 8",
+        "count": 4
+      },
+      {
+        "key": "EXAMPLE PRIMARY CARE GROUP INC 9",
+        "display_str": "EXAMPLE PRIMARY CARE GROUP INC 9",
+        "count": 2
+      },
+      {
+        "key": "SAMPLE MEDICAL ASSOCIATES LLC 10",
+        "display_str": "SAMPLE MEDICAL ASSOCIATES LLC 10",
+        "count": 5
+      },
+      {
+        "key": "PLACEHOLDER HEALTH PARTNERS PA 11",
+        "display_str": "PLACEHOLDER HEALTH PARTNERS PA 11",
+        "count": 3
+      },
+      {
+        "key": "EXAMPLE PRIMARY CARE GROUP INC 12",
+        "display_str": "EXAMPLE PRIMARY CARE GROUP INC 12",
+        "count": 4
+      },
+      {
+        "key": "SAMPLE MEDICAL ASSOCIATES LLC 13",
+        "display_str": "SAMPLE MEDICAL ASSOCIATES LLC 13",
+        "count": 24
+      },
+      {
+        "key": "PLACEHOLDER HEALTH PARTNERS PA 14",
+        "display_str": "PLACEHOLDER HEALTH PARTNERS PA 14",
+        "count": 6
+      },
+      {
+        "key": "EXAMPLE PRIMARY CARE GROUP INC 15",
+        "display_str": "EXAMPLE PRIMARY CARE GROUP INC 15",
+        "count": 11
+      },
+      {
+        "key": "SAMPLE MEDICAL ASSOCIATES LLC 16",
+        "display_str": "SAMPLE MEDICAL ASSOCIATES LLC 16",
+        "count": 7
+      },
+      {
+        "key": "PLACEHOLDER HEALTH PARTNERS PA 17",
+        "display_str": "PLACEHOLDER HEALTH PARTNERS PA 17",
+        "count": 23
+      },
+      {
+        "key": "EXAMPLE PRIMARY CARE GROUP INC 18",
+        "display_str": "EXAMPLE PRIMARY CARE GROUP INC 18",
+        "count": 9
+      },
+      {
+        "key": "SAMPLE MEDICAL ASSOCIATES LLC 19",
+        "display_str": "SAMPLE MEDICAL ASSOCIATES LLC 19",
+        "count": 4
+      },
+      {
+        "key": "PLACEHOLDER HEALTH PARTNERS PA 20",
+        "display_str": "PLACEHOLDER HEALTH PARTNERS PA 20",
+        "count": 3
+      },
+      {
+        "key": "EXAMPLE PRIMARY CARE GROUP INC 21",
+        "display_str": "EXAMPLE PRIMARY CARE GROUP INC 21",
+        "count": 5
+      },
+      {
+        "key": "SAMPLE MEDICAL ASSOCIATES LLC 22",
+        "display_str": "SAMPLE MEDICAL ASSOCIATES LLC 22",
+        "count": 8
+      },
+      {
+        "key": "PLACEHOLDER HEALTH PARTNERS PA 23",
+        "display_str": "PLACEHOLDER HEALTH PARTNERS PA 23",
+        "count": 29
+      },
+      {
+        "key": "EXAMPLE PRIMARY CARE GROUP INC 24",
+        "display_str": "EXAMPLE PRIMARY CARE GROUP INC 24",
+        "count": 7
+      },
+      {
+        "key": "SAMPLE MEDICAL ASSOCIATES LLC 25",
+        "display_str": "SAMPLE MEDICAL ASSOCIATES LLC 25",
+        "count": 16
+      },
+      {
+        "key": "PLACEHOLDER HEALTH PARTNERS PA 26",
+        "display_str": "PLACEHOLDER HEALTH PARTNERS PA 26",
+        "count": 9
+      },
+      {
+        "key": "EXAMPLE PRIMARY CARE GROUP INC 27",
+        "display_str": "EXAMPLE PRIMARY CARE GROUP INC 27",
+        "count": 8
+      },
+      {
+        "key": "SAMPLE MEDICAL ASSOCIATES LLC 28",
+        "display_str": "SAMPLE MEDICAL ASSOCIATES LLC 28",
+        "count": 5
+      },
+      {
+        "key": "PLACEHOLDER HEALTH PARTNERS PA 29",
+        "display_str": "PLACEHOLDER HEALTH PARTNERS PA 29",
+        "count": 5
+      },
+      {
+        "key": "EXAMPLE PRIMARY CARE GROUP INC 30",
+        "display_str": "EXAMPLE PRIMARY CARE GROUP INC 30",
+        "count": 4
+      },
+      {
+        "key": "SAMPLE MEDICAL ASSOCIATES LLC 31",
+        "display_str": "SAMPLE MEDICAL ASSOCIATES LLC 31",
+        "count": 10
+      },
+      {
+        "key": "PLACEHOLDER HEALTH PARTNERS PA 32",
+        "display_str": "PLACEHOLDER HEALTH PARTNERS PA 32",
+        "count": 25
+      },
+      {
+        "key": "EXAMPLE PRIMARY CARE GROUP INC 33",
+        "display_str": "EXAMPLE PRIMARY CARE GROUP INC 33",
+        "count": 21
+      },
+      {
+        "key": "SAMPLE MEDICAL ASSOCIATES LLC 34",
+        "display_str": "SAMPLE MEDICAL ASSOCIATES LLC 34",
+        "count": 5
+      },
+      {
+        "key": "PLACEHOLDER HEALTH PARTNERS PA 35",
+        "display_str": "PLACEHOLDER HEALTH PARTNERS PA 35",
+        "count": 5
+      },
+      {
+        "key": "EXAMPLE PRIMARY CARE GROUP INC 36",
+        "display_str": "EXAMPLE PRIMARY CARE GROUP INC 36",
+        "count": 9
+      },
+      {
+        "key": "SAMPLE MEDICAL ASSOCIATES LLC 37",
+        "display_str": "SAMPLE MEDICAL ASSOCIATES LLC 37",
+        "count": 13
+      },
+      {
+        "key": "PLACEHOLDER HEALTH PARTNERS PA 38",
+        "display_str": "PLACEHOLDER HEALTH PARTNERS PA 38",
+        "count": 6
+      },
+      {
+        "key": "EXAMPLE PRIMARY CARE GROUP INC 39",
+        "display_str": "EXAMPLE PRIMARY CARE GROUP INC 39",
+        "count": 4
+      },
+      {
+        "key": "SAMPLE MEDICAL ASSOCIATES LLC 40",
+        "display_str": "SAMPLE MEDICAL ASSOCIATES LLC 40",
+        "count": 55
+      },
+      {
+        "key": "PLACEHOLDER HEALTH PARTNERS PA 41",
+        "display_str": "PLACEHOLDER HEALTH PARTNERS PA 41",
+        "count": 19
+      },
+      {
+        "key": "EXAMPLE PRIMARY CARE GROUP INC 42",
+        "display_str": "EXAMPLE PRIMARY CARE GROUP INC 42",
+        "count": 15
+      },
+      {
+        "key": "SAMPLE MEDICAL ASSOCIATES LLC 43",
+        "display_str": "SAMPLE MEDICAL ASSOCIATES LLC 43",
+        "count": 3
+      },
+      {
+        "key": "PLACEHOLDER HEALTH PARTNERS PA 44",
+        "display_str": "PLACEHOLDER HEALTH PARTNERS PA 44",
+        "count": 13
+      },
+      {
+        "key": "EXAMPLE PRIMARY CARE GROUP INC 45",
+        "display_str": "EXAMPLE PRIMARY CARE GROUP INC 45",
+        "count": 13
+      },
+      {
+        "key": "SAMPLE MEDICAL ASSOCIATES LLC 46",
+        "display_str": "SAMPLE MEDICAL ASSOCIATES LLC 46",
+        "count": 13
+      },
+      {
+        "key": "PLACEHOLDER HEALTH PARTNERS PA 47",
+        "display_str": "PLACEHOLDER HEALTH PARTNERS PA 47",
+        "count": 47
+      },
+      {
+        "key": "EXAMPLE PRIMARY CARE GROUP INC 48",
+        "display_str": "EXAMPLE PRIMARY CARE GROUP INC 48",
+        "count": 4
+      },
+      {
+        "key": "SAMPLE MEDICAL ASSOCIATES LLC 49",
+        "display_str": "SAMPLE MEDICAL ASSOCIATES LLC 49",
+        "count": 6
+      },
+      {
+        "key": "PLACEHOLDER HEALTH PARTNERS PA 50",
+        "display_str": "PLACEHOLDER HEALTH PARTNERS PA 50",
+        "count": 51
+      },
+      {
+        "key": "EXAMPLE PRIMARY CARE GROUP INC 51",
+        "display_str": "EXAMPLE PRIMARY CARE GROUP INC 51",
+        "count": 44
+      },
+      {
+        "key": "SAMPLE MEDICAL ASSOCIATES LLC 52",
+        "display_str": "SAMPLE MEDICAL ASSOCIATES LLC 52",
+        "count": 7
+      },
+      {
+        "key": "PLACEHOLDER HEALTH PARTNERS PA 53",
+        "display_str": "PLACEHOLDER HEALTH PARTNERS PA 53",
+        "count": 23
+      },
+      {
+        "key": "EXAMPLE PRIMARY CARE GROUP INC 54",
+        "display_str": "EXAMPLE PRIMARY CARE GROUP INC 54",
+        "count": 10
+      },
+      {
+        "key": "SAMPLE MEDICAL ASSOCIATES LLC 55",
+        "display_str": "SAMPLE MEDICAL ASSOCIATES LLC 55",
+        "count": 4
+      },
+      {
+        "key": "PLACEHOLDER HEALTH PARTNERS PA 56",
+        "display_str": "PLACEHOLDER HEALTH PARTNERS PA 56",
+        "count": 4
+      },
+      {
+        "key": "EXAMPLE PRIMARY CARE GROUP INC 57",
+        "display_str": "EXAMPLE PRIMARY CARE GROUP INC 57",
+        "count": 1
+      },
+      {
+        "key": "SAMPLE MEDICAL ASSOCIATES LLC 58",
+        "display_str": "SAMPLE MEDICAL ASSOCIATES LLC 58",
+        "count": 6
+      },
+      {
+        "key": "PLACEHOLDER HEALTH PARTNERS PA 59",
+        "display_str": "PLACEHOLDER HEALTH PARTNERS PA 59",
+        "count": 26
+      },
+      {
+        "key": "EXAMPLE PRIMARY CARE GROUP INC 60",
+        "display_str": "EXAMPLE PRIMARY CARE GROUP INC 60",
+        "count": 7
+      },
+      {
+        "key": "SAMPLE MEDICAL ASSOCIATES LLC 61",
+        "display_str": "SAMPLE MEDICAL ASSOCIATES LLC 61",
+        "count": 6
+      },
+      {
+        "key": "PLACEHOLDER HEALTH PARTNERS PA 62",
+        "display_str": "PLACEHOLDER HEALTH PARTNERS PA 62",
+        "count": 5
+      },
+      {
+        "key": "EXAMPLE PRIMARY CARE GROUP INC 63",
+        "display_str": "EXAMPLE PRIMARY CARE GROUP INC 63",
+        "count": 7
+      },
+      {
+        "key": "SAMPLE MEDICAL ASSOCIATES LLC 64",
+        "display_str": "SAMPLE MEDICAL ASSOCIATES LLC 64",
+        "count": 5
+      },
+      {
+        "key": "PLACEHOLDER HEALTH PARTNERS PA 65",
+        "display_str": "PLACEHOLDER HEALTH PARTNERS PA 65",
+        "count": 135
+      },
+      {
+        "key": "EXAMPLE PRIMARY CARE GROUP INC 66",
+        "display_str": "EXAMPLE PRIMARY CARE GROUP INC 66",
+        "count": 2
+      },
+      {
+        "key": "SAMPLE MEDICAL ASSOCIATES LLC 67",
+        "display_str": "SAMPLE MEDICAL ASSOCIATES LLC 67",
+        "count": 4
+      },
+      {
+        "key": "PLACEHOLDER HEALTH PARTNERS PA 68",
+        "display_str": "PLACEHOLDER HEALTH PARTNERS PA 68",
+        "count": 3
+      },
+      {
+        "key": "EXAMPLE PRIMARY CARE GROUP INC 69",
+        "display_str": "EXAMPLE PRIMARY CARE GROUP INC 69",
+        "count": 4
+      },
+      {
+        "key": "SAMPLE MEDICAL ASSOCIATES LLC 70",
+        "display_str": "SAMPLE MEDICAL ASSOCIATES LLC 70",
+        "count": 10
+      },
+      {
+        "key": "PLACEHOLDER HEALTH PARTNERS PA 71",
+        "display_str": "PLACEHOLDER HEALTH PARTNERS PA 71",
+        "count": 3
+      },
+      {
+        "key": "EXAMPLE PRIMARY CARE GROUP INC 72",
+        "display_str": "EXAMPLE PRIMARY CARE GROUP INC 72",
+        "count": 6
+      },
+      {
+        "key": "SAMPLE MEDICAL ASSOCIATES LLC 73",
+        "display_str": "SAMPLE MEDICAL ASSOCIATES LLC 73",
+        "count": 4
+      },
+      {
+        "key": "PLACEHOLDER HEALTH PARTNERS PA 74",
+        "display_str": "PLACEHOLDER HEALTH PARTNERS PA 74",
+        "count": 4
+      },
+      {
+        "key": "EXAMPLE PRIMARY CARE GROUP INC 75",
+        "display_str": "EXAMPLE PRIMARY CARE GROUP INC 75",
+        "count": 3
+      },
+      {
+        "key": "SAMPLE MEDICAL ASSOCIATES LLC 76",
+        "display_str": "SAMPLE MEDICAL ASSOCIATES LLC 76",
+        "count": 9
+      },
+      {
+        "key": "PLACEHOLDER HEALTH PARTNERS PA 77",
+        "display_str": "PLACEHOLDER HEALTH PARTNERS PA 77",
+        "count": 3
+      },
+      {
+        "key": "EXAMPLE PRIMARY CARE GROUP INC 78",
+        "display_str": "EXAMPLE PRIMARY CARE GROUP INC 78",
+        "count": 6
+      },
+      {
+        "key": "SAMPLE MEDICAL ASSOCIATES LLC 79",
+        "display_str": "SAMPLE MEDICAL ASSOCIATES LLC 79",
+        "count": 7
+      },
+      {
+        "key": "PLACEHOLDER HEALTH PARTNERS PA 80",
+        "display_str": "PLACEHOLDER HEALTH PARTNERS PA 80",
+        "count": 25
+      },
+      {
+        "key": "EXAMPLE PRIMARY CARE GROUP INC 81",
+        "display_str": "EXAMPLE PRIMARY CARE GROUP INC 81",
+        "count": 22
+      },
+      {
+        "key": "SAMPLE MEDICAL ASSOCIATES LLC 82",
+        "display_str": "SAMPLE MEDICAL ASSOCIATES LLC 82",
+        "count": 8
+      },
+      {
+        "key": "PLACEHOLDER HEALTH PARTNERS PA 83",
+        "display_str": "PLACEHOLDER HEALTH PARTNERS PA 83",
+        "count": 4
+      },
+      {
+        "key": "EXAMPLE PRIMARY CARE GROUP INC 84",
+        "display_str": "EXAMPLE PRIMARY CARE GROUP INC 84",
+        "count": 9
+      },
+      {
+        "key": "SAMPLE MEDICAL ASSOCIATES LLC 85",
+        "display_str": "SAMPLE MEDICAL ASSOCIATES LLC 85",
+        "count": 9
+      },
+      {
+        "key": "PLACEHOLDER HEALTH PARTNERS PA 86",
+        "display_str": "PLACEHOLDER HEALTH PARTNERS PA 86",
+        "count": 10
+      },
+      {
+        "key": "EXAMPLE PRIMARY CARE GROUP INC 87",
+        "display_str": "EXAMPLE PRIMARY CARE GROUP INC 87",
+        "count": 10
+      },
+      {
+        "key": "SAMPLE MEDICAL ASSOCIATES LLC 88",
+        "display_str": "SAMPLE MEDICAL ASSOCIATES LLC 88",
+        "count": 5
+      },
+      {
+        "key": "PLACEHOLDER HEALTH PARTNERS PA 89",
+        "display_str": "PLACEHOLDER HEALTH PARTNERS PA 89",
+        "count": 6
+      },
+      {
+        "key": "EXAMPLE PRIMARY CARE GROUP INC 90",
+        "display_str": "EXAMPLE PRIMARY CARE GROUP INC 90",
+        "count": 13
+      },
+      {
+        "key": "SAMPLE MEDICAL ASSOCIATES LLC 91",
+        "display_str": "SAMPLE MEDICAL ASSOCIATES LLC 91",
+        "count": 9
+      },
+      {
+        "key": "PLACEHOLDER HEALTH PARTNERS PA 92",
+        "display_str": "PLACEHOLDER HEALTH PARTNERS PA 92",
+        "count": 8
+      },
+      {
+        "key": "EXAMPLE PRIMARY CARE GROUP INC 93",
+        "display_str": "EXAMPLE PRIMARY CARE GROUP INC 93",
+        "count": 4
+      },
+      {
+        "key": "SAMPLE MEDICAL ASSOCIATES LLC 94",
+        "display_str": "SAMPLE MEDICAL ASSOCIATES LLC 94",
+        "count": 7
+      },
+      {
+        "key": "PLACEHOLDER HEALTH PARTNERS PA 95",
+        "display_str": "PLACEHOLDER HEALTH PARTNERS PA 95",
+        "count": 3
+      },
+      {
+        "key": "EXAMPLE PRIMARY CARE GROUP INC 96",
+        "display_str": "EXAMPLE PRIMARY CARE GROUP INC 96",
+        "count": 23
+      },
+      {
+        "key": "SAMPLE MEDICAL ASSOCIATES LLC 97",
+        "display_str": "SAMPLE MEDICAL ASSOCIATES LLC 97",
+        "count": 192
+      },
+      {
+        "key": "PLACEHOLDER HEALTH PARTNERS PA 98",
+        "display_str": "PLACEHOLDER HEALTH PARTNERS PA 98",
+        "count": 2
+      },
+      {
+        "key": "EXAMPLE PRIMARY CARE GROUP INC 99",
+        "display_str": "EXAMPLE PRIMARY CARE GROUP INC 99",
+        "count": 3
+      },
+      {
+        "key": "SAMPLE MEDICAL ASSOCIATES LLC 100",
+        "display_str": "SAMPLE MEDICAL ASSOCIATES LLC 100",
+        "count": 8
+      },
+      {
+        "key": "PLACEHOLDER HEALTH PARTNERS PA 101",
+        "display_str": "PLACEHOLDER HEALTH PARTNERS PA 101",
+        "count": 3
+      },
+      {
+        "key": "EXAMPLE PRIMARY CARE GROUP INC 102",
+        "display_str": "EXAMPLE PRIMARY CARE GROUP INC 102",
+        "count": 63
+      },
+      {
+        "key": "SAMPLE MEDICAL ASSOCIATES LLC 103",
+        "display_str": "SAMPLE MEDICAL ASSOCIATES LLC 103",
+        "count": 34
+      },
+      {
+        "key": "PLACEHOLDER HEALTH PARTNERS PA 104",
+        "display_str": "PLACEHOLDER HEALTH PARTNERS PA 104",
+        "count": 16
+      },
+      {
+        "key": "EXAMPLE PRIMARY CARE GROUP INC 105",
+        "display_str": "EXAMPLE PRIMARY CARE GROUP INC 105",
+        "count": 3
+      },
+      {
+        "key": "SAMPLE MEDICAL ASSOCIATES LLC 106",
+        "display_str": "SAMPLE MEDICAL ASSOCIATES LLC 106",
+        "count": 17
+      },
+      {
+        "key": "PLACEHOLDER HEALTH PARTNERS PA 107",
+        "display_str": "PLACEHOLDER HEALTH PARTNERS PA 107",
+        "count": 19
+      },
+      {
+        "key": "EXAMPLE PRIMARY CARE GROUP INC 108",
+        "display_str": "EXAMPLE PRIMARY CARE GROUP INC 108",
+        "count": 8
+      },
+      {
+        "key": "SAMPLE MEDICAL ASSOCIATES LLC 109",
+        "display_str": "SAMPLE MEDICAL ASSOCIATES LLC 109",
+        "count": 6
+      },
+      {
+        "key": "PLACEHOLDER HEALTH PARTNERS PA 110",
+        "display_str": "PLACEHOLDER HEALTH PARTNERS PA 110",
+        "count": 2
+      },
+      {
+        "key": "EXAMPLE PRIMARY CARE GROUP INC 111",
+        "display_str": "EXAMPLE PRIMARY CARE GROUP INC 111",
+        "count": 10
+      },
+      {
+        "key": "SAMPLE MEDICAL ASSOCIATES LLC 112",
+        "display_str": "SAMPLE MEDICAL ASSOCIATES LLC 112",
+        "count": 2
+      },
+      {
+        "key": "PLACEHOLDER HEALTH PARTNERS PA 113",
+        "display_str": "PLACEHOLDER HEALTH PARTNERS PA 113",
+        "count": 9
+      },
+      {
+        "key": "EXAMPLE PRIMARY CARE GROUP INC 114",
+        "display_str": "EXAMPLE PRIMARY CARE GROUP INC 114",
+        "count": 6
+      },
+      {
+        "key": "SAMPLE MEDICAL ASSOCIATES LLC 115",
+        "display_str": "SAMPLE MEDICAL ASSOCIATES LLC 115",
+        "count": 3
+      },
+      {
+        "key": "PLACEHOLDER HEALTH PARTNERS PA 116",
+        "display_str": "PLACEHOLDER HEALTH PARTNERS PA 116",
+        "count": 3
+      },
+      {
+        "key": "EXAMPLE PRIMARY CARE GROUP INC 117",
+        "display_str": "EXAMPLE PRIMARY CARE GROUP INC 117",
+        "count": 3
+      },
+      {
+        "key": "SAMPLE MEDICAL ASSOCIATES LLC 118",
+        "display_str": "SAMPLE MEDICAL ASSOCIATES LLC 118",
+        "count": 4
+      },
+      {
+        "key": "PLACEHOLDER HEALTH PARTNERS PA 119",
+        "display_str": "PLACEHOLDER HEALTH PARTNERS PA 119",
+        "count": 4
+      },
+      {
+        "key": "EXAMPLE PRIMARY CARE GROUP INC 120",
+        "display_str": "EXAMPLE PRIMARY CARE GROUP INC 120",
+        "count": 20
+      },
+      {
+        "key": "SAMPLE MEDICAL ASSOCIATES LLC 121",
+        "display_str": "SAMPLE MEDICAL ASSOCIATES LLC 121",
+        "count": 58
+      },
+      {
+        "key": "PLACEHOLDER HEALTH PARTNERS PA 122",
+        "display_str": "PLACEHOLDER HEALTH PARTNERS PA 122",
+        "count": 3
+      },
+      {
+        "key": "EXAMPLE PRIMARY CARE GROUP INC 123",
+        "display_str": "EXAMPLE PRIMARY CARE GROUP INC 123",
+        "count": 4
+      },
+      {
+        "key": "SAMPLE MEDICAL ASSOCIATES LLC 124",
+        "display_str": "SAMPLE MEDICAL ASSOCIATES LLC 124",
+        "count": 4
+      },
+      {
+        "key": "PLACEHOLDER HEALTH PARTNERS PA 125",
+        "display_str": "PLACEHOLDER HEALTH PARTNERS PA 125",
+        "count": 39
+      },
+      {
+        "key": "EXAMPLE PRIMARY CARE GROUP INC 126",
+        "display_str": "EXAMPLE PRIMARY CARE GROUP INC 126",
+        "count": 39
+      },
+      {
+        "key": "SAMPLE MEDICAL ASSOCIATES LLC 127",
+        "display_str": "SAMPLE MEDICAL ASSOCIATES LLC 127",
+        "count": 20
+      },
+      {
+        "key": "PLACEHOLDER HEALTH PARTNERS PA 128",
+        "display_str": "PLACEHOLDER HEALTH PARTNERS PA 128",
+        "count": 4
+      },
+      {
+        "key": "EXAMPLE PRIMARY CARE GROUP INC 129",
+        "display_str": "EXAMPLE PRIMARY CARE GROUP INC 129",
+        "count": 5
+      },
+      {
+        "key": "SAMPLE MEDICAL ASSOCIATES LLC 130",
+        "display_str": "SAMPLE MEDICAL ASSOCIATES LLC 130",
+        "count": 7
+      },
+      {
+        "key": "PLACEHOLDER HEALTH PARTNERS PA 131",
+        "display_str": "PLACEHOLDER HEALTH PARTNERS PA 131",
+        "count": 3
+      },
+      {
+        "key": "EXAMPLE PRIMARY CARE GROUP INC 132",
+        "display_str": "EXAMPLE PRIMARY CARE GROUP INC 132",
+        "count": 2
+      },
+      {
+        "key": "SAMPLE MEDICAL ASSOCIATES LLC 133",
+        "display_str": "SAMPLE MEDICAL ASSOCIATES LLC 133",
+        "count": 17
+      },
+      {
+        "key": "PLACEHOLDER HEALTH PARTNERS PA 134",
+        "display_str": "PLACEHOLDER HEALTH PARTNERS PA 134",
+        "count": 19
+      },
+      {
+        "key": "EXAMPLE PRIMARY CARE GROUP INC 135",
+        "display_str": "EXAMPLE PRIMARY CARE GROUP INC 135",
+        "count": 40
+      },
+      {
+        "key": "SAMPLE MEDICAL ASSOCIATES LLC 136",
+        "display_str": "SAMPLE MEDICAL ASSOCIATES LLC 136",
+        "count": 37
+      },
+      {
+        "key": "PLACEHOLDER HEALTH PARTNERS PA 137",
+        "display_str": "PLACEHOLDER HEALTH PARTNERS PA 137",
+        "count": 6
+      },
+      {
+        "key": "EXAMPLE PRIMARY CARE GROUP INC 138",
+        "display_str": "EXAMPLE PRIMARY CARE GROUP INC 138",
+        "count": 6
+      },
+      {
+        "key": "SAMPLE MEDICAL ASSOCIATES LLC 139",
+        "display_str": "SAMPLE MEDICAL ASSOCIATES LLC 139",
+        "count": 7
+      },
+      {
+        "key": "PLACEHOLDER HEALTH PARTNERS PA 140",
+        "display_str": "PLACEHOLDER HEALTH PARTNERS PA 140",
+        "count": 27
+      },
+      {
+        "key": "EXAMPLE PRIMARY CARE GROUP INC 141",
+        "display_str": "EXAMPLE PRIMARY CARE GROUP INC 141",
+        "count": 9
+      },
+      {
+        "key": "SAMPLE MEDICAL ASSOCIATES LLC 142",
+        "display_str": "SAMPLE MEDICAL ASSOCIATES LLC 142",
+        "count": 31
+      },
+      {
+        "key": "PLACEHOLDER HEALTH PARTNERS PA 143",
+        "display_str": "PLACEHOLDER HEALTH PARTNERS PA 143",
+        "count": 4
+      },
+      {
+        "key": "EXAMPLE PRIMARY CARE GROUP INC 144",
+        "display_str": "EXAMPLE PRIMARY CARE GROUP INC 144",
+        "count": 4
+      },
+      {
+        "key": "SAMPLE MEDICAL ASSOCIATES LLC 145",
+        "display_str": "SAMPLE MEDICAL ASSOCIATES LLC 145",
+        "count": 2
+      },
+      {
+        "key": "PLACEHOLDER HEALTH PARTNERS PA 146",
+        "display_str": "PLACEHOLDER HEALTH PARTNERS PA 146",
+        "count": 9
+      },
+      {
+        "key": "EXAMPLE PRIMARY CARE GROUP INC 147",
+        "display_str": "EXAMPLE PRIMARY CARE GROUP INC 147",
+        "count": 3
+      },
+      {
+        "key": "SAMPLE MEDICAL ASSOCIATES LLC 148",
+        "display_str": "SAMPLE MEDICAL ASSOCIATES LLC 148",
+        "count": 59
+      },
+      {
+        "key": "PLACEHOLDER HEALTH PARTNERS PA 149",
+        "display_str": "PLACEHOLDER HEALTH PARTNERS PA 149",
+        "count": 18
+      },
+      {
+        "key": "EXAMPLE PRIMARY CARE GROUP INC 150",
+        "display_str": "EXAMPLE PRIMARY CARE GROUP INC 150",
+        "count": 8
+      },
+      {
+        "key": "SAMPLE MEDICAL ASSOCIATES LLC 151",
+        "display_str": "SAMPLE MEDICAL ASSOCIATES LLC 151",
+        "count": 4
+      },
+      {
+        "key": "PLACEHOLDER HEALTH PARTNERS PA 152",
+        "display_str": "PLACEHOLDER HEALTH PARTNERS PA 152",
+        "count": 11
+      },
+      {
+        "key": "EXAMPLE PRIMARY CARE GROUP INC 153",
+        "display_str": "EXAMPLE PRIMARY CARE GROUP INC 153",
+        "count": 59
+      },
+      {
+        "key": "SAMPLE MEDICAL ASSOCIATES LLC 154",
+        "display_str": "SAMPLE MEDICAL ASSOCIATES LLC 154",
+        "count": 28
+      },
+      {
+        "key": "PLACEHOLDER HEALTH PARTNERS PA 155",
+        "display_str": "PLACEHOLDER HEALTH PARTNERS PA 155",
+        "count": 7
+      },
+      {
+        "key": "EXAMPLE PRIMARY CARE GROUP INC 156",
+        "display_str": "EXAMPLE PRIMARY CARE GROUP INC 156",
+        "count": 4
+      },
+      {
+        "key": "SAMPLE MEDICAL ASSOCIATES LLC 157",
+        "display_str": "SAMPLE MEDICAL ASSOCIATES LLC 157",
+        "count": 16
+      },
+      {
+        "key": "PLACEHOLDER HEALTH PARTNERS PA 158",
+        "display_str": "PLACEHOLDER HEALTH PARTNERS PA 158",
+        "count": 9
+      },
+      {
+        "key": "EXAMPLE PRIMARY CARE GROUP INC 159",
+        "display_str": "EXAMPLE PRIMARY CARE GROUP INC 159",
+        "count": 3
+      },
+      {
+        "key": "SAMPLE MEDICAL ASSOCIATES LLC 160",
+        "display_str": "SAMPLE MEDICAL ASSOCIATES LLC 160",
+        "count": 4
+      },
+      {
+        "key": "PLACEHOLDER HEALTH PARTNERS PA 161",
+        "display_str": "PLACEHOLDER HEALTH PARTNERS PA 161",
+        "count": 3
+      },
+      {
+        "key": "EXAMPLE PRIMARY CARE GROUP INC 162",
+        "display_str": "EXAMPLE PRIMARY CARE GROUP INC 162",
+        "count": 3
+      },
+      {
+        "key": "SAMPLE MEDICAL ASSOCIATES LLC 163",
+        "display_str": "SAMPLE MEDICAL ASSOCIATES LLC 163",
+        "count": 39
+      },
+      {
+        "key": "PLACEHOLDER HEALTH PARTNERS PA 164",
+        "display_str": "PLACEHOLDER HEALTH PARTNERS PA 164",
+        "count": 14
+      },
+      {
+        "key": "EXAMPLE PRIMARY CARE GROUP INC 165",
+        "display_str": "EXAMPLE PRIMARY CARE GROUP INC 165",
+        "count": 148
+      },
+      {
+        "key": "SAMPLE MEDICAL ASSOCIATES LLC 166",
+        "display_str": "SAMPLE MEDICAL ASSOCIATES LLC 166",
+        "count": 121
+      },
+      {
+        "key": "PLACEHOLDER HEALTH PARTNERS PA 167",
+        "display_str": "PLACEHOLDER HEALTH PARTNERS PA 167",
+        "count": 3
+      },
+      {
+        "key": "EXAMPLE PRIMARY CARE GROUP INC 168",
+        "display_str": "EXAMPLE PRIMARY CARE GROUP INC 168",
+        "count": 10
+      },
+      {
+        "key": "SAMPLE MEDICAL ASSOCIATES LLC 169",
+        "display_str": "SAMPLE MEDICAL ASSOCIATES LLC 169",
+        "count": 8
+      },
+      {
+        "key": "PLACEHOLDER HEALTH PARTNERS PA 170",
+        "display_str": "PLACEHOLDER HEALTH PARTNERS PA 170",
+        "count": 11
+      },
+      {
+        "key": "EXAMPLE PRIMARY CARE GROUP INC 171",
+        "display_str": "EXAMPLE PRIMARY CARE GROUP INC 171",
+        "count": 11
+      },
+      {
+        "key": "SAMPLE MEDICAL ASSOCIATES LLC 172",
+        "display_str": "SAMPLE MEDICAL ASSOCIATES LLC 172",
+        "count": 31
+      },
+      {
+        "key": "PLACEHOLDER HEALTH PARTNERS PA 173",
+        "display_str": "PLACEHOLDER HEALTH PARTNERS PA 173",
+        "count": 3
+      },
+      {
+        "key": "EXAMPLE PRIMARY CARE GROUP INC 174",
+        "display_str": "EXAMPLE PRIMARY CARE GROUP INC 174",
+        "count": 17
+      },
+      {
+        "key": "SAMPLE MEDICAL ASSOCIATES LLC 175",
+        "display_str": "SAMPLE MEDICAL ASSOCIATES LLC 175",
+        "count": 57
+      },
+      {
+        "key": "PLACEHOLDER HEALTH PARTNERS PA 176",
+        "display_str": "PLACEHOLDER HEALTH PARTNERS PA 176",
+        "count": 18
+      },
+      {
+        "key": "EXAMPLE PRIMARY CARE GROUP INC 177",
+        "display_str": "EXAMPLE PRIMARY CARE GROUP INC 177",
+        "count": 3
+      },
+      {
+        "key": "SAMPLE MEDICAL ASSOCIATES LLC 178",
+        "display_str": "SAMPLE MEDICAL ASSOCIATES LLC 178",
+        "count": 2
+      },
+      {
+        "key": "PLACEHOLDER HEALTH PARTNERS PA 179",
+        "display_str": "PLACEHOLDER HEALTH PARTNERS PA 179",
+        "count": 14
+      },
+      {
+        "key": "EXAMPLE PRIMARY CARE GROUP INC 180",
+        "display_str": "EXAMPLE PRIMARY CARE GROUP INC 180",
+        "count": 9
+      },
+      {
+        "key": "SAMPLE MEDICAL ASSOCIATES LLC 181",
+        "display_str": "SAMPLE MEDICAL ASSOCIATES LLC 181",
+        "count": 13
+      },
+      {
+        "key": "PLACEHOLDER HEALTH PARTNERS PA 182",
+        "display_str": "PLACEHOLDER HEALTH PARTNERS PA 182",
+        "count": 3
+      },
+      {
+        "key": "EXAMPLE PRIMARY CARE GROUP INC 183",
+        "display_str": "EXAMPLE PRIMARY CARE GROUP INC 183",
+        "count": 6
+      },
+      {
+        "key": "SAMPLE MEDICAL ASSOCIATES LLC 184",
+        "display_str": "SAMPLE MEDICAL ASSOCIATES LLC 184",
+        "count": 15
+      },
+      {
+        "key": "PLACEHOLDER HEALTH PARTNERS PA 185",
+        "display_str": "PLACEHOLDER HEALTH PARTNERS PA 185",
+        "count": 3
+      },
+      {
+        "key": "EXAMPLE PRIMARY CARE GROUP INC 186",
+        "display_str": "EXAMPLE PRIMARY CARE GROUP INC 186",
+        "count": 7
+      },
+      {
+        "key": "SAMPLE MEDICAL ASSOCIATES LLC 187",
+        "display_str": "SAMPLE MEDICAL ASSOCIATES LLC 187",
+        "count": 41
+      },
+      {
+        "key": "PLACEHOLDER HEALTH PARTNERS PA 188",
+        "display_str": "PLACEHOLDER HEALTH PARTNERS PA 188",
+        "count": 4
+      },
+      {
+        "key": "EXAMPLE PRIMARY CARE GROUP INC 189",
+        "display_str": "EXAMPLE PRIMARY CARE GROUP INC 189",
+        "count": 158
+      },
+      {
+        "key": "SAMPLE MEDICAL ASSOCIATES LLC 190",
+        "display_str": "SAMPLE MEDICAL ASSOCIATES LLC 190",
+        "count": 20
+      },
+      {
+        "key": "PLACEHOLDER HEALTH PARTNERS PA 191",
+        "display_str": "PLACEHOLDER HEALTH PARTNERS PA 191",
+        "count": 3
+      },
+      {
+        "key": "EXAMPLE PRIMARY CARE GROUP INC 192",
+        "display_str": "EXAMPLE PRIMARY CARE GROUP INC 192",
+        "count": 3
+      },
+      {
+        "key": "SAMPLE MEDICAL ASSOCIATES LLC 193",
+        "display_str": "SAMPLE MEDICAL ASSOCIATES LLC 193",
+        "count": 3
+      },
+      {
+        "key": "PLACEHOLDER HEALTH PARTNERS PA 194",
+        "display_str": "PLACEHOLDER HEALTH PARTNERS PA 194",
+        "count": 173
+      },
+      {
+        "key": "EXAMPLE PRIMARY CARE GROUP INC 195",
+        "display_str": "EXAMPLE PRIMARY CARE GROUP INC 195",
+        "count": 17
+      },
+      {
+        "key": "SAMPLE MEDICAL ASSOCIATES LLC 196",
+        "display_str": "SAMPLE MEDICAL ASSOCIATES LLC 196",
+        "count": 3
+      },
+      {
+        "key": "PLACEHOLDER HEALTH PARTNERS PA 197",
+        "display_str": "PLACEHOLDER HEALTH PARTNERS PA 197",
+        "count": 2
+      },
+      {
+        "key": "EXAMPLE PRIMARY CARE GROUP INC 198",
+        "display_str": "EXAMPLE PRIMARY CARE GROUP INC 198",
+        "count": 3
+      },
+      {
+        "key": "SAMPLE MEDICAL ASSOCIATES LLC 199",
+        "display_str": "SAMPLE MEDICAL ASSOCIATES LLC 199",
+        "count": 3
+      }
+    ],
+    "15": [],
+    "6": [
+      {
+        "key": " Example General Hospital",
+        "display_str": " Example General Hospital",
+        "count": 1
+      },
+      {
+        "key": "Example General Hospital",
+        "display_str": "Example General Hospital",
+        "count": 1
+      },
+      {
+        "key": "Sample Regional Medical Center",
+        "display_str": "Sample Regional Medical Center",
+        "count": 1
+      },
+      {
+        "key": "Placeholder Community Hospital ",
+        "display_str": "Placeholder Community Hospital ",
+        "count": 1
+      },
+      {
+        "key": "Fictional Memorial Hospital",
+        "display_str": "Fictional Memorial Hospital",
+        "count": 3
+      },
+      {
+        "key": " Example General Hospital 5",
+        "display_str": " Example General Hospital 5",
+        "count": 1
+      },
+      {
+        "key": "Example General Hospital 6",
+        "display_str": "Example General Hospital 6",
+        "count": 1
+      },
+      {
+        "key": "Sample Regional Medical Center 7",
+        "display_str": "Sample Regional Medical Center 7",
+        "count": 1
+      },
+      {
+        "key": "Placeholder Community Hospital  8",
+        "display_str": "Placeholder Community Hospital  8",
+        "count": 1
+      },
+      {
+        "key": "Fictional Memorial Hospital 9",
+        "display_str": "Fictional Memorial Hospital 9",
+        "count": 1
+      },
+      {
+        "key": " Example General Hospital 10",
+        "display_str": " Example General Hospital 10",
+        "count": 1
+      },
+      {
+        "key": "Example General Hospital 11",
+        "display_str": "Example General Hospital 11",
+        "count": 1
+      },
+      {
+        "key": "Sample Regional Medical Center 12",
+        "display_str": "Sample Regional Medical Center 12",
+        "count": 2
+      },
+      {
+        "key": "Placeholder Community Hospital  13",
+        "display_str": "Placeholder Community Hospital  13",
+        "count": 1
+      },
+      {
+        "key": "Fictional Memorial Hospital 14",
+        "display_str": "Fictional Memorial Hospital 14",
+        "count": 2
+      },
+      {
+        "key": " Example General Hospital 15",
+        "display_str": " Example General Hospital 15",
+        "count": 1
+      },
+      {
+        "key": "Example General Hospital 16",
+        "display_str": "Example General Hospital 16",
+        "count": 2
+      },
+      {
+        "key": "Sample Regional Medical Center 17",
+        "display_str": "Sample Regional Medical Center 17",
+        "count": 1
+      },
+      {
+        "key": "Placeholder Community Hospital  18",
+        "display_str": "Placeholder Community Hospital  18",
+        "count": 2
+      },
+      {
+        "key": "Fictional Memorial Hospital 19",
+        "display_str": "Fictional Memorial Hospital 19",
+        "count": 1
+      },
+      {
+        "key": " Example General Hospital 20",
+        "display_str": " Example General Hospital 20",
+        "count": 7
+      },
+      {
+        "key": "Example General Hospital 21",
+        "display_str": "Example General Hospital 21",
+        "count": 1
+      },
+      {
+        "key": "Sample Regional Medical Center 22",
+        "display_str": "Sample Regional Medical Center 22",
+        "count": 2
+      },
+      {
+        "key": "Placeholder Community Hospital  23",
+        "display_str": "Placeholder Community Hospital  23",
+        "count": 6
+      },
+      {
+        "key": "Fictional Memorial Hospital 24",
+        "display_str": "Fictional Memorial Hospital 24",
+        "count": 1
+      },
+      {
+        "key": " Example General Hospital 25",
+        "display_str": " Example General Hospital 25",
+        "count": 2
+      },
+      {
+        "key": "Example General Hospital 26",
+        "display_str": "Example General Hospital 26",
+        "count": 4
+      },
+      {
+        "key": "Sample Regional Medical Center 27",
+        "display_str": "Sample Regional Medical Center 27",
+        "count": 1
+      },
+      {
+        "key": "Placeholder Community Hospital  28",
+        "display_str": "Placeholder Community Hospital  28",
+        "count": 2
+      },
+      {
+        "key": "Fictional Memorial Hospital 29",
+        "display_str": "Fictional Memorial Hospital 29",
+        "count": 54
+      },
+      {
+        "key": " Example General Hospital 30",
+        "display_str": " Example General Hospital 30",
+        "count": 2
+      },
+      {
+        "key": "Example General Hospital 31",
+        "display_str": "Example General Hospital 31",
+        "count": 2
+      },
+      {
+        "key": "Sample Regional Medical Center 32",
+        "display_str": "Sample Regional Medical Center 32",
+        "count": 55
+      },
+      {
+        "key": "Placeholder Community Hospital  33",
+        "display_str": "Placeholder Community Hospital  33",
+        "count": 9
+      },
+      {
+        "key": "Fictional Memorial Hospital 34",
+        "display_str": "Fictional Memorial Hospital 34",
+        "count": 2
+      },
+      {
+        "key": " Example General Hospital 35",
+        "display_str": " Example General Hospital 35",
+        "count": 45
+      },
+      {
+        "key": "Example General Hospital 36",
+        "display_str": "Example General Hospital 36",
+        "count": 2
+      },
+      {
+        "key": "Sample Regional Medical Center 37",
+        "display_str": "Sample Regional Medical Center 37",
+        "count": 77
+      },
+      {
+        "key": "Placeholder Community Hospital  38",
+        "display_str": "Placeholder Community Hospital  38",
+        "count": 39
+      },
+      {
+        "key": "Fictional Memorial Hospital 39",
+        "display_str": "Fictional Memorial Hospital 39",
+        "count": 71
+      },
+      {
+        "key": " Example General Hospital 40",
+        "display_str": " Example General Hospital 40",
+        "count": 46
+      },
+      {
+        "key": "Example General Hospital 41",
+        "display_str": "Example General Hospital 41",
+        "count": 8
+      },
+      {
+        "key": "Sample Regional Medical Center 42",
+        "display_str": "Sample Regional Medical Center 42",
+        "count": 74
+      },
+      {
+        "key": "Placeholder Community Hospital  43",
+        "display_str": "Placeholder Community Hospital  43",
+        "count": 19
+      },
+      {
+        "key": "Fictional Memorial Hospital 44",
+        "display_str": "Fictional Memorial Hospital 44",
+        "count": 7
+      },
+      {
+        "key": " Example General Hospital 45",
+        "display_str": " Example General Hospital 45",
+        "count": 69
+      },
+      {
+        "key": "Example General Hospital 46",
+        "display_str": "Example General Hospital 46",
+        "count": 7
+      },
+      {
+        "key": "Sample Regional Medical Center 47",
+        "display_str": "Sample Regional Medical Center 47",
+        "count": 141
+      },
+      {
+        "key": "Placeholder Community Hospital  48",
+        "display_str": "Placeholder Community Hospital  48",
+        "count": 2
+      },
+      {
+        "key": "Fictional Memorial Hospital 49",
+        "display_str": "Fictional Memorial Hospital 49",
+        "count": 2
+      },
+      {
+        "key": " Example General Hospital 50",
+        "display_str": " Example General Hospital 50",
+        "count": 29
+      },
+      {
+        "key": "Example General Hospital 51",
+        "display_str": "Example General Hospital 51",
+        "count": 2
+      },
+      {
+        "key": "Sample Regional Medical Center 52",
+        "display_str": "Sample Regional Medical Center 52",
+        "count": 4
+      },
+      {
+        "key": "Placeholder Community Hospital  53",
+        "display_str": "Placeholder Community Hospital  53",
+        "count": 27
+      },
+      {
+        "key": "Fictional Memorial Hospital 54",
+        "display_str": "Fictional Memorial Hospital 54",
+        "count": 3
+      },
+      {
+        "key": " Example General Hospital 55",
+        "display_str": " Example General Hospital 55",
+        "count": 2
+      },
+      {
+        "key": "Example General Hospital 56",
+        "display_str": "Example General Hospital 56",
+        "count": 3
+      },
+      {
+        "key": "Sample Regional Medical Center 57",
+        "display_str": "Sample Regional Medical Center 57",
+        "count": 3
+      },
+      {
+        "key": "Placeholder Community Hospital  58",
+        "display_str": "Placeholder Community Hospital  58",
+        "count": 99
+      },
+      {
+        "key": "Fictional Memorial Hospital 59",
+        "display_str": "Fictional Memorial Hospital 59",
+        "count": 2
+      },
+      {
+        "key": " Example General Hospital 60",
+        "display_str": " Example General Hospital 60",
+        "count": 3
+      },
+      {
+        "key": "Example General Hospital 61",
+        "display_str": "Example General Hospital 61",
+        "count": 2
+      },
+      {
+        "key": "Sample Regional Medical Center 62",
+        "display_str": "Sample Regional Medical Center 62",
+        "count": 2
+      },
+      {
+        "key": "Placeholder Community Hospital  63",
+        "display_str": "Placeholder Community Hospital  63",
+        "count": 43
+      },
+      {
+        "key": "Fictional Memorial Hospital 64",
+        "display_str": "Fictional Memorial Hospital 64",
+        "count": 36
+      },
+      {
+        "key": " Example General Hospital 65",
+        "display_str": " Example General Hospital 65",
+        "count": 4
+      },
+      {
+        "key": "Example General Hospital 66",
+        "display_str": "Example General Hospital 66",
+        "count": 23
+      },
+      {
+        "key": "Sample Regional Medical Center 67",
+        "display_str": "Sample Regional Medical Center 67",
+        "count": 58
+      },
+      {
+        "key": "Placeholder Community Hospital  68",
+        "display_str": "Placeholder Community Hospital  68",
+        "count": 2
+      },
+      {
+        "key": "Fictional Memorial Hospital 69",
+        "display_str": "Fictional Memorial Hospital 69",
+        "count": 2
+      },
+      {
+        "key": " Example General Hospital 70",
+        "display_str": " Example General Hospital 70",
+        "count": 4
+      },
+      {
+        "key": "Example General Hospital 71",
+        "display_str": "Example General Hospital 71",
+        "count": 2
+      },
+      {
+        "key": "Sample Regional Medical Center 72",
+        "display_str": "Sample Regional Medical Center 72",
+        "count": 2
+      },
+      {
+        "key": "Placeholder Community Hospital  73",
+        "display_str": "Placeholder Community Hospital  73",
+        "count": 34
+      },
+      {
+        "key": "Fictional Memorial Hospital 74",
+        "display_str": "Fictional Memorial Hospital 74",
+        "count": 2
+      },
+      {
+        "key": " Example General Hospital 75",
+        "display_str": " Example General Hospital 75",
+        "count": 107
+      },
+      {
+        "key": "Example General Hospital 76",
+        "display_str": "Example General Hospital 76",
+        "count": 81
+      },
+      {
+        "key": "Sample Regional Medical Center 77",
+        "display_str": "Sample Regional Medical Center 77",
+        "count": 58
+      },
+      {
+        "key": "Placeholder Community Hospital  78",
+        "display_str": "Placeholder Community Hospital  78",
+        "count": 2
+      },
+      {
+        "key": "Fictional Memorial Hospital 79",
+        "display_str": "Fictional Memorial Hospital 79",
+        "count": 66
+      },
+      {
+        "key": " Example General Hospital 80",
+        "display_str": " Example General Hospital 80",
+        "count": 3
+      },
+      {
+        "key": "Example General Hospital 81",
+        "display_str": "Example General Hospital 81",
+        "count": 2
+      },
+      {
+        "key": "Sample Regional Medical Center 82",
+        "display_str": "Sample Regional Medical Center 82",
+        "count": 4
+      },
+      {
+        "key": "Placeholder Community Hospital  83",
+        "display_str": "Placeholder Community Hospital  83",
+        "count": 15
+      },
+      {
+        "key": "Fictional Memorial Hospital 84",
+        "display_str": "Fictional Memorial Hospital 84",
+        "count": 64
+      },
+      {
+        "key": " Example General Hospital 85",
+        "display_str": " Example General Hospital 85",
+        "count": 55
+      },
+      {
+        "key": "Example General Hospital 86",
+        "display_str": "Example General Hospital 86",
+        "count": 26
+      },
+      {
+        "key": "Sample Regional Medical Center 87",
+        "display_str": "Sample Regional Medical Center 87",
+        "count": 2
+      },
+      {
+        "key": "Placeholder Community Hospital  88",
+        "display_str": "Placeholder Community Hospital  88",
+        "count": 2
+      },
+      {
+        "key": "Fictional Memorial Hospital 89",
+        "display_str": "Fictional Memorial Hospital 89",
+        "count": 13
+      },
+      {
+        "key": " Example General Hospital 90",
+        "display_str": " Example General Hospital 90",
+        "count": 5
+      },
+      {
+        "key": "Example General Hospital 91",
+        "display_str": "Example General Hospital 91",
+        "count": 4
+      },
+      {
+        "key": "Sample Regional Medical Center 92",
+        "display_str": "Sample Regional Medical Center 92",
+        "count": 7
+      },
+      {
+        "key": "Placeholder Community Hospital  93",
+        "display_str": "Placeholder Community Hospital  93",
+        "count": 13
+      },
+      {
+        "key": "Fictional Memorial Hospital 94",
+        "display_str": "Fictional Memorial Hospital 94",
+        "count": 3
+      },
+      {
+        "key": " Example General Hospital 95",
+        "display_str": " Example General Hospital 95",
+        "count": 2
+      },
+      {
+        "key": "Example General Hospital 96",
+        "display_str": "Example General Hospital 96",
+        "count": 4
+      },
+      {
+        "key": "Sample Regional Medical Center 97",
+        "display_str": "Sample Regional Medical Center 97",
+        "count": 21
+      },
+      {
+        "key": "Placeholder Community Hospital  98",
+        "display_str": "Placeholder Community Hospital  98",
+        "count": 6
+      },
+      {
+        "key": "Fictional Memorial Hospital 99",
+        "display_str": "Fictional Memorial Hospital 99",
+        "count": 30
+      },
+      {
+        "key": " Example General Hospital 100",
+        "display_str": " Example General Hospital 100",
+        "count": 121
+      },
+      {
+        "key": "Example General Hospital 101",
+        "display_str": "Example General Hospital 101",
+        "count": 44
+      },
+      {
+        "key": "Sample Regional Medical Center 102",
+        "display_str": "Sample Regional Medical Center 102",
+        "count": 18
+      },
+      {
+        "key": "Placeholder Community Hospital  103",
+        "display_str": "Placeholder Community Hospital  103",
+        "count": 35
+      },
+      {
+        "key": "Fictional Memorial Hospital 104",
+        "display_str": "Fictional Memorial Hospital 104",
+        "count": 2
+      },
+      {
+        "key": " Example General Hospital 105",
+        "display_str": " Example General Hospital 105",
+        "count": 2
+      },
+      {
+        "key": "Example General Hospital 106",
+        "display_str": "Example General Hospital 106",
+        "count": 7
+      },
+      {
+        "key": "Sample Regional Medical Center 107",
+        "display_str": "Sample Regional Medical Center 107",
+        "count": 3
+      },
+      {
+        "key": "Placeholder Community Hospital  108",
+        "display_str": "Placeholder Community Hospital  108",
+        "count": 91
+      },
+      {
+        "key": "Fictional Memorial Hospital 109",
+        "display_str": "Fictional Memorial Hospital 109",
+        "count": 3
+      },
+      {
+        "key": " Example General Hospital 110",
+        "display_str": " Example General Hospital 110",
+        "count": 3
+      },
+      {
+        "key": "Example General Hospital 111",
+        "display_str": "Example General Hospital 111",
+        "count": 10
+      },
+      {
+        "key": "Sample Regional Medical Center 112",
+        "display_str": "Sample Regional Medical Center 112",
+        "count": 3
+      },
+      {
+        "key": "Placeholder Community Hospital  113",
+        "display_str": "Placeholder Community Hospital  113",
+        "count": 4
+      },
+      {
+        "key": "Fictional Memorial Hospital 114",
+        "display_str": "Fictional Memorial Hospital 114",
+        "count": 39
+      },
+      {
+        "key": " Example General Hospital 115",
+        "display_str": " Example General Hospital 115",
+        "count": 2
+      },
+      {
+        "key": "Example General Hospital 116",
+        "display_str": "Example General Hospital 116",
+        "count": 116
+      },
+      {
+        "key": "Sample Regional Medical Center 117",
+        "display_str": "Sample Regional Medical Center 117",
+        "count": 3
+      },
+      {
+        "key": "Placeholder Community Hospital  118",
+        "display_str": "Placeholder Community Hospital  118",
+        "count": 2
+      },
+      {
+        "key": "Fictional Memorial Hospital 119",
+        "display_str": "Fictional Memorial Hospital 119",
+        "count": 39
+      },
+      {
+        "key": " Example General Hospital 120",
+        "display_str": " Example General Hospital 120",
+        "count": 3
+      },
+      {
+        "key": "Example General Hospital 121",
+        "display_str": "Example General Hospital 121",
+        "count": 3
+      },
+      {
+        "key": "Sample Regional Medical Center 122",
+        "display_str": "Sample Regional Medical Center 122",
+        "count": 2
+      },
+      {
+        "key": "Placeholder Community Hospital  123",
+        "display_str": "Placeholder Community Hospital  123",
+        "count": 2
+      },
+      {
+        "key": "Fictional Memorial Hospital 124",
+        "display_str": "Fictional Memorial Hospital 124",
+        "count": 5
+      },
+      {
+        "key": " Example General Hospital 125",
+        "display_str": " Example General Hospital 125",
+        "count": 110
+      },
+      {
+        "key": "Example General Hospital 126",
+        "display_str": "Example General Hospital 126",
+        "count": 133
+      },
+      {
+        "key": "Sample Regional Medical Center 127",
+        "display_str": "Sample Regional Medical Center 127",
+        "count": 201
+      },
+      {
+        "key": "Placeholder Community Hospital  128",
+        "display_str": "Placeholder Community Hospital  128",
+        "count": 75
+      },
+      {
+        "key": "Fictional Memorial Hospital 129",
+        "display_str": "Fictional Memorial Hospital 129",
+        "count": 2
+      },
+      {
+        "key": " Example General Hospital 130",
+        "display_str": " Example General Hospital 130",
+        "count": 45
+      },
+      {
+        "key": "Example General Hospital 131",
+        "display_str": "Example General Hospital 131",
+        "count": 2
+      },
+      {
+        "key": "Sample Regional Medical Center 132",
+        "display_str": "Sample Regional Medical Center 132",
+        "count": 49
+      },
+      {
+        "key": "Placeholder Community Hospital  133",
+        "display_str": "Placeholder Community Hospital  133",
+        "count": 3
+      },
+      {
+        "key": "Fictional Memorial Hospital 134",
+        "display_str": "Fictional Memorial Hospital 134",
+        "count": 3
+      },
+      {
+        "key": " Example General Hospital 135",
+        "display_str": " Example General Hospital 135",
+        "count": 2
+      },
+      {
+        "key": "Example General Hospital 136",
+        "display_str": "Example General Hospital 136",
+        "count": 7
+      },
+      {
+        "key": "Sample Regional Medical Center 137",
+        "display_str": "Sample Regional Medical Center 137",
+        "count": 4
+      },
+      {
+        "key": "Placeholder Community Hospital  138",
+        "display_str": "Placeholder Community Hospital  138",
+        "count": 4
+      },
+      {
+        "key": "Fictional Memorial Hospital 139",
+        "display_str": "Fictional Memorial Hospital 139",
+        "count": 11
+      },
+      {
+        "key": " Example General Hospital 140",
+        "display_str": " Example General Hospital 140",
+        "count": 12
+      },
+      {
+        "key": "Example General Hospital 141",
+        "display_str": "Example General Hospital 141",
+        "count": 2
+      },
+      {
+        "key": "Sample Regional Medical Center 142",
+        "display_str": "Sample Regional Medical Center 142",
+        "count": 9
+      },
+      {
+        "key": "Placeholder Community Hospital  143",
+        "display_str": "Placeholder Community Hospital  143",
+        "count": 6
+      },
+      {
+        "key": "Fictional Memorial Hospital 144",
+        "display_str": "Fictional Memorial Hospital 144",
+        "count": 2
+      },
+      {
+        "key": " Example General Hospital 145",
+        "display_str": " Example General Hospital 145",
+        "count": 3
+      },
+      {
+        "key": "Example General Hospital 146",
+        "display_str": "Example General Hospital 146",
+        "count": 9
+      },
+      {
+        "key": "Sample Regional Medical Center 147",
+        "display_str": "Sample Regional Medical Center 147",
+        "count": 2
+      },
+      {
+        "key": "Placeholder Community Hospital  148",
+        "display_str": "Placeholder Community Hospital  148",
+        "count": 39
+      },
+      {
+        "key": "Fictional Memorial Hospital 149",
+        "display_str": "Fictional Memorial Hospital 149",
+        "count": 2
+      },
+      {
+        "key": " Example General Hospital 150",
+        "display_str": " Example General Hospital 150",
+        "count": 3
+      },
+      {
+        "key": "Example General Hospital 151",
+        "display_str": "Example General Hospital 151",
+        "count": 3
+      },
+      {
+        "key": "Sample Regional Medical Center 152",
+        "display_str": "Sample Regional Medical Center 152",
+        "count": 2
+      },
+      {
+        "key": "Placeholder Community Hospital  153",
+        "display_str": "Placeholder Community Hospital  153",
+        "count": 152
+      },
+      {
+        "key": "Fictional Memorial Hospital 154",
+        "display_str": "Fictional Memorial Hospital 154",
+        "count": 5
+      },
+      {
+        "key": " Example General Hospital 155",
+        "display_str": " Example General Hospital 155",
+        "count": 3
+      },
+      {
+        "key": "Example General Hospital 156",
+        "display_str": "Example General Hospital 156",
+        "count": 43
+      },
+      {
+        "key": "Sample Regional Medical Center 157",
+        "display_str": "Sample Regional Medical Center 157",
+        "count": 2
+      },
+      {
+        "key": "Placeholder Community Hospital  158",
+        "display_str": "Placeholder Community Hospital  158",
+        "count": 8
+      },
+      {
+        "key": "Fictional Memorial Hospital 159",
+        "display_str": "Fictional Memorial Hospital 159",
+        "count": 3
+      },
+      {
+        "key": " Example General Hospital 160",
+        "display_str": " Example General Hospital 160",
+        "count": 2
+      },
+      {
+        "key": "Example General Hospital 161",
+        "display_str": "Example General Hospital 161",
+        "count": 20
+      },
+      {
+        "key": "Sample Regional Medical Center 162",
+        "display_str": "Sample Regional Medical Center 162",
+        "count": 6
+      },
+      {
+        "key": "Placeholder Community Hospital  163",
+        "display_str": "Placeholder Community Hospital  163",
+        "count": 2
+      },
+      {
+        "key": "Fictional Memorial Hospital 164",
+        "display_str": "Fictional Memorial Hospital 164",
+        "count": 2
+      },
+      {
+        "key": " Example General Hospital 165",
+        "display_str": " Example General Hospital 165",
+        "count": 102
+      },
+      {
+        "key": "Example General Hospital 166",
+        "display_str": "Example General Hospital 166",
+        "count": 2
+      },
+      {
+        "key": "Sample Regional Medical Center 167",
+        "display_str": "Sample Regional Medical Center 167",
+        "count": 54
+      },
+      {
+        "key": "Placeholder Community Hospital  168",
+        "display_str": "Placeholder Community Hospital  168",
+        "count": 3
+      },
+      {
+        "key": "Fictional Memorial Hospital 169",
+        "display_str": "Fictional Memorial Hospital 169",
+        "count": 25
+      },
+      {
+        "key": " Example General Hospital 170",
+        "display_str": " Example General Hospital 170",
+        "count": 3
+      },
+      {
+        "key": "Example General Hospital 171",
+        "display_str": "Example General Hospital 171",
+        "count": 2
+      },
+      {
+        "key": "Sample Regional Medical Center 172",
+        "display_str": "Sample Regional Medical Center 172",
+        "count": 20
+      },
+      {
+        "key": "Placeholder Community Hospital  173",
+        "display_str": "Placeholder Community Hospital  173",
+        "count": 2
+      },
+      {
+        "key": "Fictional Memorial Hospital 174",
+        "display_str": "Fictional Memorial Hospital 174",
+        "count": 2
+      },
+      {
+        "key": " Example General Hospital 175",
+        "display_str": " Example General Hospital 175",
+        "count": 4
+      },
+      {
+        "key": "Example General Hospital 176",
+        "display_str": "Example General Hospital 176",
+        "count": 2
+      },
+      {
+        "key": "Sample Regional Medical Center 177",
+        "display_str": "Sample Regional Medical Center 177",
+        "count": 13
+      },
+      {
+        "key": "Placeholder Community Hospital  178",
+        "display_str": "Placeholder Community Hospital  178",
+        "count": 4
+      },
+      {
+        "key": "Fictional Memorial Hospital 179",
+        "display_str": "Fictional Memorial Hospital 179",
+        "count": 123
+      },
+      {
+        "key": " Example General Hospital 180",
+        "display_str": " Example General Hospital 180",
+        "count": 2
+      },
+      {
+        "key": "Example General Hospital 181",
+        "display_str": "Example General Hospital 181",
+        "count": 3
+      },
+      {
+        "key": "Sample Regional Medical Center 182",
+        "display_str": "Sample Regional Medical Center 182",
+        "count": 2
+      },
+      {
+        "key": "Placeholder Community Hospital  183",
+        "display_str": "Placeholder Community Hospital  183",
+        "count": 37
+      },
+      {
+        "key": "Fictional Memorial Hospital 184",
+        "display_str": "Fictional Memorial Hospital 184",
+        "count": 2
+      },
+      {
+        "key": " Example General Hospital 185",
+        "display_str": " Example General Hospital 185",
+        "count": 28
+      },
+      {
+        "key": "Example General Hospital 186",
+        "display_str": "Example General Hospital 186",
+        "count": 21
+      },
+      {
+        "key": "Sample Regional Medical Center 187",
+        "display_str": "Sample Regional Medical Center 187",
+        "count": 54
+      },
+      {
+        "key": "Placeholder Community Hospital  188",
+        "display_str": "Placeholder Community Hospital  188",
+        "count": 34
+      },
+      {
+        "key": "Fictional Memorial Hospital 189",
+        "display_str": "Fictional Memorial Hospital 189",
+        "count": 60
+      },
+      {
+        "key": " Example General Hospital 190",
+        "display_str": " Example General Hospital 190",
+        "count": 44
+      },
+      {
+        "key": "Example General Hospital 191",
+        "display_str": "Example General Hospital 191",
+        "count": 28
+      },
+      {
+        "key": "Sample Regional Medical Center 192",
+        "display_str": "Sample Regional Medical Center 192",
+        "count": 3
+      },
+      {
+        "key": "Placeholder Community Hospital  193",
+        "display_str": "Placeholder Community Hospital  193",
+        "count": 3
+      },
+      {
+        "key": "Fictional Memorial Hospital 194",
+        "display_str": "Fictional Memorial Hospital 194",
+        "count": 2
+      },
+      {
+        "key": " Example General Hospital 195",
+        "display_str": " Example General Hospital 195",
+        "count": 76
+      },
+      {
+        "key": "Example General Hospital 196",
+        "display_str": "Example General Hospital 196",
+        "count": 2
+      },
+      {
+        "key": "Sample Regional Medical Center 197",
+        "display_str": "Sample Regional Medical Center 197",
+        "count": 2
+      },
+      {
+        "key": "Placeholder Community Hospital  198",
+        "display_str": "Placeholder Community Hospital  198",
+        "count": 2
+      }
+    ]
+  },
+  "boundingBox": null,
+  "directSchedulingEnabled": true,
+  "memberInfo": null,
+  "parentResultCount": 0,
+  "providerNetworkId": "066",
+  "responseContext": {
+    "request_id": "example-request-id"
+  },
+  "results": [
+    {
+      "provider": {
+        "absolute_cost_to_member": 0,
+        "affiliations": [],
+        "certifications": [
+          {
+            "certification_description": "",
+            "board_description": "American Association of Nurse Practitioners",
+            "issue_year": 0
+          }
+        ],
+        "cost_to_member_bucket": 2,
+        "educations": [
+          {
+            "degree": "NP",
+            "education_program": "Medical School",
+            "institution_name": "",
+            "graduation_date": {
+              "year": 2018,
+              "month": 1,
+              "day": 1
+            }
+          },
+          {
+            "degree": "APRN",
+            "education_program": "Medical School",
+            "institution_name": "",
+            "graduation_date": null
+          }
+        ],
+        "first_name": "Alex",
+        "gender": "F",
+        "languages": [
+          {
+            "iso_code": "EN",
+            "display_name_english": "English"
+          },
+          {
+            "iso_code": "ES",
+            "display_name_english": "Spanish"
+          }
+        ],
+        "last_name": "Alvarez",
+        "licenses": [
+          {
+            "license_number": "EX100000",
+            "license_state": "FL",
+            "expiration_date": null
+          }
+        ],
+        "middle_name": "",
+        "npi": "1000000005",
+        "offices": [
+          {
+            "accepting_new_patients": true,
+            "geocode_success": true,
+            "vendor_supports_scheduling": false,
+            "office_name": "Example Clinic A",
+            "address_hash": "",
+            "phone": "5550100000",
+            "location": {
+              "address": {
+                "address_line_1": "250 Sample Blvd",
+                "city": "Example City",
+                "state": "FL",
+                "zipcode": "33101",
+                "address_line_2": ""
+              },
+              "coordinates": {
+                "lat": 25.9844103,
+                "lng": -80.133283,
+                "latitude": 25.9844103,
+                "longitude": -80.133283
+              },
+              "distance_miles": 4.402221503503092,
+              "county": ""
+            },
+            "fax": "",
+            "address_type": "Service",
+            "visibility_infos": [
+              {
+                "visible": true,
+                "provider_network_id": "019",
+                "start_date": null,
+                "end_date": null
+              },
+              {
+                "visible": true,
+                "provider_network_id": "070",
+                "start_date": null,
+                "end_date": null
+              },
+              {
+                "visible": true,
+                "provider_network_id": "066",
+                "start_date": null,
+                "end_date": null
+              }
+            ],
+            "provider_office_id": "exampleOffice0000",
+            "email": "",
+            "badges": {
+              "one_medical": false,
+              "oscar_clinic": false,
+              "pediatric_only": false,
+              "mental_health_only": false,
+              "quaternary_care_only": false,
+              "offers_mental_health": false,
+              "preferred_partner": false,
+              "routine_services_only": false,
+              "in_network": true,
+              "oon_soon": false
+            },
+            "medlines_to_appt_availability": {
+              "ANY": false
+            },
+            "all_provider_office_ids": [
+              "exampleRecordId0000"
+            ],
+            "predicted_appointment_availability": [],
+            "medlines_to_direct_scheduling_ranges": {},
+            "provider_office_organizations": [],
+            "cost_to_member_bucket": 0,
+            "accepting_limited_patients": 0,
+            "structured_attributes": {
+              "age_of_third_next_appointment_edit": 0,
+              "concierge_disclaimer_value": false,
+              "days_until_next_appointment": 0,
+              "days_until_next_urgent_care_appointment": 0,
+              "days_until_third_next_appointment": 0,
+              "network_awareness": false,
+              "oscar_virtual_behavioral_health_states": [],
+              "oscar_virtual_primary_care_states": [],
+              "oscar_virtual_urgent_care_states": [],
+              "supports_virtual_care": 0,
+              "telemedicine_offered": false,
+              "website": "",
+              "wheelchair_accessible": true,
+              "audio_appointments": false,
+              "caregiver_telehealth": false,
+              "physical_appointments": true,
+              "video_appointments": false
+            },
+            "preference_tiers": [],
+            "specialties": [
+              {
+                "internal_specialty_code": "363LF0000X",
+                "internal_specialty_description": "Family Nurse Practitioner",
+                "internal_specialty_display": "Family Nurse Practitioner",
+                "specialty_group": "",
+                "specialty_id": "363LF0000X",
+                "specialty_name": "Family Nurse Practitioner"
+              }
+            ],
+            "provider_office_attributes": [],
+            "office_hours": {
+              "mon": {
+                "status": 0,
+                "time_range": null
+              },
+              "tue": {
+                "status": 0,
+                "time_range": null
+              },
+              "wed": {
+                "status": 0,
+                "time_range": null
+              },
+              "thu": {
+                "status": 0,
+                "time_range": null
+              },
+              "fri": {
+                "status": 0,
+                "time_range": null
+              },
+              "sat": {
+                "status": 0,
+                "time_range": null
+              },
+              "sun": {
+                "status": 0,
+                "time_range": null
+              }
+            },
+            "interpreter_languages": [],
+            "direct_scheduling_partner": false,
+            "tier_infos": [],
+            "last_inn_date": null,
+            "tier_label": null,
+            "in_network": true,
+            "going_oon_soon": null,
+            "is_pcp_office": true,
+            "staff_languages": [],
+            "referral_required": 1,
+            "network_infos": []
+          }
+        ],
+        "pcp": true,
+        "preventive_care_quality": 1,
+        "primary_city": "",
+        "primary_state": "",
+        "provider_id": "exampleProviderId0001",
+        "specialties": [
+          {
+            "internal_specialty_code": "363LF0000X",
+            "internal_specialty_description": "Family Nurse Practitioner",
+            "internal_specialty_display": "Family Nurse Practitioner",
+            "specialty_group": "",
+            "specialty_id": "363LF0000X",
+            "specialty_name": "Family Nurse Practitioner"
+          }
+        ],
+        "tenant_id": "oscar",
+        "structured_attributes": {
+          "supervising_physician_npi": "",
+          "supervising_physician_specialty": "",
+          "residents_attending_physicians_license_number": "",
+          "residency_status_primary_specialty": "",
+          "after_hours_indicator": false,
+          "photo_full_body_id": "",
+          "photo_avatar_id": "",
+          "biography": "",
+          "partner_program": false,
+          "cleveland_clinic_pcp_capacity": false,
+          "vpc_video_url_en": "",
+          "vpc_video_url_es": ""
+        },
+        "member_feedback": {
+          "num_reviews": 6,
+          "percent_recommend": 1.0,
+          "top_provider": true,
+          "can_show_reviews": true,
+          "member_feedback_facet_infos": [
+            {
+              "facet_type": 1,
+              "can_show_facet": false,
+              "raw_count_feedbacks": 1
+            },
+            {
+              "facet_type": 2,
+              "can_show_facet": false,
+              "raw_count_feedbacks": 2
+            },
+            {
+              "facet_type": 3,
+              "can_show_facet": false,
+              "raw_count_feedbacks": 1
+            },
+            {
+              "facet_type": 4,
+              "can_show_facet": false,
+              "raw_count_feedbacks": 1
+            },
+            {
+              "facet_type": 5,
+              "can_show_facet": false,
+              "raw_count_feedbacks": 1
+            },
+            {
+              "facet_type": 6,
+              "can_show_facet": false,
+              "raw_count_feedbacks": 1
+            },
+            {
+              "facet_type": 8,
+              "can_show_facet": false,
+              "raw_count_feedbacks": 1
+            },
+            {
+              "facet_type": 9,
+              "can_show_facet": false,
+              "raw_count_feedbacks": 0
+            },
+            {
+              "facet_type": 10,
+              "can_show_facet": false,
+              "raw_count_feedbacks": 0
+            },
+            {
+              "facet_type": 11,
+              "can_show_facet": false,
+              "raw_count_feedbacks": 0
+            }
+          ]
+        },
+        "provider_attributes": [],
+        "years_experience": 8,
+        "tin_infos": [
+          {
+            "tin": "000000000"
+          },
+          {
+            "tin": "000000000"
+          },
+          {
+            "tin": "000000000"
+          }
+        ],
+        "has_public_profile": true,
+        "populations_served": [],
+        "availabilities": null,
+        "availability_confidence_levels": null,
+        "is_vpc": null,
+        "should_show_optum_redirect": false,
+        "all_specialties_ny_bh_optum": false
+      }
+    },
+    {
+      "provider": {
+        "absolute_cost_to_member": 98,
+        "affiliations": [
+          {
+            "institution_name": "Example Medical Center 8",
+            "institution_tin": "",
+            "admit_privileges": false,
+            "hospital_admit_privileges": 0,
+            "institution_npi": "",
+            "normalized_institution": "Palmetto General Hospital"
+          }
+        ],
+        "certifications": [
+          {
+            "certification_description": "",
+            "board_description": "American Board of Family Medicine",
+            "issue_year": 1999
+          },
+          {
+            "certification_description": "",
+            "board_description": "American Board of Family Medicine",
+            "issue_year": 0
+          }
+        ],
+        "cost_to_member_bucket": 2,
+        "educations": [
+          {
+            "degree": "MD",
+            "education_program": "Medical School",
+            "institution_name": "",
+            "graduation_date": null
+          },
+          {
+            "degree": "MD",
+            "education_program": "Medical School",
+            "institution_name": "Example Medical Center 9",
+            "graduation_date": null
+          }
+        ],
+        "first_name": "Jordan",
+        "gender": "",
+        "languages": [
+          {
+            "iso_code": "EN",
+            "display_name_english": "English"
+          },
+          {
+            "iso_code": "ES",
+            "display_name_english": "Spanish"
+          }
+        ],
+        "last_name": "Nakamura",
+        "licenses": [
+          {
+            "license_number": "EX100000",
+            "license_state": "FL",
+            "expiration_date": null
+          }
+        ],
+        "middle_name": "",
+        "npi": "1000000006",
+        "offices": [
+          {
+            "accepting_new_patients": true,
+            "geocode_success": true,
+            "vendor_supports_scheduling": false,
+            "office_name": "Example Clinic A",
+            "address_hash": "",
+            "phone": "5550100000",
+            "location": {
+              "address": {
+                "address_line_1": "375 Placeholder Way",
+                "city": "Example City",
+                "state": "FL",
+                "zipcode": "33101",
+                "address_line_2": ""
+              },
+              "coordinates": {
+                "lat": 25.9174831,
+                "lng": -80.2161803,
+                "latitude": 25.9174831,
+                "longitude": -80.2161803
+              },
+              "distance_miles": 2.6746349950340464,
+              "county": ""
+            },
+            "fax": "",
+            "address_type": "Service and billing",
+            "visibility_infos": [
+              {
+                "visible": true,
+                "provider_network_id": "070",
+                "start_date": null,
+                "end_date": null
+              },
+              {
+                "visible": true,
+                "provider_network_id": "019",
+                "start_date": null,
+                "end_date": null
+              },
+              {
+                "visible": true,
+                "provider_network_id": "066",
+                "start_date": null,
+                "end_date": null
+              }
+            ],
+            "provider_office_id": "exampleOffice0010",
+            "email": "",
+            "badges": {
+              "one_medical": false,
+              "oscar_clinic": false,
+              "pediatric_only": false,
+              "mental_health_only": false,
+              "quaternary_care_only": false,
+              "offers_mental_health": false,
+              "preferred_partner": false,
+              "routine_services_only": false,
+              "in_network": true,
+              "oon_soon": false
+            },
+            "medlines_to_appt_availability": {
+              "ANY": false
+            },
+            "all_provider_office_ids": [
+              "exampleRecordId0001",
+              "exampleRecordId0002",
+              "exampleRecordId0003"
+            ],
+            "predicted_appointment_availability": [],
+            "medlines_to_direct_scheduling_ranges": {},
+            "provider_office_organizations": [
+              {
+                "organization_name": "Example Medical Center 13"
+              }
+            ],
+            "cost_to_member_bucket": 0,
+            "accepting_limited_patients": 0,
+            "structured_attributes": {
+              "age_of_third_next_appointment_edit": 0,
+              "concierge_disclaimer_value": false,
+              "days_until_next_appointment": 0,
+              "days_until_next_urgent_care_appointment": 0,
+              "days_until_third_next_appointment": 0,
+              "network_awareness": false,
+              "oscar_virtual_behavioral_health_states": [],
+              "oscar_virtual_primary_care_states": [],
+              "oscar_virtual_urgent_care_states": [],
+              "supports_virtual_care": 0,
+              "telemedicine_offered": true,
+              "website": "",
+              "wheelchair_accessible": true,
+              "audio_appointments": false,
+              "caregiver_telehealth": false,
+              "physical_appointments": true,
+              "video_appointments": false
+            },
+            "preference_tiers": [],
+            "specialties": [
+              {
+                "internal_specialty_code": "207Q00000X",
+                "internal_specialty_description": "Family Medicine",
+                "internal_specialty_display": "Family Medicine Specialist",
+                "specialty_group": "",
+                "specialty_id": "207Q00000X",
+                "specialty_name": "Family Medicine Specialist"
+              }
+            ],
+            "provider_office_attributes": [
+              {
+                "name": "Example Medical Center 14",
+                "value": "true"
+              }
+            ],
+            "office_hours": {
+              "mon": {
+                "status": 0,
+                "time_range": null
+              },
+              "tue": {
+                "status": 0,
+                "time_range": null
+              },
+              "wed": {
+                "status": 0,
+                "time_range": null
+              },
+              "thu": {
+                "status": 0,
+                "time_range": null
+              },
+              "fri": {
+                "status": 0,
+                "time_range": null
+              },
+              "sat": {
+                "status": 0,
+                "time_range": null
+              },
+              "sun": {
+                "status": 0,
+                "time_range": null
+              }
+            },
+            "interpreter_languages": [],
+            "direct_scheduling_partner": false,
+            "tier_infos": [],
+            "last_inn_date": null,
+            "tier_label": null,
+            "in_network": true,
+            "going_oon_soon": null,
+            "is_pcp_office": true,
+            "staff_languages": [],
+            "referral_required": 1,
+            "network_infos": []
+          }
+        ],
+        "pcp": true,
+        "preventive_care_quality": 1,
+        "primary_city": "",
+        "primary_state": "",
+        "provider_id": "exampleProviderId0002",
+        "specialties": [
+          {
+            "internal_specialty_code": "207Q00000X",
+            "internal_specialty_description": "Family Medicine",
+            "internal_specialty_display": "Family Medicine Specialist",
+            "specialty_group": "",
+            "specialty_id": "207Q00000X",
+            "specialty_name": "Family Medicine Specialist"
+          }
+        ],
+        "tenant_id": "oscar",
+        "structured_attributes": {
+          "supervising_physician_npi": "",
+          "supervising_physician_specialty": "",
+          "residents_attending_physicians_license_number": "",
+          "residency_status_primary_specialty": "",
+          "after_hours_indicator": false,
+          "photo_full_body_id": "",
+          "photo_avatar_id": "",
+          "biography": "",
+          "partner_program": false,
+          "cleveland_clinic_pcp_capacity": false,
+          "vpc_video_url_en": "",
+          "vpc_video_url_es": ""
+        },
+        "member_feedback": {
+          "num_reviews": 51,
+          "percent_recommend": 1.0,
+          "top_provider": true,
+          "can_show_reviews": true,
+          "member_feedback_facet_infos": [
+            {
+              "facet_type": 1,
+              "can_show_facet": true,
+              "raw_count_feedbacks": 28
+            },
+            {
+              "facet_type": 2,
+              "can_show_facet": true,
+              "raw_count_feedbacks": 28
+            },
+            {
+              "facet_type": 3,
+              "can_show_facet": true,
+              "raw_count_feedbacks": 26
+            },
+            {
+              "facet_type": 4,
+              "can_show_facet": true,
+              "raw_count_feedbacks": 28
+            },
+            {
+              "facet_type": 5,
+              "can_show_facet": true,
+              "raw_count_feedbacks": 26
+            },
+            {
+              "facet_type": 6,
+              "can_show_facet": true,
+              "raw_count_feedbacks": 22
+            },
+            {
+              "facet_type": 8,
+              "can_show_facet": true,
+              "raw_count_feedbacks": 23
+            },
+            {
+              "facet_type": 9,
+              "can_show_facet": false,
+              "raw_count_feedbacks": 0
+            },
+            {
+              "facet_type": 10,
+              "can_show_facet": false,
+              "raw_count_feedbacks": 0
+            },
+            {
+              "facet_type": 11,
+              "can_show_facet": false,
+              "raw_count_feedbacks": 0
+            }
+          ]
+        },
+        "provider_attributes": [],
+        "years_experience": 0,
+        "tin_infos": [
+          {
+            "tin": "000000000"
+          },
+          {
+            "tin": "000000000"
+          },
+          {
+            "tin": "000000000"
+          },
+          {
+            "tin": "000000000"
+          }
+        ],
+        "has_public_profile": true,
+        "populations_served": [],
+        "availabilities": null,
+        "availability_confidence_levels": null,
+        "is_vpc": null,
+        "should_show_optum_redirect": false,
+        "all_specialties_ny_bh_optum": false
+      }
+    },
+    {
+      "provider": {
+        "absolute_cost_to_member": 0,
+        "affiliations": [],
+        "certifications": [],
+        "cost_to_member_bucket": 2,
+        "educations": [
+          {
+            "degree": "MD",
+            "education_program": "Medical School",
+            "institution_name": "Example Medical Center 15",
+            "graduation_date": null
+          },
+          {
+            "degree": "MD",
+            "education_program": "Medical School",
+            "institution_name": "",
+            "graduation_date": null
+          }
+        ],
+        "first_name": "Riley",
+        "gender": "M",
+        "languages": [
+          {
+            "iso_code": "EN",
+            "display_name_english": "English"
+          },
+          {
+            "iso_code": "ES",
+            "display_name_english": "Spanish"
+          }
+        ],
+        "last_name": "Okonkwo",
+        "licenses": [
+          {
+            "license_number": "EX100000",
+            "license_state": "FL",
+            "expiration_date": null
+          }
+        ],
+        "middle_name": "",
+        "npi": "1000000007",
+        "offices": [
+          {
+            "accepting_new_patients": true,
+            "geocode_success": true,
+            "vendor_supports_scheduling": false,
+            "office_name": "Example Clinic A",
+            "address_hash": "",
+            "phone": "5550100000",
+            "location": {
+              "address": {
+                "address_line_1": "100 Example Ave",
+                "city": "Example City",
+                "state": "FL",
+                "zipcode": "33101",
+                "address_line_2": ""
+              },
+              "coordinates": {
+                "lat": 25.9429858,
+                "lng": -80.2034826,
+                "latitude": 25.9429858,
+                "longitude": -80.2034826
+              },
+              "distance_miles": 0.8176749748697005,
+              "county": ""
+            },
+            "fax": "",
+            "address_type": "Service and billing",
+            "visibility_infos": [
+              {
+                "visible": true,
+                "provider_network_id": "066",
+                "start_date": null,
+                "end_date": null
+              },
+              {
+                "visible": true,
+                "provider_network_id": "070",
+                "start_date": null,
+                "end_date": null
+              },
+              {
+                "visible": true,
+                "provider_network_id": "019",
+                "start_date": null,
+                "end_date": null
+              }
+            ],
+            "provider_office_id": "exampleOffice0020",
+            "email": "",
+            "badges": {
+              "one_medical": false,
+              "oscar_clinic": false,
+              "pediatric_only": false,
+              "mental_health_only": false,
+              "quaternary_care_only": false,
+              "offers_mental_health": false,
+              "preferred_partner": false,
+              "routine_services_only": false,
+              "in_network": true,
+              "oon_soon": false
+            },
+            "medlines_to_appt_availability": {
+              "ANY": false
+            },
+            "all_provider_office_ids": [
+              "exampleRecordId0004",
+              "n0lJHFlczpuUfDewxe-T",
+              "exampleRecordId0005",
+              "SPX5jPJivIMCxbBUdV-C",
+              "exampleRecordId0006"
+            ],
+            "predicted_appointment_availability": [],
+            "medlines_to_direct_scheduling_ranges": {},
+            "provider_office_organizations": [
+              {
+                "organization_name": "Example Medical Center 19"
+              },
+              {
+                "organization_name": "Example Medical Center 20"
+              }
+            ],
+            "cost_to_member_bucket": 0,
+            "accepting_limited_patients": 0,
+            "structured_attributes": {
+              "age_of_third_next_appointment_edit": 0,
+              "concierge_disclaimer_value": false,
+              "days_until_next_appointment": 0,
+              "days_until_next_urgent_care_appointment": 0,
+              "days_until_third_next_appointment": 0,
+              "network_awareness": false,
+              "oscar_virtual_behavioral_health_states": [],
+              "oscar_virtual_primary_care_states": [],
+              "oscar_virtual_urgent_care_states": [],
+              "supports_virtual_care": 0,
+              "telemedicine_offered": false,
+              "website": "",
+              "wheelchair_accessible": true,
+              "audio_appointments": false,
+              "caregiver_telehealth": false,
+              "physical_appointments": true,
+              "video_appointments": false
+            },
+            "preference_tiers": [],
+            "specialties": [
+              {
+                "internal_specialty_code": "207Q00000X",
+                "internal_specialty_description": "Family Medicine",
+                "internal_specialty_display": "Family Medicine Specialist",
+                "specialty_group": "",
+                "specialty_id": "207Q00000X",
+                "specialty_name": "Family Medicine Specialist"
+              },
+              {
+                "internal_specialty_code": "207R00000X",
+                "internal_specialty_description": "General Internal Medicine",
+                "internal_specialty_display": "Internal Medicine Specialist",
+                "specialty_group": "",
+                "specialty_id": "207R00000X",
+                "specialty_name": "Internal Medicine Specialist"
+              }
+            ],
+            "provider_office_attributes": [
+              {
+                "name": "Example Medical Center 21",
+                "value": "false"
+              }
+            ],
+            "office_hours": {
+              "mon": {
+                "status": 0,
+                "time_range": null
+              },
+              "tue": {
+                "status": 0,
+                "time_range": null
+              },
+              "wed": {
+                "status": 0,
+                "time_range": null
+              },
+              "thu": {
+                "status": 0,
+                "time_range": null
+              },
+              "fri": {
+                "status": 0,
+                "time_range": null
+              },
+              "sat": {
+                "status": 0,
+                "time_range": null
+              },
+              "sun": {
+                "status": 0,
+                "time_range": null
+              }
+            },
+            "interpreter_languages": [],
+            "direct_scheduling_partner": false,
+            "tier_infos": [],
+            "last_inn_date": null,
+            "tier_label": null,
+            "in_network": true,
+            "going_oon_soon": null,
+            "is_pcp_office": true,
+            "staff_languages": [],
+            "referral_required": 1,
+            "network_infos": []
+          }
+        ],
+        "pcp": true,
+        "preventive_care_quality": 1,
+        "primary_city": "",
+        "primary_state": "",
+        "provider_id": "exampleProviderId0003",
+        "specialties": [
+          {
+            "internal_specialty_code": "207R00000X",
+            "internal_specialty_description": "General Internal Medicine",
+            "internal_specialty_display": "Internal Medicine Specialist",
+            "specialty_group": "",
+            "specialty_id": "207R00000X",
+            "specialty_name": "Internal Medicine Specialist"
+          }
+        ],
+        "tenant_id": "oscar",
+        "structured_attributes": {
+          "supervising_physician_npi": "",
+          "supervising_physician_specialty": "",
+          "residents_attending_physicians_license_number": "",
+          "residency_status_primary_specialty": "",
+          "after_hours_indicator": false,
+          "photo_full_body_id": "",
+          "photo_avatar_id": "",
+          "biography": "",
+          "partner_program": false,
+          "cleveland_clinic_pcp_capacity": false,
+          "vpc_video_url_en": "",
+          "vpc_video_url_es": ""
+        },
+        "member_feedback": null,
+        "provider_attributes": [
+          {
+            "name": "Example Medical Center 22",
+            "value": "2054-5"
+          }
+        ],
+        "years_experience": 0,
+        "tin_infos": [
+          {
+            "tin": "000000000"
+          }
+        ],
+        "has_public_profile": true,
+        "populations_served": [],
+        "availabilities": null,
+        "availability_confidence_levels": null,
+        "is_vpc": null,
+        "should_show_optum_redirect": false,
+        "all_specialties_ny_bh_optum": false
+      }
+    },
+    {
+      "provider": {
+        "absolute_cost_to_member": 0,
+        "affiliations": [],
+        "certifications": [
+          {
+            "certification_description": "",
+            "board_description": "American Association of Nurse Practitioners",
+            "issue_year": 0
+          }
+        ],
+        "cost_to_member_bucket": 2,
+        "educations": [
+          {
+            "degree": "NP",
+            "education_program": "Medical School",
+            "institution_name": "",
+            "graduation_date": {
+              "year": 2018,
+              "month": 1,
+              "day": 1
+            }
+          },
+          {
+            "degree": "APRN",
+            "education_program": "Medical School",
+            "institution_name": "",
+            "graduation_date": null
+          }
+        ],
+        "first_name": "Morgan",
+        "gender": "F",
+        "languages": [
+          {
+            "iso_code": "EN",
+            "display_name_english": "English"
+          },
+          {
+            "iso_code": "ES",
+            "display_name_english": "Spanish"
+          }
+        ],
+        "last_name": "Petrov",
+        "licenses": [
+          {
+            "license_number": "EX100000",
+            "license_state": "FL",
+            "expiration_date": null
+          }
+        ],
+        "middle_name": "",
+        "npi": "1000000008",
+        "offices": [
+          {
+            "accepting_new_patients": false,
+            "geocode_success": true,
+            "vendor_supports_scheduling": false,
+            "office_name": "Example Clinic A",
+            "address_hash": "",
+            "phone": "5550100000",
+            "location": {
+              "address": {
+                "address_line_1": "410 Fictional Dr",
+                "city": "Example City",
+                "state": "FL",
+                "zipcode": "33101",
+                "address_line_2": ""
+              },
+              "coordinates": {
+                "lat": 25.9844103,
+                "lng": -80.133283,
+                "latitude": 25.9844103,
+                "longitude": -80.133283
+              },
+              "distance_miles": 18.2,
+              "county": ""
+            },
+            "fax": "",
+            "address_type": "Service",
+            "visibility_infos": [
+              {
+                "visible": true,
+                "provider_network_id": "019",
+                "start_date": null,
+                "end_date": null
+              },
+              {
+                "visible": true,
+                "provider_network_id": "070",
+                "start_date": null,
+                "end_date": null
+              },
+              {
+                "visible": true,
+                "provider_network_id": "066",
+                "start_date": null,
+                "end_date": null
+              }
+            ],
+            "provider_office_id": "exampleOffice0500",
+            "email": "",
+            "badges": {
+              "one_medical": false,
+              "oscar_clinic": false,
+              "pediatric_only": false,
+              "mental_health_only": false,
+              "quaternary_care_only": false,
+              "offers_mental_health": false,
+              "preferred_partner": false,
+              "routine_services_only": false,
+              "in_network": true,
+              "oon_soon": false
+            },
+            "medlines_to_appt_availability": {
+              "ANY": false
+            },
+            "all_provider_office_ids": [
+              "exampleRecordId0000"
+            ],
+            "predicted_appointment_availability": [],
+            "medlines_to_direct_scheduling_ranges": {},
+            "provider_office_organizations": [],
+            "cost_to_member_bucket": 0,
+            "accepting_limited_patients": 0,
+            "structured_attributes": {
+              "age_of_third_next_appointment_edit": 0,
+              "concierge_disclaimer_value": false,
+              "days_until_next_appointment": 0,
+              "days_until_next_urgent_care_appointment": 0,
+              "days_until_third_next_appointment": 0,
+              "network_awareness": false,
+              "oscar_virtual_behavioral_health_states": [],
+              "oscar_virtual_primary_care_states": [],
+              "oscar_virtual_urgent_care_states": [],
+              "supports_virtual_care": 0,
+              "telemedicine_offered": false,
+              "website": "",
+              "wheelchair_accessible": true,
+              "audio_appointments": false,
+              "caregiver_telehealth": false,
+              "physical_appointments": true,
+              "video_appointments": false
+            },
+            "preference_tiers": [],
+            "specialties": [
+              {
+                "internal_specialty_code": "363LF0000X",
+                "internal_specialty_description": "Family Nurse Practitioner",
+                "internal_specialty_display": "Family Nurse Practitioner",
+                "specialty_group": "",
+                "specialty_id": "363LF0000X",
+                "specialty_name": "Family Nurse Practitioner"
+              }
+            ],
+            "provider_office_attributes": [],
+            "office_hours": {
+              "mon": {
+                "status": 0,
+                "time_range": null
+              },
+              "tue": {
+                "status": 0,
+                "time_range": null
+              },
+              "wed": {
+                "status": 0,
+                "time_range": null
+              },
+              "thu": {
+                "status": 0,
+                "time_range": null
+              },
+              "fri": {
+                "status": 0,
+                "time_range": null
+              },
+              "sat": {
+                "status": 0,
+                "time_range": null
+              },
+              "sun": {
+                "status": 0,
+                "time_range": null
+              }
+            },
+            "interpreter_languages": [],
+            "direct_scheduling_partner": false,
+            "tier_infos": [],
+            "last_inn_date": null,
+            "tier_label": null,
+            "in_network": true,
+            "going_oon_soon": null,
+            "is_pcp_office": true,
+            "staff_languages": [],
+            "referral_required": 1,
+            "network_infos": []
+          },
+          {
+            "accepting_new_patients": true,
+            "geocode_success": true,
+            "vendor_supports_scheduling": false,
+            "office_name": "Example Clinic B",
+            "address_hash": "",
+            "phone": "5550100000",
+            "location": {
+              "address": {
+                "address_line_1": "100 Example Ave",
+                "city": "Example City",
+                "state": "FL",
+                "zipcode": "33101",
+                "address_line_2": ""
+              },
+              "coordinates": {
+                "lat": 25.9844103,
+                "lng": -80.133283,
+                "latitude": 25.9844103,
+                "longitude": -80.133283
+              },
+              "distance_miles": 2.1,
+              "county": ""
+            },
+            "fax": "",
+            "address_type": "Service",
+            "visibility_infos": [
+              {
+                "visible": true,
+                "provider_network_id": "019",
+                "start_date": null,
+                "end_date": null
+              },
+              {
+                "visible": true,
+                "provider_network_id": "070",
+                "start_date": null,
+                "end_date": null
+              },
+              {
+                "visible": true,
+                "provider_network_id": "066",
+                "start_date": null,
+                "end_date": null
+              }
+            ],
+            "provider_office_id": "exampleOffice0500",
+            "email": "",
+            "badges": {
+              "one_medical": false,
+              "oscar_clinic": false,
+              "pediatric_only": false,
+              "mental_health_only": false,
+              "quaternary_care_only": false,
+              "offers_mental_health": false,
+              "preferred_partner": false,
+              "routine_services_only": false,
+              "in_network": true,
+              "oon_soon": false
+            },
+            "medlines_to_appt_availability": {
+              "ANY": false
+            },
+            "all_provider_office_ids": [
+              "exampleRecordId0000"
+            ],
+            "predicted_appointment_availability": [],
+            "medlines_to_direct_scheduling_ranges": {},
+            "provider_office_organizations": [],
+            "cost_to_member_bucket": 0,
+            "accepting_limited_patients": 0,
+            "structured_attributes": {
+              "age_of_third_next_appointment_edit": 0,
+              "concierge_disclaimer_value": false,
+              "days_until_next_appointment": 0,
+              "days_until_next_urgent_care_appointment": 0,
+              "days_until_third_next_appointment": 0,
+              "network_awareness": false,
+              "oscar_virtual_behavioral_health_states": [],
+              "oscar_virtual_primary_care_states": [],
+              "oscar_virtual_urgent_care_states": [],
+              "supports_virtual_care": 0,
+              "telemedicine_offered": false,
+              "website": "",
+              "wheelchair_accessible": true,
+              "audio_appointments": false,
+              "caregiver_telehealth": false,
+              "physical_appointments": true,
+              "video_appointments": false
+            },
+            "preference_tiers": [],
+            "specialties": [
+              {
+                "internal_specialty_code": "363LF0000X",
+                "internal_specialty_description": "Family Nurse Practitioner",
+                "internal_specialty_display": "Family Nurse Practitioner",
+                "specialty_group": "",
+                "specialty_id": "363LF0000X",
+                "specialty_name": "Family Nurse Practitioner"
+              }
+            ],
+            "provider_office_attributes": [],
+            "office_hours": {
+              "mon": {
+                "status": 0,
+                "time_range": null
+              },
+              "tue": {
+                "status": 0,
+                "time_range": null
+              },
+              "wed": {
+                "status": 0,
+                "time_range": null
+              },
+              "thu": {
+                "status": 0,
+                "time_range": null
+              },
+              "fri": {
+                "status": 0,
+                "time_range": null
+              },
+              "sat": {
+                "status": 0,
+                "time_range": null
+              },
+              "sun": {
+                "status": 0,
+                "time_range": null
+              }
+            },
+            "interpreter_languages": [],
+            "direct_scheduling_partner": false,
+            "tier_infos": [],
+            "last_inn_date": null,
+            "tier_label": null,
+            "in_network": true,
+            "going_oon_soon": null,
+            "is_pcp_office": true,
+            "staff_languages": [],
+            "referral_required": 1,
+            "network_infos": []
+          },
+          {
+            "accepting_new_patients": false,
+            "geocode_success": true,
+            "vendor_supports_scheduling": false,
+            "office_name": "Example Clinic C",
+            "address_hash": "",
+            "phone": "5550100000",
+            "location": {
+              "address": {
+                "address_line_1": "250 Sample Blvd",
+                "city": "Example City",
+                "state": "FL",
+                "zipcode": "33101",
+                "address_line_2": ""
+              },
+              "coordinates": {
+                "lat": 25.9844103,
+                "lng": -80.133283,
+                "latitude": 25.9844103,
+                "longitude": -80.133283
+              },
+              "distance_miles": 9.7,
+              "county": ""
+            },
+            "fax": "",
+            "address_type": "Service",
+            "visibility_infos": [
+              {
+                "visible": true,
+                "provider_network_id": "019",
+                "start_date": null,
+                "end_date": null
+              },
+              {
+                "visible": true,
+                "provider_network_id": "070",
+                "start_date": null,
+                "end_date": null
+              },
+              {
+                "visible": true,
+                "provider_network_id": "066",
+                "start_date": null,
+                "end_date": null
+              }
+            ],
+            "provider_office_id": "exampleOffice0500",
+            "email": "",
+            "badges": {
+              "one_medical": false,
+              "oscar_clinic": false,
+              "pediatric_only": false,
+              "mental_health_only": false,
+              "quaternary_care_only": false,
+              "offers_mental_health": false,
+              "preferred_partner": false,
+              "routine_services_only": false,
+              "in_network": true,
+              "oon_soon": false
+            },
+            "medlines_to_appt_availability": {
+              "ANY": false
+            },
+            "all_provider_office_ids": [
+              "exampleRecordId0000"
+            ],
+            "predicted_appointment_availability": [],
+            "medlines_to_direct_scheduling_ranges": {},
+            "provider_office_organizations": [],
+            "cost_to_member_bucket": 0,
+            "accepting_limited_patients": 0,
+            "structured_attributes": {
+              "age_of_third_next_appointment_edit": 0,
+              "concierge_disclaimer_value": false,
+              "days_until_next_appointment": 0,
+              "days_until_next_urgent_care_appointment": 0,
+              "days_until_third_next_appointment": 0,
+              "network_awareness": false,
+              "oscar_virtual_behavioral_health_states": [],
+              "oscar_virtual_primary_care_states": [],
+              "oscar_virtual_urgent_care_states": [],
+              "supports_virtual_care": 0,
+              "telemedicine_offered": false,
+              "website": "",
+              "wheelchair_accessible": true,
+              "audio_appointments": false,
+              "caregiver_telehealth": false,
+              "physical_appointments": true,
+              "video_appointments": false
+            },
+            "preference_tiers": [],
+            "specialties": [
+              {
+                "internal_specialty_code": "363LF0000X",
+                "internal_specialty_description": "Family Nurse Practitioner",
+                "internal_specialty_display": "Family Nurse Practitioner",
+                "specialty_group": "",
+                "specialty_id": "363LF0000X",
+                "specialty_name": "Family Nurse Practitioner"
+              }
+            ],
+            "provider_office_attributes": [],
+            "office_hours": {
+              "mon": {
+                "status": 0,
+                "time_range": null
+              },
+              "tue": {
+                "status": 0,
+                "time_range": null
+              },
+              "wed": {
+                "status": 0,
+                "time_range": null
+              },
+              "thu": {
+                "status": 0,
+                "time_range": null
+              },
+              "fri": {
+                "status": 0,
+                "time_range": null
+              },
+              "sat": {
+                "status": 0,
+                "time_range": null
+              },
+              "sun": {
+                "status": 0,
+                "time_range": null
+              }
+            },
+            "interpreter_languages": [],
+            "direct_scheduling_partner": false,
+            "tier_infos": [],
+            "last_inn_date": null,
+            "tier_label": null,
+            "in_network": true,
+            "going_oon_soon": null,
+            "is_pcp_office": true,
+            "staff_languages": [],
+            "referral_required": 1,
+            "network_infos": []
+          }
+        ],
+        "pcp": true,
+        "preventive_care_quality": 1,
+        "primary_city": "",
+        "primary_state": "",
+        "provider_id": "exampleProviderId0004",
+        "specialties": [
+          {
+            "internal_specialty_code": "363LF0000X",
+            "internal_specialty_description": "Family Nurse Practitioner",
+            "internal_specialty_display": "Family Nurse Practitioner",
+            "specialty_group": "",
+            "specialty_id": "363LF0000X",
+            "specialty_name": "Family Nurse Practitioner"
+          }
+        ],
+        "tenant_id": "oscar",
+        "structured_attributes": {
+          "supervising_physician_npi": "",
+          "supervising_physician_specialty": "",
+          "residents_attending_physicians_license_number": "",
+          "residency_status_primary_specialty": "",
+          "after_hours_indicator": false,
+          "photo_full_body_id": "",
+          "photo_avatar_id": "",
+          "biography": "",
+          "partner_program": false,
+          "cleveland_clinic_pcp_capacity": false,
+          "vpc_video_url_en": "",
+          "vpc_video_url_es": ""
+        },
+        "member_feedback": {
+          "num_reviews": 6,
+          "percent_recommend": 1.0,
+          "top_provider": true,
+          "can_show_reviews": true,
+          "member_feedback_facet_infos": [
+            {
+              "facet_type": 1,
+              "can_show_facet": false,
+              "raw_count_feedbacks": 1
+            },
+            {
+              "facet_type": 2,
+              "can_show_facet": false,
+              "raw_count_feedbacks": 2
+            },
+            {
+              "facet_type": 3,
+              "can_show_facet": false,
+              "raw_count_feedbacks": 1
+            },
+            {
+              "facet_type": 4,
+              "can_show_facet": false,
+              "raw_count_feedbacks": 1
+            },
+            {
+              "facet_type": 5,
+              "can_show_facet": false,
+              "raw_count_feedbacks": 1
+            },
+            {
+              "facet_type": 6,
+              "can_show_facet": false,
+              "raw_count_feedbacks": 1
+            },
+            {
+              "facet_type": 8,
+              "can_show_facet": false,
+              "raw_count_feedbacks": 1
+            },
+            {
+              "facet_type": 9,
+              "can_show_facet": false,
+              "raw_count_feedbacks": 0
+            },
+            {
+              "facet_type": 10,
+              "can_show_facet": false,
+              "raw_count_feedbacks": 0
+            },
+            {
+              "facet_type": 11,
+              "can_show_facet": false,
+              "raw_count_feedbacks": 0
+            }
+          ]
+        },
+        "provider_attributes": [],
+        "years_experience": 8,
+        "tin_infos": [
+          {
+            "tin": "000000000"
+          },
+          {
+            "tin": "000000000"
+          },
+          {
+            "tin": "000000000"
+          }
+        ],
+        "has_public_profile": true,
+        "populations_served": [],
+        "availabilities": null,
+        "availability_confidence_levels": null,
+        "is_vpc": null,
+        "should_show_optum_redirect": false,
+        "all_specialties_ny_bh_optum": false
+      }
+    },
+    {
+      "provider": {
+        "absolute_cost_to_member": 98,
+        "affiliations": [
+          {
+            "institution_name": "Example Medical Center 28",
+            "institution_tin": "",
+            "admit_privileges": false,
+            "hospital_admit_privileges": 0,
+            "institution_npi": "",
+            "normalized_institution": "Palmetto General Hospital"
+          }
+        ],
+        "certifications": [
+          {
+            "certification_description": "",
+            "board_description": "American Board of Family Medicine",
+            "issue_year": 1999
+          },
+          {
+            "certification_description": "",
+            "board_description": "American Board of Family Medicine",
+            "issue_year": 0
+          }
+        ],
+        "cost_to_member_bucket": 2,
+        "educations": [
+          {
+            "degree": "MD",
+            "education_program": "Medical School",
+            "institution_name": "",
+            "graduation_date": null
+          },
+          {
+            "degree": "MD",
+            "education_program": "Medical School",
+            "institution_name": "Example Medical Center 29",
+            "graduation_date": null
+          }
+        ],
+        "first_name": "Casey",
+        "gender": "",
+        "languages": [
+          {
+            "iso_code": "EN",
+            "display_name_english": "English"
+          },
+          {
+            "iso_code": "ES",
+            "display_name_english": "Spanish"
+          }
+        ],
+        "last_name": "Silva",
+        "licenses": [
+          {
+            "license_number": "EX100000",
+            "license_state": "FL",
+            "expiration_date": null
+          }
+        ],
+        "middle_name": "",
+        "npi": "1000000009",
+        "offices": [
+          {
+            "accepting_new_patients": true,
+            "geocode_success": true,
+            "vendor_supports_scheduling": false,
+            "office_name": "Example Clinic A",
+            "address_hash": "",
+            "phone": "5550100000",
+            "location": {
+              "address": {
+                "address_line_1": "375 Placeholder Way",
+                "city": "Example City",
+                "state": "FL",
+                "zipcode": "33101",
+                "address_line_2": ""
+              },
+              "coordinates": {
+                "lat": 25.9174831,
+                "lng": -80.2161803,
+                "latitude": 25.9174831,
+                "longitude": -80.2161803
+              },
+              "distance_miles": 2.6746349950340464,
+              "county": ""
+            },
+            "fax": "",
+            "address_type": "Service and billing",
+            "visibility_infos": [
+              {
+                "visible": true,
+                "provider_network_id": "070",
+                "start_date": null,
+                "end_date": null
+              },
+              {
+                "visible": true,
+                "provider_network_id": "019",
+                "start_date": null,
+                "end_date": null
+              },
+              {
+                "visible": true,
+                "provider_network_id": "066",
+                "start_date": null,
+                "end_date": null
+              }
+            ],
+            "provider_office_id": "exampleOffice0510",
+            "email": "",
+            "badges": {
+              "one_medical": false,
+              "oscar_clinic": false,
+              "pediatric_only": false,
+              "mental_health_only": false,
+              "quaternary_care_only": false,
+              "offers_mental_health": false,
+              "preferred_partner": false,
+              "routine_services_only": false,
+              "in_network": true,
+              "oon_soon": false
+            },
+            "medlines_to_appt_availability": {
+              "ANY": false
+            },
+            "all_provider_office_ids": [
+              "exampleRecordId0001",
+              "exampleRecordId0002",
+              "exampleRecordId0003"
+            ],
+            "predicted_appointment_availability": [],
+            "medlines_to_direct_scheduling_ranges": {},
+            "provider_office_organizations": [
+              {
+                "organization_name": "Example Medical Center 33"
+              }
+            ],
+            "cost_to_member_bucket": 0,
+            "accepting_limited_patients": 0,
+            "structured_attributes": {
+              "age_of_third_next_appointment_edit": 0,
+              "concierge_disclaimer_value": false,
+              "days_until_next_appointment": 0,
+              "days_until_next_urgent_care_appointment": 0,
+              "days_until_third_next_appointment": 0,
+              "network_awareness": false,
+              "oscar_virtual_behavioral_health_states": [],
+              "oscar_virtual_primary_care_states": [],
+              "oscar_virtual_urgent_care_states": [],
+              "supports_virtual_care": 0,
+              "telemedicine_offered": true,
+              "website": "",
+              "wheelchair_accessible": true,
+              "audio_appointments": false,
+              "caregiver_telehealth": false,
+              "physical_appointments": true,
+              "video_appointments": false
+            },
+            "preference_tiers": [],
+            "specialties": [
+              {
+                "internal_specialty_code": "207Q00000X",
+                "internal_specialty_description": "Family Medicine",
+                "internal_specialty_display": "Family Medicine Specialist",
+                "specialty_group": "",
+                "specialty_id": "207Q00000X",
+                "specialty_name": "Family Medicine Specialist"
+              }
+            ],
+            "provider_office_attributes": [
+              {
+                "name": "Example Medical Center 34",
+                "value": "true"
+              }
+            ],
+            "office_hours": {
+              "mon": {
+                "status": 0,
+                "time_range": null
+              },
+              "tue": {
+                "status": 0,
+                "time_range": null
+              },
+              "wed": {
+                "status": 0,
+                "time_range": null
+              },
+              "thu": {
+                "status": 0,
+                "time_range": null
+              },
+              "fri": {
+                "status": 0,
+                "time_range": null
+              },
+              "sat": {
+                "status": 0,
+                "time_range": null
+              },
+              "sun": {
+                "status": 0,
+                "time_range": null
+              }
+            },
+            "interpreter_languages": [],
+            "direct_scheduling_partner": false,
+            "tier_infos": [],
+            "last_inn_date": null,
+            "tier_label": null,
+            "in_network": true,
+            "going_oon_soon": null,
+            "is_pcp_office": true,
+            "staff_languages": [],
+            "referral_required": 1,
+            "network_infos": []
+          }
+        ],
+        "pcp": true,
+        "preventive_care_quality": 1,
+        "primary_city": "",
+        "primary_state": "",
+        "provider_id": "exampleProviderId0005",
+        "specialties": [
+          {
+            "internal_specialty_code": "207Q00000X",
+            "internal_specialty_description": "Family Medicine",
+            "internal_specialty_display": "Family Medicine Specialist",
+            "specialty_group": "",
+            "specialty_id": "207Q00000X",
+            "specialty_name": "Family Medicine Specialist"
+          }
+        ],
+        "tenant_id": "oscar",
+        "structured_attributes": {
+          "supervising_physician_npi": "",
+          "supervising_physician_specialty": "",
+          "residents_attending_physicians_license_number": "",
+          "residency_status_primary_specialty": "",
+          "after_hours_indicator": false,
+          "photo_full_body_id": "",
+          "photo_avatar_id": "",
+          "biography": "",
+          "partner_program": false,
+          "cleveland_clinic_pcp_capacity": false,
+          "vpc_video_url_en": "",
+          "vpc_video_url_es": ""
+        },
+        "member_feedback": null,
+        "provider_attributes": [],
+        "years_experience": 0,
+        "tin_infos": [
+          {
+            "tin": "000000000"
+          },
+          {
+            "tin": "000000000"
+          },
+          {
+            "tin": "000000000"
+          },
+          {
+            "tin": "000000000"
+          }
+        ],
+        "has_public_profile": true,
+        "populations_served": [],
+        "availabilities": null,
+        "availability_confidence_levels": null,
+        "is_vpc": null,
+        "should_show_optum_redirect": false,
+        "all_specialties_ny_bh_optum": false
+      }
+    }
+  ],
+  "tierLabel": null,
+  "totalResultCount": 4772,
+  "requestInfo": {
+    "nameQuery": null,
+    "pageStart": 0,
+    "pageSize": 30,
+    "parentSpecialty": null,
+    "reasonForVisit": null,
+    "specialty": {
+      "specialty_id": "CLINPCPMAN",
+      "name": "Example Medical Center 35",
+      "specialty_type": 3,
+      "autocomplete_searchable": true,
+      "expand_to_ids": [
+        "CLINPCPMAN",
+        "363LP2300X",
+        "PRIMECARE0",
+        "JPRIMECARE",
+        "207Q00000X",
+        "GENPRACMED",
+        "207R00000X",
+        "363LF0000X"
+      ],
+      "children_ids": [
+        "PRIMECARE0"
+      ],
+      "name_spanish": "M\u00e9dico de cabecera",
+      "name_highlights": [],
+      "parent_ids": [],
+      "equivalent_name": "",
+      "equivalent_id": "",
+      "parent_oscar_hierarchy_id": "",
+      "children_oscar_hierarchy_ids": []
+    }
+  },
+  "ooaLinks": null,
+  "anchorLocation": {
+    "lat": 25.9502474,
+    "lng": -80.1930859
+  },
+  "optumPhoneNumber": null,
+  "isBehavioralHealthSpecialty": false,
+  "isReferralRequiredEnum": 0,
+  "year": 2026,
+  "enableMedianCostEstimateFetch": true,
+  "medianProviderId": "",
+  "medianProviderOfficeId": "",
+  "zipCode": "33101"
+}
