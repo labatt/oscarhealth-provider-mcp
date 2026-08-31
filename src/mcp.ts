@@ -14,7 +14,7 @@ export type { ToolContext } from './tools/context.js';
  */
 export function buildMcpServer(ctx: ToolContext): McpServer {
   const server = new McpServer(
-    { name: 'oscar-provider-mcp', version: '1.0.0' },
+    { name: 'oscarhealth-provider-mcp', version: '1.0.0' },
     { capabilities: { tools: {} } }
   );
   registerLookupTools(server, ctx);

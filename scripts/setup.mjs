@@ -3,7 +3,7 @@
  * Interactive setup.
  *
  * Everything opaque is discovered rather than asked for. The user picks their
- * state, then their network and plan BY NAME from Oscar's own catalogue; the
+ * state, then their network and plan BY NAME from Oscar Health's own catalogue; the
  * policyId, formulary tier and a sensible default ZIP fall out of that. The
  * only thing a person should have to recognise is the plan name printed on
  * their insurance card.
@@ -19,7 +19,7 @@ import { dirname, join } from 'node:path';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const BASE = process.env.OSCAR_BASE_URL?.trim() || 'https://www.hioscar.com';
-const UA = 'oscar-provider-mcp setup (https://github.com/labatt/oscar-provider-mcp)';
+const UA = 'oscarhealth-provider-mcp setup (https://github.com/labatt/oscarhealth-provider-mcp)';
 
 /**
  * Prompt layer that works both interactively and with piped input.
@@ -94,8 +94,8 @@ async function confirm(q) {
 }
 
 async function main() {
-  console.log(`\n${b('Oscar Provider MCP — setup')}`);
-  console.log(dim('Discovers your plan from Oscar\'s own catalogue, then writes config/plans.json and .env.\n'));
+  console.log(`\n${b('Oscar Health Provider MCP — setup')}`);
+  console.log(dim('Discovers your plan from Oscar Health\'s own catalogue, then writes config/plans.json and .env.\n'));
 
   // ---- 1. Plan discovery -------------------------------------------------
   console.log(dim(`Fetching the network catalogue from ${BASE} …`));
@@ -140,7 +140,7 @@ async function main() {
   }
   if (!policyId) {
     console.log(dim('  Falling back to manual entry. Your policyId appears in the URL when you'));
-    console.log(dim('  use Oscar\'s own Find Care page, as policyId=…'));
+    console.log(dim('  use Oscar Health\'s own Find Care page, as policyId=…'));
     policyId = await ask('  policyId', '00000000-0000-0000-0000-000000000000');
   }
 

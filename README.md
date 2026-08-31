@@ -1,4 +1,4 @@
-# Oscar Provider MCP
+# Oscar Health Provider MCP
 
 An [MCP](https://modelcontextprotocol.io) server for searching an Oscar Health
 in-network provider directory — doctors and facilities — from an AI assistant.
@@ -15,7 +15,7 @@ network.
 
 | Tool | Purpose |
 | --- | --- |
-| `find_specialty` | Resolve free text ("cardiologist") to a specialty ID. Call this first — IDs mix Oscar internal codes with NUCC taxonomy codes and cannot be guessed. |
+| `find_specialty` | Resolve free text ("cardiologist") to a specialty ID. Call this first — IDs mix Oscar Health internal codes with NUCC taxonomy codes and cannot be guessed. |
 | `search_doctors` | Search physicians: specialty, distance, language, group, hospital, plus local gender and review filtering. |
 | `search_facilities` | Hospitals, pharmacies, labs, urgent care. |
 | `get_provider_details` | Full record for one provider — every office, education, certifications. Always fetched live. |
@@ -23,7 +23,7 @@ network.
 
 ## Two things it does that a thin API wrapper would not
 
-**Gender and review quality are filtered locally.** Oscar's API accepts a
+**Gender and review quality are filtered locally.** Oscar Health's API accepts a
 `gender` parameter and silently ignores it — every value returns the same
 unfiltered count — and offers no way to sort by patient reviews. Both are
 therefore applied in this server, over a bounded sample of fetched pages, and
@@ -70,14 +70,14 @@ miles.
 ## Setup
 
 ```bash
-git clone https://github.com/labatt/oscar-provider-mcp.git
-cd oscar-provider-mcp
+git clone https://github.com/labatt/oscarhealth-provider-mcp.git
+cd oscarhealth-provider-mcp
 npm install
 npm run setup
 ```
 
 `npm run setup` is interactive and does the awkward parts for you. It reads
-Oscar's own catalogue and has you pick your **state**, then your **network**,
+Oscar Health's own catalogue and has you pick your **state**, then your **network**,
 then your **plan by the name printed on your insurance card** — the `policyId`,
 formulary tier and a sensible default ZIP all fall out of those choices, so you
 never type an opaque identifier. It then runs a real search to prove the
@@ -112,7 +112,7 @@ Both `config/plans.json` and `.env` are gitignored.
 <summary>Configuring by hand instead</summary>
 
 Copy `config/plans.example.json` to `config/plans.json` and fill it in. All five
-values are visible in the URL of Oscar's own search page:
+values are visible in the URL of Oscar Health's own search page:
 
 ```
 https://www.hioscar.com/search/?networkId=066&state=FL&year=2026&policyId=b5c9…&formularyPlanType=INDIVIDUAL_4_TIER
@@ -298,7 +298,7 @@ provider directory.
 
 ## Fair use
 
-Oscar's `robots.txt` disallows `/search/*` and `/member/*`. That directive
+Oscar Health's `robots.txt` disallows `/search/*` and `/member/*`. That directive
 addresses search-engine crawling; this server makes low-volume, user-initiated
 lookups against a directory that CMS transparency rules require insurers to
 publish. It is built to stay on that side of the line:
@@ -327,13 +327,13 @@ including its quirks, but contain no real clinicians.
 ### When the contract tests fail
 
 `npm run test:contract` pins every upstream fact this server depends on. A
-failure means Oscar changed something and the *documentation* needs updating,
+failure means Oscar Health changed something and the *documentation* needs updating,
 not the test. The ones most worth watching:
 
 - **`gender` is still ignored server-side.** If it starts working, delete the
   local filter and send it upstream.
 - **NPI is still unsearchable.** `get_provider_details` carries a `name`
-  parameter purely to work around this; if Oscar adds NPI search, simplify it.
+  parameter purely to work around this; if Oscar Health adds NPI search, simplify it.
 - **Facet keys still differ from labels.** `language_code=ES` matches;
   `language_code=Spanish` returns zero.
 
