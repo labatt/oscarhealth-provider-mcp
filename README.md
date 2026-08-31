@@ -238,6 +238,64 @@ your URL can register a client and start an authorization request. The consent
 screen always shows you the callback host — the allowlist turns that judgement
 call into a server-side refusal.
 
+## Example queries
+
+Once connected, ask in plain language. Claude resolves the specialty first, then
+searches — you never handle IDs.
+
+**Finding a doctor**
+
+> Find me a primary care physician within 10 miles who's accepting new patients.
+
+> I want a male cardiologist with good reviews, sorted by rating.
+
+> Are there any female dermatologists near me who speak Spanish?
+
+> Find pediatricians affiliated with a hospital I'd actually want to be admitted to — show me which hospitals they're affiliated with.
+
+> Who are the ten best-reviewed PCPs in my network, and how many reviews does each have?
+
+**Narrowing a shortlist**
+
+> Of those five, which have been practising longest and are board certified?
+
+> Show me everything you have on the second one — all their office locations, education and certifications.
+
+> Is Dr. Alvarez still in my network? I want to check before I book.
+
+**Facilities**
+
+> Find in-network pharmacies within 5 miles.
+
+> Which hospitals are in my network, and which are accredited?
+
+> Is there an in-network urgent care near ZIP 33139?
+
+**Understanding your plan**
+
+> What plan am I configured for, and what network is it?
+
+> What languages can I filter doctors by?
+
+> List the medical groups in my network so I can filter by one.
+
+### What the answers will and won't tell you
+
+Claude will say when a filter ran locally rather than upstream, because it
+matters: **gender and review filters operate on a fetched sample**, not the
+whole directory. A search that reports "applied locally over 90 fetched
+providers" out of 4,772 has genuinely looked at 90. Narrow with a distance or a
+more specific specialty and the sample covers proportionally more of what
+matches.
+
+You will also see providers with **no gender on file returned separately** rather
+than dropped, with their names — about 9% of records — so you can judge for
+yourself instead of losing them silently.
+
+Things it deliberately cannot do: book appointments, quote your out-of-pocket
+cost, or read anything from your member account. It only searches the public
+provider directory.
+
 ## Fair use
 
 Oscar's `robots.txt` disallows `/search/*` and `/member/*`. That directive
