@@ -218,10 +218,10 @@ export interface FacetValue {
    * The exact string the corresponding search filter accepts, which is not
    * always the label: language facets are keyed by ISO code ("ES", not
    * "Spanish"), and a handful of hospital keys carry stray leading or trailing
-   * spaces that upstream matches literally. Verified 2026-08-30 —
-   * `language_code=ES` returns 2449 of 4772 PCPs while `language_code=Spanish`
-   * returns 0, and " Baptist Hospital" and "Baptist Hospital" are separate
-   * facets returning 1 and 141 providers.
+   * spaces that upstream matches literally. Measured against a live network:
+   * `language_code=ES` matched 2449 of 4772 PCPs while `language_code=Spanish`
+   * matched 0, and one hospital name existed as two separate facets — with and
+   * without a leading space — holding 1 provider and 141 respectively.
    */
   code: string;
   count: number;

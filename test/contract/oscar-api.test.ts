@@ -288,7 +288,7 @@ describe('Oscar API contract', () => {
     expect(
       untrimmed.length,
       'No hospital facet key carries leading or trailing whitespace any more. Oscar ' +
-      'currently emits both " Baptist Hospital" and "Baptist Hospital" as separate ' +
+      'currently emits both a name with and without a leading space as separate ' +
       'facets matching different providers, and it matches the key literally — which is ' +
       'why shapeFacets keeps `code` untrimmed while trimming `value` for display. If the ' +
       'duplicates have been cleaned up upstream, that split can be simplified; if ' +
