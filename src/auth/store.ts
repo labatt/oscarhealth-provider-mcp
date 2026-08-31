@@ -144,7 +144,7 @@ export class AuthStore {
 
   /**
    * Registers a client, first pruning abandoned registrations and then
-   * refusing outright if the store is still at capacity — see MAX_CLIENTS
+   * evicting the oldest unauthorized rows if still at capacity — see MAX_CLIENTS
    * and UNAUTHORIZED_CLIENT_TTL_MS. Thrown as a plain Error: the SDK's
    * registration handler (RegisterHandler.ts) catches any non-OAuthError
    * thrown from `registerClient` and reports it as a 500 server_error, which
@@ -153,9 +153,24 @@ export class AuthStore {
    */
   saveClient(c: StoredClient): void {
     this.pruneStaleClients();
+    // Evict rather than refuse. Throwing here let anyone who could reach
+    // /register fill the table with unauthorized rows and keep it full against
+    // the hourly prune, which would block the OPERATOR's own client from
+    // registering — a denial of service on the person running the server.
+    // Authorized clients are never evicted, so a working connection cannot be
+    // displaced by registration spam.
     const { n } = this.db.prepare('SELECT COUNT(*) AS n FROM clients').get() as { n: number };
     if (n >= MAX_CLIENTS) {
-      throw new Error('Client registration limit reached. Try again later.');
+      this.db
+        .prepare(
+          `DELETE FROM clients WHERE client_id IN (
+             SELECT client_id FROM clients
+             WHERE authorized_at IS NULL
+             ORDER BY created_at ASC
+             LIMIT ?
+           )`
+        )
+        .run(n - MAX_CLIENTS + 1);
     }
     this.db
       .prepare('INSERT OR REPLACE INTO clients (client_id, json, created_at, authorized_at) VALUES (?, ?, ?, NULL)')

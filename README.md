@@ -131,9 +131,8 @@ argon2.hash(pw, { type: argon2.argon2id }).then(h => {
 });"
 ```
 
-Set `MCP_SESSION_SECRET` to `openssl rand -hex 32`, and `MCP_PUBLIC_URL` to your
-public origin — **no trailing slash**, since it is the OAuth issuer and must
-match exactly.
+Set `MCP_PUBLIC_URL` to your public origin — **no trailing slash**, since it is
+the OAuth issuer and must match exactly.
 
 You can define several plans and pass `plan: "<id>"` to any tool to switch.
 </details>
@@ -320,6 +319,23 @@ publish. It is built to stay on that side of the line:
 **Please keep those.** They are the difference between a personal lookup tool and
 a scraper. Deploy it for your own plan; do not point it at a directory you have
 no relationship with, and do not mirror the data.
+
+### Known limitations
+
+Verified during a security review and accepted rather than fixed, so you can
+judge them yourself:
+
+- **Tool calls are not audited.** `logs/audit.jsonl` records every OAuth grant —
+  client name, id, redirect URI, timestamp — but nothing about what an
+  authorized client subsequently searched.
+- **No refresh-token reuse detection.** Rotation spends the presented token, so
+  a stolen one stops working once the legitimate client rotates; but reuse
+  breaks that client rather than revoking the whole token family.
+- **No audience binding.** The `resource` parameter is stored and not enforced
+  (RFC 8707). Harmless with a single resource server, which is the only
+  supported deployment.
+- **Client secrets are stored in plaintext** in `data/oauth.db`. The database
+  and its WAL sidecars are force-chmodded to `0600` on every start.
 
 ## Development
 

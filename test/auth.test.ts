@@ -67,3 +67,25 @@ describe('redirect host allowlist', () => {
     expect(allowed(p, 'not a url')).toBe(false);
   });
 });
+
+describe('client registration under capacity pressure', () => {
+  const mkClient = (id: string, name: string) => ({
+    client_id: id, client_name: name, redirect_uris: ['https://example.test/cb'],
+    client_id_issued_at: Math.floor(Date.now() / 1000)
+  }) as never;
+
+  it("lets the operator still register when the table is full of spam", () => {
+    // Refusing at capacity meant anyone reaching /register could fill the table
+    // and keep it full, locking the operator out of connecting their own client.
+    for (let i = 0; i < 600; i++) store.saveClient(mkClient(`spam-${i}`, 'spam'));
+    expect(() => store.saveClient(mkClient('operator-client', 'Claude'))).not.toThrow();
+    expect(store.getClient('operator-client')).toBeDefined();
+  });
+
+  it('never evicts a client that has completed an authorization', () => {
+    store.saveClient(mkClient('real-client', 'Claude'));
+    store.markClientAuthorized('real-client');
+    for (let i = 0; i < 600; i++) store.saveClient(mkClient(`flood-${i}`, 'flood'));
+    expect(store.getClient('real-client')).toBeDefined();
+  });
+});

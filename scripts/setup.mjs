@@ -83,6 +83,25 @@ async function choose(label, items, render) {
   }
 }
 
+/**
+ * Like ask(), but does not echo. readline has no built-in masking, so the
+ * output hook is replaced for the duration of the question — otherwise the
+ * operator's password is left in their terminal scrollback and any recording
+ * of the session.
+ */
+async function askSecret(q) {
+  if (!interactive) return prompt(`${q}: `);
+  const write = rl._writeToOutput?.bind(rl);
+  rl._writeToOutput = function (chunk) { if (chunk.includes('\n')) write?.(chunk); };
+  stdout.write(`${q}: `);
+  try {
+    const a = await rl.question('');
+    return a.trim();
+  } finally {
+    rl._writeToOutput = write;
+  }
+}
+
 async function ask(q, fallback) {
   const a = (await prompt(fallback ? `${q} ${dim(`[${fallback}]`)}: ` : `${q}: `)).trim();
   return a || fallback || '';
@@ -198,21 +217,19 @@ async function main() {
   const port = await ask('Loopback port', '3070');
   const loginUser = await ask('Operator username', 'operator');
 
-  let password = await ask('Operator password (blank to generate a strong one)', '');
+  let password = await askSecret('Operator password (blank to generate a strong one; input is hidden)');
   let generated = false;
   if (!password) { password = randomBytes(18).toString('base64url'); generated = true; }
 
   console.log(dim('\nHashing the password …'));
   const argon2 = (await import('argon2')).default;
   const hash = await argon2.hash(password, { type: argon2.argon2id });
-  const sessionSecret = randomBytes(32).toString('hex');
 
   const env = [
     `MCP_PUBLIC_URL=${publicUrl}`,
     `MCP_PORT=${port}`,
     `MCP_LOGIN_USER=${loginUser}`,
     `MCP_LOGIN_PASSWORD_HASH=${hash}`,
-    `MCP_SESSION_SECRET=${sessionSecret}`,
     '',
     '# Optional. Defaults to https://www.hioscar.com. Leave commented out — a key',
     '# present but EMPTY is an empty string, not "unset", and would blank the URL.',
@@ -226,7 +243,11 @@ async function main() {
     'MCP_ALLOWED_REDIRECT_HOSTS=',
     ''
   ].join('\n');
-  writeFileSync(envPath, env);
+  // Mode is set AT CREATION. writeFileSync-then-chmod leaves a window in which
+  // the file exists at the default umask (typically 0644) holding the argon2
+  // hash and session secret. The chmod stays for the overwrite case, where an
+  // existing file keeps its own mode regardless of what is passed here.
+  writeFileSync(envPath, env, { mode: 0o600 });
   try { chmodSync(envPath, 0o600); } catch { /* best effort on non-POSIX */ }
   console.log(green('  ✓ wrote .env (mode 600)'));
 

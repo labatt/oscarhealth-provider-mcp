@@ -6,7 +6,6 @@ export interface Config {
   oscarBaseUrl: string;
   loginUser: string;
   loginPasswordHash: string;
-  sessionSecret: string;
   /** Optional hostname allowlist for OAuth redirect URIs. See the notes in this file. */
   allowedRedirectHosts?: string[];
 }
@@ -71,7 +70,6 @@ export function loadConfig(): Config {
     oscarBaseUrl: optional('OSCAR_BASE_URL') ?? 'https://www.hioscar.com',
     loginUser: required('MCP_LOGIN_USER'),
     loginPasswordHash: required('MCP_LOGIN_PASSWORD_HASH'),
-    sessionSecret: required('MCP_SESSION_SECRET'),
     allowedRedirectHosts: parseAllowedRedirectHosts()
   };
 }

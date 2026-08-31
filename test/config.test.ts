@@ -5,8 +5,7 @@ const REQUIRED = {
   MCP_PUBLIC_URL: 'https://mcp.example.com',
   MCP_PORT: '3070',
   MCP_LOGIN_USER: 'operator',
-  MCP_LOGIN_PASSWORD_HASH: '$argon2id$v=19$m=65536,t=3,p=4$abc$def',
-  MCP_SESSION_SECRET: 'secret'
+  MCP_LOGIN_PASSWORD_HASH: '$argon2id$v=19$m=65536,t=3,p=4$abc$def'
 };
 
 let saved: NodeJS.ProcessEnv;
@@ -31,8 +30,8 @@ describe('loadConfig', () => {
   });
 
   it('names the missing variable', () => {
-    delete process.env.MCP_SESSION_SECRET;
-    expect(() => loadConfig()).toThrow(/MCP_SESSION_SECRET/);
+    delete process.env.MCP_LOGIN_PASSWORD_HASH;
+    expect(() => loadConfig()).toThrow(/MCP_LOGIN_PASSWORD_HASH/);
   });
 
   it('falls back to the default when OSCAR_BASE_URL is present but blank', () => {
