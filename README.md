@@ -69,10 +69,174 @@ miles.
 
 ## Setup
 
-See **[SETUP.md](SETUP.md)**. In short: copy your plan's `networkId`, `state`,
-`year` and `policyId` out of the URL of Oscar's own search page into
-`config/plans.json`, generate an operator credential, and run behind a
-TLS-terminating proxy.
+```bash
+git clone https://github.com/labatt/oscar-provider-mcp.git
+cd oscar-provider-mcp
+npm install
+npm run setup
+```
+
+`npm run setup` is interactive and does the awkward parts for you. It reads
+Oscar's own catalogue and has you pick your **state**, then your **network**,
+then your **plan by the name printed on your insurance card** — the `policyId`,
+formulary tier and a sensible default ZIP all fall out of those choices, so you
+never type an opaque identifier. It then runs a real search to prove the
+configuration works before writing anything:
+
+```
+State
+   1. AL    3. FL    5. IA  …
+
+Network in FL for 2026
+   1. Florida EPO Off Exchange   (019, EPO)
+   2. Florida HMO Broad          (070, HMO_NAME_ONLY)
+   3. Florida HMO Standard       (066, HMO_NAME_ONLY)
+
+Your plan (as printed on your insurance card)
+   …
+  34. Gold Classic Standard      INDIVIDUAL_4_TIER
+
+Verifying with a real search …
+  ✓ 4,123 primary care providers found near 33186.
+  ✓ wrote config/plans.json  (2026 Florida HMO Standard)
+```
+
+It also generates the operator credential — prompting for a password or
+inventing a strong one, hashing it with argon2id — plus a session secret, and
+writes `.env` with mode `600`. **The password is printed once and stored
+nowhere**; save it then.
+
+Both `config/plans.json` and `.env` are gitignored.
+
+<details>
+<summary>Configuring by hand instead</summary>
+
+Copy `config/plans.example.json` to `config/plans.json` and fill it in. All five
+values are visible in the URL of Oscar's own search page:
+
+```
+https://www.hioscar.com/search/?networkId=066&state=FL&year=2026&policyId=b5c9…&formularyPlanType=INDIVIDUAL_4_TIER
+                                          ^^^        ^^     ^^^^          ^^^^                    ^^^^^^^^^^^^^^^^
+```
+
+Then `cp .env.example .env` and generate a credential:
+
+```bash
+node -e "
+const argon2 = require('argon2');
+const pw = require('crypto').randomBytes(18).toString('base64url');
+argon2.hash(pw, { type: argon2.argon2id }).then(h => {
+  console.log('PASSWORD (save this):', pw);
+  console.log('HASH (put in .env):  ', h);
+});"
+```
+
+Set `MCP_SESSION_SECRET` to `openssl rand -hex 32`, and `MCP_PUBLIC_URL` to your
+public origin — **no trailing slash**, since it is the OAuth issuer and must
+match exactly.
+
+You can define several plans and pass `plan: "<id>"` to any tool to switch.
+</details>
+
+## Running it
+
+```bash
+npm run build
+node dist/server.js
+```
+
+It listens on `127.0.0.1:3070` and expects a TLS-terminating reverse proxy in
+front. `MCP_PUBLIC_URL` must be the public HTTPS origin.
+
+### Deploying with Claude Code
+
+TLS certificates, reverse proxy config and a process manager are exactly the
+kind of fiddly, host-specific work an agent is good at. If you have
+[Claude Code](https://claude.com/claude-code) on the server, this prompt gets
+you a working deployment:
+
+```
+Deploy the MCP server in this directory behind nginx with a Let's Encrypt
+certificate, at https://mcp.example.com. Specifically:
+
+1. Confirm DNS for mcp.example.com already points at this host, and stop if
+   it does not — certbot's HTTP-01 challenge will fail otherwise.
+2. Run `npm run build`, then start dist/server.js under a process manager
+   (pm2 or systemd) bound to 127.0.0.1:3070. Verify it actually bound with
+   `ss -ltnp | grep 3070` — under pm2 fork mode a process can report
+   "online" while never binding, so do not trust the status column.
+3. Add an nginx site proxying to 127.0.0.1:3070. Streamable HTTP holds the
+   response open, so it needs: proxy_buffering off, proxy_cache off,
+   proxy_read_timeout 3600s, proxy_send_timeout 3600s and
+   chunked_transfer_encoding on. Without these the connector is
+   intermittently flaky rather than obviously broken.
+4. Obtain a certificate with certbot --nginx and reload.
+5. Verify from outside: /healthz returns {"ok":true}; /mcp returns 401 with
+   a WWW-Authenticate header naming resource_metadata; and confirm that
+   /.env, /config/plans.json and /.git/config are NOT reachable.
+
+Do not edit .env or anything under data/. Show me the nginx config before
+reloading, and check `nginx -t` first.
+```
+
+Replace `mcp.example.com` with your host. Step 5 matters: a **401** on `/mcp` is
+success — it means auth is wired and no token was supplied. A 403 means host
+validation rejected the request; a 502 means the app is not listening.
+
+<details>
+<summary>Deploying by hand</summary>
+
+```nginx
+server {
+    server_name mcp.example.com;
+
+    location / {
+        proxy_pass http://127.0.0.1:3070;
+        proxy_http_version 1.1;
+        proxy_set_header Host              $host;
+        proxy_set_header X-Real-IP         $remote_addr;
+        proxy_set_header X-Forwarded-For   $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+
+        # Streamable HTTP holds the response open. Default buffering plus a 60s
+        # read timeout severs the session mid-stream, which shows up as an
+        # intermittently "flaky" connector rather than an obvious timeout.
+        proxy_buffering off;
+        proxy_cache off;
+        proxy_read_timeout 3600s;
+        proxy_send_timeout 3600s;
+        chunked_transfer_encoding on;
+    }
+    listen 443 ssl;   # certbot manages the certificate lines
+}
+```
+
+The app expects exactly one hop of `X-Forwarded-For` (`trust proxy` is
+`loopback`). Add another proxy in front and every request looks like it came
+from `127.0.0.1`, sharing one rate-limit bucket.
+
+Under **pm2 fork mode**, `process.argv[1]` is pm2's wrapper rather than your
+app, so `isMainModule` consults `process.env.pm_exec_path` first. Without that
+pm2 reports "online" with a live PID while nothing binds the port — verify with
+`ss -ltnp | grep 3070`.
+</details>
+
+## Connecting a client
+
+Add `https://your-host/mcp` as a custom MCP connector. The OAuth flow opens a
+browser; sign in with your operator credentials.
+
+Then **set `MCP_ALLOWED_REDIRECT_HOSTS`** to the callback host your client used
+and restart:
+
+```bash
+sqlite3 data/oauth.db "select * from clients;"   # shows the registered callback
+```
+
+Dynamic client registration is open, so until you set this, anyone who finds
+your URL can register a client and start an authorization request. The consent
+screen always shows you the callback host — the allowlist turns that judgement
+call into a server-side refusal.
 
 ## Fair use
 

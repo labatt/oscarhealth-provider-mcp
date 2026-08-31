@@ -8,7 +8,8 @@
     "build": "tsc",
     "test:contract": "vitest run --config vitest.contract.config.ts",
     "dev": "tsx src/server.ts",
-    "typecheck": "tsc -p tsconfig.check.json"
+    "typecheck": "tsc -p tsconfig.check.json",
+    "setup": "node scripts/setup.mjs"
   },
   "author": "",
   "license": "MIT",
