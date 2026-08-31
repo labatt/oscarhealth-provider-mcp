@@ -33,7 +33,12 @@ export function loadPlans(path: string = DEFAULT_PATH): PlanBook {
  */
 export function resolvePlan(book: PlanBook, id?: string): Plan {
   const key = id ?? book.defaultPlan;
-  const plan = book.plans[key];
+  // Object.hasOwn, not a truthiness check: `plans['constructor']`,
+  // `plans['toString']` and `plans['__proto__']` are all truthy via the
+  // prototype chain, so `plan: "constructor"` would pass a `!plan` guard and
+  // then yield an all-undefined param set — an unscoped upstream request
+  // cached under a junk key.
+  const plan = Object.hasOwn(book.plans, key) ? book.plans[key] : undefined;
   if (!plan) {
     throw new Error(`Unknown plan "${key}". Available: ${Object.keys(book.plans).join(', ')}`);
   }

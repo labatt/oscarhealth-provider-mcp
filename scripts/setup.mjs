@@ -218,8 +218,11 @@ async function main() {
     '# present but EMPTY is an empty string, not "unset", and would blank the URL.',
     '# OSCAR_BASE_URL=https://www.hioscar.com',
     '',
-    '# Set this to your MCP client\'s callback host once you have connected it,',
-    '# e.g. claude.ai, then restart. Until then any party can register a client.',
+    '# REQUIRED — fails closed. Blank means no client can be authorized at all,',
+    '# because dynamic client registration is open and an attacker could otherwise',
+    '# register a client pointing at their own callback. Connect once, read the',
+    '# hostname off the refusal page, put it here and restart. For Claude:',
+    '#   MCP_ALLOWED_REDIRECT_HOSTS=claude.ai',
     'MCP_ALLOWED_REDIRECT_HOSTS=',
     ''
   ].join('\n');

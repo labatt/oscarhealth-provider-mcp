@@ -30,3 +30,40 @@ describe('AuthStore', () => {
     expect(() => store.purgeExpired()).not.toThrow();
   });
 });
+
+describe('redirect host allowlist', () => {
+  const allowed = (provider: OscarOAuthProvider, uri: string): boolean =>
+    // redirectHostAllowed is private; exercise it the way /authorize does.
+    (provider as unknown as { redirectHostAllowed(u: string): boolean }).redirectHostAllowed(uri);
+
+  it('denies every host when the allowlist is unset — fails closed', () => {
+    // Dynamic registration is open, so an unconfigured allowlist previously let
+    // an attacker register a client pointing at their own callback and phish a
+    // real consent screen on the operator's own domain.
+    const p = new OscarOAuthProvider(store, {});
+    expect(allowed(p, 'https://claude.ai/cb')).toBe(false);
+    expect(allowed(p, 'https://evil.test/cb')).toBe(false);
+  });
+
+  it('allows exactly the configured hosts', () => {
+    const p = new OscarOAuthProvider(store, { allowedRedirectHosts: ['claude.ai'] });
+    expect(allowed(p, 'https://claude.ai/api/mcp/auth_callback')).toBe(true);
+    expect(allowed(p, 'https://evil.test/cb')).toBe(false);
+  });
+
+  it('matches the whole hostname, not a suffix', () => {
+    const p = new OscarOAuthProvider(store, { allowedRedirectHosts: ['claude.ai'] });
+    expect(allowed(p, 'https://claude.ai.evil.test/cb')).toBe(false);
+    expect(allowed(p, 'https://notclaude.ai/cb')).toBe(false);
+  });
+
+  it('treats * as an explicit opt-out', () => {
+    const p = new OscarOAuthProvider(store, { allowedRedirectHosts: ['*'] });
+    expect(allowed(p, 'https://anything.test/cb')).toBe(true);
+  });
+
+  it('denies a redirect_uri that is not a parseable URL', () => {
+    const p = new OscarOAuthProvider(store, { allowedRedirectHosts: ['claude.ai'] });
+    expect(allowed(p, 'not a url')).toBe(false);
+  });
+});

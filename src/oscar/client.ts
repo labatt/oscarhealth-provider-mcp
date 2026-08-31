@@ -4,6 +4,9 @@ import { OscarUpstreamError } from './errors.js';
 
 export { OscarUpstreamError };
 
+/** Upper bound on a single upstream request. */
+const UPSTREAM_TIMEOUT_MS = 15_000;
+
 export const USER_AGENT =
   'mcp.example.com MCP (personal in-network provider lookup; +https://mcp.example.com)';
 
@@ -137,7 +140,15 @@ export class OscarClient {
   private async fetchFresh(key: string, pathWithQuery: string, ttlMs: number): Promise<unknown> {
     await this.throttle();
     const res = await fetch(`${this.baseUrl}${pathWithQuery}`, {
-      headers: { 'User-Agent': USER_AGENT, Accept: 'application/json' }
+      headers: { 'User-Agent': USER_AGENT, Accept: 'application/json' },
+      // Without a signal the only bound is undici's 300s default, so a slow
+      // upstream would pin a request — and the throttle serialises callers, so
+      // one stalled fetch delays every other.
+      signal: AbortSignal.timeout(UPSTREAM_TIMEOUT_MS),
+      // The base URL is operator-configured and paths are fixed, so a redirect
+      // could only come from upstream itself — but following one silently would
+      // send this server's requests somewhere it never chose.
+      redirect: 'manual'
     });
 
     const text = await res.text();
@@ -146,6 +157,10 @@ export class OscarClient {
       body = JSON.parse(text);
     } catch {
       throw new OscarUpstreamError(res.status, `Expected JSON, got ${text.slice(0, 120)}`);
+    }
+
+    if (res.status >= 300 && res.status < 400) {
+      throw new OscarUpstreamError(res.status, `Upstream redirected to ${res.headers.get('location') ?? 'an unknown location'}; not followed.`);
     }
 
     if (!res.ok) {

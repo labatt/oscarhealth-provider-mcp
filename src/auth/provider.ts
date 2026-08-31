@@ -38,6 +38,9 @@ function escapeHtml(s: string): string {
   return s.replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]!);
 }
 
+/** The hostname to add, pulled out so the page can be copied from directly. */
+const hostOf = (uri: string) => { try { return new URL(uri).hostname; } catch { return uri; } };
+
 const rejectionPage = (redirectUri: string) => `<!doctype html>
 <html><head><meta charset="utf-8"><title>Authorization refused</title>
 <meta name="viewport" content="width=device-width,initial-scale=1"></head>
@@ -46,9 +49,14 @@ const rejectionPage = (redirectUri: string) => `<!doctype html>
 <p>This application asked to send your authorization code to
 <strong>${escapeHtml(redirectUri)}</strong>, which is not on this server's
 redirect allowlist. No sign-in page was shown and nothing was authorized.</p>
-<p style="color:#666;font-size:.9rem">If this is a client you trust, add its
-callback hostname to <code>MCP_ALLOWED_REDIRECT_HOSTS</code> in the server's
-<code>.env</code> and restart.</p>
+<p style="color:#666;font-size:.9rem">If you started this yourself and trust the
+client, add its callback hostname to <code>MCP_ALLOWED_REDIRECT_HOSTS</code> in
+the server's <code>.env</code> and restart:</p>
+<pre style="background:#f4f4f4;padding:.6rem .8rem;border-radius:6px;font-size:.9rem;overflow-x:auto"
+>MCP_ALLOWED_REDIRECT_HOSTS=${escapeHtml(hostOf(redirectUri))}</pre>
+<p style="color:#666;font-size:.9rem">If you did <strong>not</strong> start this,
+someone else is trying to have your authorization code sent to a host they
+control. Nothing was authorized and no action is needed.</p>
 </body></html>`;
 
 /** Length-safe constant-time comparison of two ASCII strings. */
@@ -90,6 +98,7 @@ export class OscarOAuthProvider implements OAuthServerProvider {
 
   private readonly loginPath: string;
   private readonly allowedRedirectHosts?: string[];
+  private readonly allowAnyRedirectHost: boolean;
   private readonly audit?: AuditLog;
 
   constructor(
@@ -100,6 +109,7 @@ export class OscarOAuthProvider implements OAuthServerProvider {
     this.allowedRedirectHosts = options.allowedRedirectHosts?.length
       ? options.allowedRedirectHosts.map(h => h.toLowerCase())
       : undefined;
+    this.allowAnyRedirectHost = this.allowedRedirectHosts?.includes('*') ?? false;
     this.audit = options.audit;
   }
 
@@ -234,7 +244,13 @@ export class OscarOAuthProvider implements OAuthServerProvider {
     };
   }
 
-  async revokeToken(_client: OAuthClientInformationFull, request: OAuthTokenRevocationRequest): Promise<void> {
+  async revokeToken(client: OAuthClientInformationFull, request: OAuthTokenRevocationRequest): Promise<void> {
+    // RFC 7009 §2.1: a client may only revoke its own tokens. Returning
+    // silently on a mismatch is deliberate — the RFC requires 200 for an
+    // invalid token, and distinguishing "not yours" from "does not exist"
+    // would turn this into an oracle for guessing token values.
+    const record = this.store.getToken(request.token);
+    if (!record || record.clientId !== client.client_id) return;
     this.store.deleteToken(request.token);
   }
 
@@ -243,8 +259,19 @@ export class OscarOAuthProvider implements OAuthServerProvider {
    * `chatgpt.com` never authorises `chatgpt.com.attacker.test`. The port is
    * ignored so a loopback callback on an ephemeral port still works.
    */
+  /**
+   * Fails CLOSED. An unconfigured allowlist denies every redirect target rather
+   * than allowing all of them, because dynamic client registration is open:
+   * without this, anyone who finds the URL can register a client named after a
+   * product the operator trusts, point it at their own callback, and send an
+   * /authorize link. The operator sees a real consent page on their own domain,
+   * types their real password, and the code lands on the attacker's host.
+   *
+   * The literal `*` restores allow-any for anyone who wants it deliberately.
+   */
   private redirectHostAllowed(redirectUri: string): boolean {
-    if (!this.allowedRedirectHosts) return true;
+    if (this.allowAnyRedirectHost) return true;
+    if (!this.allowedRedirectHosts) return false;
     let hostname: string;
     try {
       hostname = new URL(redirectUri).hostname.toLowerCase();

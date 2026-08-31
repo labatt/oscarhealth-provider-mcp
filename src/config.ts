@@ -39,6 +39,21 @@ function parsePort(): number {
   return n;
 }
 
+/**
+ * Comma-separated hostnames permitted as OAuth redirect targets.
+ *
+ * Unset or blank means NO client may be authorized — this fails closed. That
+ * matters because dynamic client registration is open: anyone who finds the URL
+ * can register a client called "Claude" pointing at their own callback and send
+ * the operator an /authorize link. The operator then sees a genuine consent page
+ * on their own domain and types their real password, and the code lands on the
+ * attacker's host. The consent screen names the redirect host precisely so that
+ * is noticeable, but noticing is a judgement call made under time pressure; a
+ * closed default is not.
+ *
+ * The literal `*` is the explicit opt-out for anyone who wants the old
+ * behaviour and has understood the trade-off.
+ */
 function parseAllowedRedirectHosts(): string[] | undefined {
   const hosts = (process.env.MCP_ALLOWED_REDIRECT_HOSTS ?? '')
     .split(',').map(h => h.trim().toLowerCase()).filter(h => h.length > 0);

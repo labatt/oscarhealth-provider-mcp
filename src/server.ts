@@ -22,9 +22,16 @@ const DB_PATH = fileURLToPath(new URL('../data/oauth.db', import.meta.url));
 const AUDIT_PATH = fileURLToPath(new URL('../logs/audit.jsonl', import.meta.url));
 
 /**
- * DNS-rebinding protection for /mcp: rejects any request whose Host header is
- * not allowlisted, so a page in the operator's browser cannot reach this server
- * via http://127.0.0.1:3070/mcp.
+ * Host-header validation for /mcp: rejects any request whose Host is not
+ * allowlisted.
+ *
+ * Note what this does NOT do. The allowlist includes the loopback origins so
+ * local smoke tests work, which means a page in the operator's browser CAN
+ * reach http://127.0.0.1:3070/mcp and pass this check. That is not exploitable
+ * here — /mcp carries no cookie or ambient authority, requireBearerAuth demands
+ * a token such a page does not have, and the route sets no CORS headers, so a
+ * response cannot be read cross-origin. The real protection is the bearer
+ * token; this layer only blocks requests arriving under an unexpected name.
  *
  * StreamableHTTPServerTransport does have allowedHosts /
  * enableDnsRebindingProtection options, but they are marked @deprecated in

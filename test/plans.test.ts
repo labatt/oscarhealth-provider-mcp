@@ -25,4 +25,13 @@ describe('resolvePlan', () => {
   it('throws a listing error for an unknown plan id', () => {
     expect(() => resolvePlan(book, 'nope')).toThrow(/Unknown plan "nope".*fl-2026/);
   });
+
+  it('does not resolve inherited object properties as plans', () => {
+    // `plans['constructor']` and friends are truthy through the prototype
+    // chain, so a `!plan` guard let `plan: "constructor"` through and produced
+    // an all-undefined parameter set — an unscoped upstream request.
+    for (const key of ['constructor', 'toString', 'valueOf', '__proto__', 'hasOwnProperty']) {
+      expect(() => resolvePlan(book, key)).toThrow(/Unknown plan/);
+    }
+  });
 });

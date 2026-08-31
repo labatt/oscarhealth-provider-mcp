@@ -226,17 +226,26 @@ pm2 reports "online" with a live PID while nothing binds the port — verify wit
 Add `https://your-host/mcp` as a custom MCP connector. The OAuth flow opens a
 browser; sign in with your operator credentials.
 
-Then **set `MCP_ALLOWED_REDIRECT_HOSTS`** to the callback host your client used
-and restart:
+**`MCP_ALLOWED_REDIRECT_HOSTS` fails closed**: until you set it, no client can
+be authorized at all. Your first connection attempt is therefore *supposed* to
+be refused — the refusal page names the hostname to add and shows the exact line
+to paste:
 
-```bash
-sqlite3 data/oauth.db "select * from clients;"   # shows the registered callback
+```
+MCP_ALLOWED_REDIRECT_HOSTS=claude.ai
 ```
 
-Dynamic client registration is open, so until you set this, anyone who finds
-your URL can register a client and start an authorization request. The consent
-screen always shows you the callback host — the allowlist turns that judgement
-call into a server-side refusal.
+Add it, restart, and connect again.
+
+This is deliberate. Dynamic client registration is open, so with an empty
+allowlist meaning "allow anything", anyone who found your URL could register a
+client named after something you trust, point it at their own callback, and send
+you an `/authorize` link. You would see a genuine consent page **on your own
+domain** and type your real password, and the code would land on their host. The
+consent screen names the redirect host precisely so that is noticeable — but
+noticing is a judgement call made in a hurry, and a closed default is not.
+
+Set it to `*` to allow any host, only if you have understood the above.
 
 ## Example queries
 
