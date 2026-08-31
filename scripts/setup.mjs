@@ -236,7 +236,7 @@ async function main() {
   console.log('    npm run build && node dist/server.js');
   console.log(`    then add ${publicUrl}/mcp as a custom MCP connector`);
   console.log(dim('\n  After connecting, set MCP_ALLOWED_REDIRECT_HOSTS in .env to your'));
-  console.log(dim('  client\'s callback host and restart. See SETUP.md.\n'));
+  console.log(dim('  client\'s callback host and restart. See the README.\n'));
 }
 
 main()
