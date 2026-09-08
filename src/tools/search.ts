@@ -11,6 +11,8 @@ import { shapeFacility, type FacilityRow } from '../oscar/shape.js';
 
 export interface SearchDoctorsArgs {
   specialty?: string;
+  latitude?: number;
+  longitude?: number;
   nameQuery?: string;
   zipCode?: string;
   distanceMiles?: DistanceMiles;
@@ -30,6 +32,8 @@ export interface SearchDoctorsArgs {
 
 export interface SearchDoctorsResult {
   plan: string;
+  /** Where the search was actually centred, as upstream resolved it. */
+  searchedNear: string;
   totalMatchingUpstream: number;
   fetched: number;
   returned: number;
@@ -42,8 +46,49 @@ export interface SearchDoctorsResult {
 }
 
 interface RawSearchResponse {
+  /** Upstream's own rendering of the anchor, e.g. "Tampa, FL 33607, USA". */
+  addressFromZip?: string;
   totalResultCount?: number;
   results?: { provider: unknown }[];
+}
+
+
+/**
+ * Where to centre the search.
+ *
+ * `zip_code` and `anchor_lat`/`anchor_lng` both work upstream; a free-text
+ * `address` does NOT — it is accepted and silently ignored, returning the
+ * network's default anchor with a plausible-looking result count. So a place
+ * name has to become either a ZIP or a coordinate pair before it gets here.
+ *
+ * Coordinates win when both are supplied, and the ZIP is then omitted rather
+ * than sent alongside, so there is exactly one anchor in play.
+ */
+function resolveAnchor(args: SearchDoctorsArgs | SearchFacilitiesArgs): {
+  params: Record<string, string | number | undefined>;
+  describe: string;
+} {
+  const { latitude: lat, longitude: lng } = args as { latitude?: number; longitude?: number };
+  const hasLat = typeof lat === 'number';
+  const hasLng = typeof lng === 'number';
+
+  if (hasLat !== hasLng) {
+    throw new Error('latitude and longitude must be given together, or neither.');
+  }
+  if (hasLat && hasLng) {
+    if (lat < -90 || lat > 90) throw new Error(`latitude ${lat} is out of range (-90 to 90).`);
+    if (lng < -180 || lng > 180) throw new Error(`longitude ${lng} is out of range (-180 to 180).`);
+    return {
+      // zip_code is explicitly undefined, not merely absent: planParams() puts
+      // the plan's default ZIP in the same object, and spreading over it would
+      // otherwise send both. Upstream does prefer the coordinates, but that
+      // precedence is undocumented and not worth depending on.
+      params: { anchor_lat: lat, anchor_lng: lng, zip_code: undefined },
+      describe: `coordinates ${lat}, ${lng}`
+    };
+  }
+  if (args.zipCode) return { params: { zip_code: args.zipCode }, describe: `ZIP ${args.zipCode}` };
+  return { params: {}, describe: 'the plan default location' };
 }
 
 export async function searchDoctors(ctx: ToolContext, args: SearchDoctorsArgs): Promise<SearchDoctorsResult> {
@@ -61,9 +106,11 @@ export async function searchDoctors(ctx: ToolContext, args: SearchDoctorsArgs): 
   const requestedPages = args.maxPages ?? (args.gender || args.minReviews || args.topRatedOnly || args.sort === 'rating' || args.sort === 'most_reviewed' ? 3 : 1);
   const maxPages = Math.min(requestedPages, MAX_PAGES);
 
+  const anchor = resolveAnchor(args);
+
   const base = {
     ...planParams(plan),
-    ...(args.zipCode ? { zip_code: args.zipCode } : {}),
+    ...anchor.params,
     specialty: args.specialty,
     name_query: args.nameQuery,
     distance_miles: args.distanceMiles,
@@ -81,6 +128,7 @@ export async function searchDoctors(ctx: ToolContext, args: SearchDoctorsArgs): 
   let total = 0;
   let oldestCachedAt: number | null = null;
   let pagesFetched = 0;
+  let anchorLabel: string | undefined;
 
   // Sequential by design. The client's throttle serialises callers anyway, and
   // fetching one page at a time is what keeps the upstream request rate low.
@@ -91,6 +139,7 @@ export async function searchDoctors(ctx: ToolContext, args: SearchDoctorsArgs): 
     );
     pagesFetched++;
     total = body.totalResultCount ?? 0;
+    anchorLabel ??= body.addressFromZip || undefined;
     if (cachedAt !== null) oldestCachedAt = oldestCachedAt === null ? cachedAt : Math.min(oldestCachedAt, cachedAt);
 
     const rows = (body.results ?? []).map(r => shapeDoctor(r.provider));
@@ -139,6 +188,9 @@ export async function searchDoctors(ctx: ToolContext, args: SearchDoctorsArgs): 
 
   return {
     plan: plan.label,
+    // Echoed back so a mis-geocoded coordinate is visible rather than silent:
+    // the caller can see the search ran somewhere other than intended.
+    searchedNear: anchorLabel ?? anchor.describe,
     totalMatchingUpstream: total,
     fetched: collected.length,
     returned: sorted.length,
@@ -195,6 +247,8 @@ export function registerSearchTools(server: McpServer, ctx: ToolContext): void {
 
 export interface SearchFacilitiesArgs {
   specialtyId?: string;
+  latitude?: number;
+  longitude?: number;
   nameQuery?: string;
   zipCode?: string;
   distanceMiles?: DistanceMiles;
@@ -206,6 +260,8 @@ export interface SearchFacilitiesArgs {
 
 export interface SearchFacilitiesResult {
   plan: string;
+  /** Where the search was actually centred, as upstream resolved it. */
+  searchedNear: string;
   totalMatchingUpstream: number;
   returned: number;
   results: FacilityRow[];
@@ -226,9 +282,11 @@ export async function searchFacilities(ctx: ToolContext, args: SearchFacilitiesA
     throw new Error(`distanceMiles must be one of ${DISTANCE_VALUES.join(', ')} — Oscar ignores any other value.`);
   }
 
+  const anchor = resolveAnchor(args);
+
   const e = endpoints.facilitySearch({
     ...planParams(plan),
-    ...(args.zipCode ? { zip_code: args.zipCode } : {}),
+    ...anchor.params,
     specialty_id: args.specialtyId,
     name_query: args.nameQuery,
     distance_miles: args.distanceMiles,
@@ -249,6 +307,7 @@ export async function searchFacilities(ctx: ToolContext, args: SearchFacilitiesA
 
   return {
     plan: plan.label,
+    searchedNear: (body as { addressFromZip?: string }).addressFromZip || anchor.describe,
     totalMatchingUpstream: total,
     returned: limited.length,
     results: limited,
@@ -269,7 +328,11 @@ export function registerFacilityTools(server: McpServer, ctx: ToolContext): void
       inputSchema: {
         specialtyId: z.string().max(120).optional().describe('Facility specialty ID from find_specialty.'),
         nameQuery: z.string().max(120).optional().describe('Search by facility name.'),
-        zipCode: z.string().max(120).optional(),
+        zipCode: z.string().max(120).optional()
+          .describe('Any US ZIP to centre the search on. Defaults to the plan\'s configured ZIP.'),
+        latitude: z.number().min(-90).max(90).optional()
+          .describe('Centre on a coordinate instead of a ZIP; pair with longitude. Takes precedence over zipCode.'),
+        longitude: z.number().min(-180).max(180).optional().describe('See latitude.'),
         distanceMiles: z.union([z.literal(1), z.literal(5), z.literal(10), z.literal(20), z.literal(50)]).optional(),
         sort: z.enum(['smart', 'distance']).optional(),
         limit: z.number().int().min(1).max(50).optional(),

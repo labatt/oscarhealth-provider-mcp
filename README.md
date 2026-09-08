@@ -67,6 +67,9 @@ touch this code:
 - **`years_experience: 0` means "not recorded"**, not zero years.
 - **`sort` outside `0｜1｜2` returns HTTP 400**, with the reason nested in an
   object rather than a string.
+- **A free-text `address` is silently ignored** — searches fall back to the
+  network's default anchor while returning a plausible count. Only a ZIP or a
+  coordinate pair actually moves the search.
 
 ## Design notes
 
@@ -277,6 +280,8 @@ searches — you never handle IDs.
 
 > Find me a primary care physician within 10 miles who's accepting new patients.
 
+> Find a primary care physician within 20 miles of Tampa, FL — near the office on Boy Scout Blvd.
+
 > I want a male cardiologist with good reviews, sorted by rating.
 
 > Are there any female dermatologists near me who speak Spanish?
@@ -300,6 +305,13 @@ searches — you never handle IDs.
 > Which hospitals are in my network, and which are accredited?
 
 > Is there an in-network urgent care near ZIP 33139?
+
+**Searching somewhere else**
+
+Pass a `zipCode` to search anywhere, or `latitude`/`longitude` for a city or
+landmark — Claude geocodes it and the result echoes `searchedNear`, so if it
+guessed the wrong place you can see that rather than quietly getting providers
+from the wrong city.
 
 **Understanding your plan**
 

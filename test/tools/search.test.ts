@@ -153,4 +153,49 @@ describe('registerSearchTools', () => {
       expect(schema[field].description).toMatch(/describe_plan/);
     }
   });
+
+  it('anchors on coordinates when given, and omits the ZIP', async () => {
+    const c = ctx([page(30, 30)]);
+    await searchDoctors(c, { specialty: 'CLINPCPMAN', latitude: 27.9506, longitude: -82.4572, zipCode: '33179' });
+    const params = c.client.get.mock.calls[0][1];
+    expect(params.anchor_lat).toBe(27.9506);
+    expect(params.anchor_lng).toBe(-82.4572);
+    // Exactly one anchor in play. The key is present but undefined, and the
+    // client's queryString() skips undefined values, so nothing is sent —
+    // toHaveProperty would pass on a present-but-undefined key, so assert the
+    // value instead.
+    expect(params.zip_code).toBeUndefined();
+  });
+
+  it('uses the ZIP when no coordinates are given', async () => {
+    const c = ctx([page(30, 30)]);
+    await searchDoctors(c, { specialty: 'CLINPCPMAN', zipCode: '33607' });
+    expect(c.client.get.mock.calls[0][1].zip_code).toBe('33607');
+    expect(c.client.get.mock.calls[0][1]).not.toHaveProperty('anchor_lat');
+  });
+
+  it('rejects a latitude without a longitude', async () => {
+    await expect(searchDoctors(ctx([page(1, 1)]), { specialty: 'CLINPCPMAN', latitude: 27.9 }))
+      .rejects.toThrow(/together/);
+  });
+
+  it('rejects an out-of-range coordinate', async () => {
+    await expect(searchDoctors(ctx([page(1, 1)]), { specialty: 'CLINPCPMAN', latitude: 200, longitude: 0 }))
+      .rejects.toThrow(/out of range/);
+  });
+
+  it('reports where the search was actually centred', async () => {
+    // A mis-geocoded coordinate should be visible in the result rather than
+    // silently returning providers from the wrong city.
+    const body = { ...page(30, 30), addressFromZip: 'Tampa, FL 33607, USA' };
+    const out = await searchDoctors(ctx([body]), { specialty: 'CLINPCPMAN', zipCode: '33607' });
+    expect(out.searchedNear).toBe('Tampa, FL 33607, USA');
+  });
+
+  it('falls back to describing the anchor when upstream does not name it', async () => {
+    const out = await searchDoctors(ctx([page(30, 30)]), {
+      specialty: 'CLINPCPMAN', latitude: 27.9506, longitude: -82.4572
+    });
+    expect(out.searchedNear).toBe('coordinates 27.9506, -82.4572');
+  });
 });

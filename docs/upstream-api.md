@@ -76,6 +76,23 @@ searching by their **name** and selecting the matching record — a lookup that
 sends only an NPI will search an arbitrary page, miss, and appear to prove the
 provider is absent.
 
+### `address` is accepted and silently ignored
+
+```
+no location at all   → 4461, anchored at the network default
+address=Tampa, FL    → 4461, anchored at the network default
+zip_code=33607       → 1690, anchored at Tampa, FL 33607
+anchor_lat/anchor_lng→ 1706, anchored exactly where given
+```
+
+A free-text location does nothing. It does not error — you get a plausible
+result count for providers near the network's *default* anchor, hundreds of
+miles from where you asked. Only a ZIP or a coordinate pair moves the search, so
+a place name must be resolved to one of those before the request is made.
+
+`anchor_lat`/`anchor_lng` take precedence when sent alongside `zip_code`, but
+that precedence is undocumented; send only one.
+
 ### Facet keys differ from their labels
 
 The `aggregations` block returns filter values as `{key, display_str, count}`.
